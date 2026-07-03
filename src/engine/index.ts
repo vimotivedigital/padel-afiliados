@@ -1,0 +1,10 @@
+export * from "./types";
+export { scoreProduct } from "./scoring/scoreEngine";
+export type { ScoringCriterion, ScoreResult, ScoreBreakdownItem } from "./scoring/scoreEngine";
+export { recommend } from "./recommendation/recommend";
+export type { RecommendationItem, RecommendationOutput } from "./recommendation/recommend";
+export { buildCrossSellPack } from "./recommendation/crossSell";
+export type { CrossSellPack } from "./recommendation/crossSell";
+export { configurators, getConfigurator } from "./configurators";
+export type { Configurator, Question, QuestionOption, Answers } from "./configurators/types";
+export * from "./datasets";

@@ -1,0 +1,6 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de accesorio de pádel">
+  <rect width="600" height="600" fill="#0E7C86"/>
+  <circle cx="300" cy="280" r="130" fill="#12664F" stroke="#C6F135" stroke-width="6"/>
+  <circle cx="300" cy="280" r="70" fill="#0B1120"/>
+  <text x="300" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">ACCESORIO</text>
+</svg>

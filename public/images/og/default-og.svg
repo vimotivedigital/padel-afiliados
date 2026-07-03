@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pádel Total">
+  <rect width="1200" height="630" fill="#0B1120"/>
+  <circle cx="980" cy="150" r="220" fill="#12664F" opacity="0.5"/>
+  <circle cx="1000" cy="480" r="120" fill="#C6F135" opacity="0.15"/>
+  <text x="90" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#F7F8F5">Pádel Total</text>
+  <text x="90" y="360" font-family="Arial, sans-serif" font-size="32" fill="#C6F135">Guías, reviews y el selector de pala inteligente</text>
+</svg>

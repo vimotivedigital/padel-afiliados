@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de artículo">
+  <rect width="1200" height="630" fill="#12664F"/>
+  <rect x="0" y="0" width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <circle cx="600" cy="300" r="160" fill="#C6F135" opacity="0.85"/>
+  <path d="M470 260 Q600 320 470 380" fill="none" stroke="#0B1120" stroke-width="8"/>
+  <path d="M730 260 Q600 320 730 380" fill="none" stroke="#0B1120" stroke-width="8"/>
+</svg>

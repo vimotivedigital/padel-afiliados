@@ -1,0 +1,7 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de pelota de pádel">
+  <rect width="600" height="600" fill="#12664F"/>
+  <circle cx="300" cy="270" r="150" fill="#C6F135" stroke="#0B1120" stroke-width="6"/>
+  <path d="M180 200 Q300 260 180 340" fill="none" stroke="#0B1120" stroke-width="5"/>
+  <path d="M420 200 Q300 260 420 340" fill="none" stroke="#0B1120" stroke-width="5"/>
+  <text x="300" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">PELOTA</text>
+</svg>

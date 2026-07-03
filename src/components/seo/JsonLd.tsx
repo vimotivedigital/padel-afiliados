@@ -1,0 +1,10 @@
+/** Inyecta un bloque JSON-LD. `data` puede ser null para condicionar (ej. sin FAQs). */
+export function JsonLd({ data }: { data: object | null }) {
+  if (!data) return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

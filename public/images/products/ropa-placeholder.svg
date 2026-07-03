@@ -1,0 +1,5 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de ropa de pádel">
+  <rect width="600" height="600" fill="#12664F"/>
+  <path d="M220 160 L260 130 L340 130 L380 160 L420 210 L370 250 L350 220 L350 470 L250 470 L250 220 L230 250 L180 210 Z" fill="#0E7C86" stroke="#0B1120" stroke-width="6"/>
+  <text x="300" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">ROPA</text>
+</svg>

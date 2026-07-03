@@ -1,0 +1,7 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de pala de pádel">
+  <rect width="600" height="600" fill="#12664F"/>
+  <ellipse cx="300" cy="240" rx="170" ry="190" fill="#0E7C86" stroke="#0B1120" stroke-width="6"/>
+  <ellipse cx="300" cy="240" rx="140" ry="160" fill="#12664F" stroke="#C6F135" stroke-width="4"/>
+  <rect x="270" y="410" width="60" height="150" rx="18" fill="#0B1120"/>
+  <text x="300" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">PALA</text>
+</svg>

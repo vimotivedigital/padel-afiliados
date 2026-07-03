@@ -1,0 +1,5 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de protector de pala">
+  <rect width="600" height="600" fill="#0B1120"/>
+  <path d="M300 140 Q420 180 420 280 Q420 400 300 460 Q180 400 180 280 Q180 180 300 140 Z" fill="#12664F" stroke="#C6F135" stroke-width="6"/>
+  <text x="300" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">PROTECTOR</text>
+</svg>

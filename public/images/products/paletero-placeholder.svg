@@ -1,0 +1,7 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Imagen de ejemplo de paletero de pádel">
+  <rect width="600" height="600" fill="#0B1120"/>
+  <rect x="160" y="180" width="280" height="320" rx="24" fill="#12664F" stroke="#C6F135" stroke-width="6"/>
+  <rect x="200" y="140" width="200" height="60" rx="16" fill="#0E7C86"/>
+  <rect x="190" y="240" width="220" height="16" fill="#C6F135"/>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#F7F8F5">PALETERO</text>
+</svg>
