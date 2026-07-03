@@ -1,7 +1,7 @@
-export const SITE_NAME = "Pádel Total";
+export const SITE_NAME = "Voleador";
 export const SITE_DESCRIPTION =
   "Guías, análisis y comparativas de material de pádel: palas, zapatillas, paleteros y accesorios, con selectores inteligentes para encontrar tu equipación ideal.";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.padeltotal.example";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://voleador.com";
 
 export const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_TAG ?? "";
 

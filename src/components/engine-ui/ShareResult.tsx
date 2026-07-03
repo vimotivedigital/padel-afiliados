@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { SITE_NAME } from "@/lib/constants";
 
 export function ShareResult({ productName }: { productName: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    const text = `Mi recomendación en Pádel Total: ${productName}`;
+    const text = `Mi recomendación en ${SITE_NAME}: ${productName}`;
     const url = typeof window !== "undefined" ? window.location.href : "";
 
     if (typeof navigator !== "undefined" && navigator.share) {

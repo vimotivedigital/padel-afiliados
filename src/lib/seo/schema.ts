@@ -7,7 +7,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/brands/brand-placeholder.svg`,
+    logo: `${SITE_URL}/images/logo-voleador.png`,
   };
 }
 

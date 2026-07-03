@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MAIN_NAV, SITE_NAME } from "@/lib/constants";
 import { MobileNav } from "./MobileNav";
@@ -11,9 +12,15 @@ export function Header() {
   return (
     <header className="relative border-b border-border bg-surface/95 backdrop-blur supports-[backdrop-filter]:bg-surface/80 sticky top-0 z-30">
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-primary text-white">P</span>
-          {SITE_NAME}
+        <Link href="/" className="relative h-9 w-[128px] shrink-0">
+          <Image
+            src="/images/logo-voleador.png"
+            alt={SITE_NAME}
+            fill
+            sizes="128px"
+            priority
+            className="object-contain object-left"
+          />
         </Link>
 
         <nav className="hidden flex-1 items-center gap-1 md:flex">
