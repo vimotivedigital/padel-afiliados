@@ -3,10 +3,10 @@ import type { Paletero } from "../types";
 export const paleteros: Paletero[] = [
   {
     id: "pt-nox-thermo",
-    slug: "nox-thermo-team",
+    slug: "nox-thermo-ml10-pro-p1",
     category: "paleteros",
     brand: "Nox",
-    name: "Nox Thermo Team",
+    name: "Nox Thermo ML10 Pro P.1",
     price: 59,
     currency: "EUR",
     rating: 4.5,
@@ -22,7 +22,7 @@ export const paleteros: Paletero[] = [
     editorReview:
       "Para quien juega 2-3 veces por semana con un par de palas es más que suficiente; el aislamiento térmico se nota especialmente en los meses de más calor.",
     faqs: [],
-    asin: "B0EXAMPLETHERM",
+    asin: "B01DW9P3G6",
     featured: true,
     hasFullReview: false,
     publishedAt: "2026-03-10",
@@ -37,10 +37,10 @@ export const paleteros: Paletero[] = [
   },
   {
     id: "pt-bullpadel-vertex-pro",
-    slug: "bullpadel-vertex-pro-2026",
+    slug: "bullpadel-paletero-vertex-bpp25001",
     category: "paleteros",
     brand: "Bullpadel",
-    name: "Bullpadel Vertex Pro 2026",
+    name: "Bullpadel Paletero Vertex BPP-25001",
     price: 99,
     currency: "EUR",
     rating: 4.7,
@@ -56,7 +56,7 @@ export const paleteros: Paletero[] = [
     editorReview:
       "Es la opción que recomendamos a quien juega con mucha frecuencia o compite: organiza muy bien el material y aguanta el uso intensivo sin deteriorarse.",
     faqs: [],
-    asin: "B0EXAMPLEVXPRO",
+    asin: "B0F649X1VR",
     featured: false,
     hasFullReview: false,
     publishedAt: "2026-03-12",

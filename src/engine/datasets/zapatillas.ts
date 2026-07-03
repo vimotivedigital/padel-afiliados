@@ -22,7 +22,7 @@ export const zapatillas: Zapatilla[] = [
     editorReview:
       "Es una de las zapatillas más equilibradas para jugadores que entrenan 2-3 veces por semana: aguanta bien el desgaste y protege la articulación en los frenazos.",
     faqs: [],
-    asin: "B0EXAMPLEGELP",
+    asin: "B0B56XNY31",
     featured: true,
     hasFullReview: false,
     publishedAt: "2026-03-05",
@@ -62,7 +62,7 @@ export const zapatillas: Zapatilla[] = [
     editorReview:
       "Para perfiles pronadores es una de las mejores opciones de este rango de precio: se nota el trabajo en la estabilidad lateral en cada frenada.",
     faqs: [],
-    asin: "B0EXAMPLEML10H",
+    asin: "B0CJJM325L",
     featured: false,
     hasFullReview: false,
     publishedAt: "2026-03-08",
