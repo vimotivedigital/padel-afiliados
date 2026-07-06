@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema } from "@/lib/seo/schema";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
+import { GOOGLE_SITE_VERIFICATION, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import { GA_ID } from "@/lib/analytics/ga";
 
 const geistSans = Geist({
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     path: "/",
   }),
+  verification: {
+    google: GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

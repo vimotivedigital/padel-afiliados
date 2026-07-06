@@ -5,6 +5,9 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://voleador.co
 
 export const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_TAG ?? "";
 
+/** Código de verificación de propiedad de Google Search Console (no es un secreto: queda público en el HTML). */
+export const GOOGLE_SITE_VERIFICATION = "lnxRgdxN0mpSclj0lEEl7-yis0QqoT-EfOIE1k5y_kg";
+
 export const AFFILIATE_DISCLOSURE_TEXT =
   "Como asociados de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste adicional para ti y nos ayuda a mantener el contenido de la web.";
 
