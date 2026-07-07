@@ -46,7 +46,7 @@ export const paleteros: Paletero[] = [
     rating: 4.7,
     reviewCount: 61,
     editorRating: 8.9,
-    images: ["/images/products/paletero-placeholder.svg"],
+    images: ["/images/products/bullpadel-paletero-vertex-bpp25001.jpg"],
     shortDescription:
       "Paletero de gran capacidad con compartimento térmico, zapatillero independiente y espacio para hasta 4 palas.",
     description:

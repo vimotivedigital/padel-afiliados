@@ -43,7 +43,7 @@ export const pelotas: Pelota[] = [
     rating: 4.2,
     reviewCount: 145,
     editorRating: 7.6,
-    images: ["/images/products/pelota-placeholder.svg"],
+    images: ["/images/products/wilson-premier-pelotas-de-padel.jpg"],
     shortDescription: "Pelota oficial de Premier Padel, buena relación precio-rendimiento para entrenar o jugar partidos recreativos.",
     description:
       "Bote oficial de Premier Padel con fieltro Dura-Weave, un precio ajustado que la hace igual de válida para entrenamientos frecuentes que para partidos recreativos entre amigos.",

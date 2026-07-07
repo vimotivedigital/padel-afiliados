@@ -12,7 +12,7 @@ export const ropa: Prenda[] = [
     rating: 4.4,
     reviewCount: 62,
     editorRating: 7.9,
-    images: ["/images/products/ropa-placeholder.svg"],
+    images: ["/images/products/nox-camiseta-padel-pro.jpg"],
     shortDescription: "Camiseta técnica transpirable para entrenamientos y partidos.",
     description: "Tejido técnico ligero con buena evacuación del sudor, corte deportivo ajustado.",
     pros: ["Muy transpirable", "Secado rápido"],

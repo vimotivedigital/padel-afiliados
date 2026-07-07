@@ -211,7 +211,7 @@ export const palas: Pala[] = [
     rating: 4.5,
     reviewCount: 134,
     editorRating: 8.6,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/adidas-adipower-multiweight-3-2.jpg"],
     shortDescription:
       "Pala diamante de balance alto con sistema de pesos ajustables, para jugadores avanzados que buscan personalizar el balance.",
     description:
@@ -323,7 +323,7 @@ export const palas: Pala[] = [
     rating: 4.3,
     reviewCount: 210,
     editorRating: 7.8,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/siux-adrenaline-ibai-edition.jpg"],
     shortDescription:
       "Pala redonda y ligera pensada para dar los primeros pasos en el pádel sin renunciar a un tacto cómodo.",
     description:
@@ -374,7 +374,7 @@ export const palas: Pala[] = [
     rating: 4.6,
     reviewCount: 87,
     editorRating: 8.9,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/starvie-metheora-pro.jpg"],
     shortDescription:
       "Pala lágrima de altas prestaciones orientada a jugadoras y jugadores de nivel avanzado con estilo de control-equilibrado.",
     description:
@@ -531,7 +531,7 @@ export const palas: Pala[] = [
     rating: 4.1,
     reviewCount: 45,
     editorRating: 7.3,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/oxdog-ultimate-pro-light-2024.jpg"],
     shortDescription:
       "Pala diamante de peso reducido (~350g) dentro de la gama Oxdog, pensada para jugadores que buscan manejabilidad sin perder pegada.",
     description:
