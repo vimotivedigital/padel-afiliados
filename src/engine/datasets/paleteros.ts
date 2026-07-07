@@ -12,7 +12,7 @@ export const paleteros: Paletero[] = [
     rating: 4.5,
     reviewCount: 88,
     editorRating: 8.3,
-    images: ["/images/products/paletero-placeholder.svg"],
+    images: ["/images/products/nox-thermo-ml10-pro-p1.jpg"],
     shortDescription:
       "Paletero con compartimento térmico para 2 palas, pensado para jugadores que entrenan varias veces por semana.",
     description:

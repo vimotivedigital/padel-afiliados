@@ -12,7 +12,7 @@ export const pelotas: Pelota[] = [
     rating: 4.6,
     reviewCount: 320,
     editorRating: 8.7,
-    images: ["/images/products/pelota-placeholder.svg"],
+    images: ["/images/products/head-padel-pro-s.jpg"],
     shortDescription: "Pelota de competición homologada, presión media-alta, buen rendimiento en interior y exterior.",
     description:
       "Pelota oficial de varios torneos, con una presión pensada para mantener sus prestaciones durante todo el partido sin perder bote prematuramente.",

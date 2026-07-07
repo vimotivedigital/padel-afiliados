@@ -21,7 +21,7 @@ export const palas: Pala[] = [
     rating: 4.7,
     reviewCount: 312,
     editorRating: 9.2,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/nox-at10-genius-18k.jpg"],
     shortDescription:
       "La pala de potencia de referencia de Agustín Tapia, con carbono 18K y balance alto para jugadores avanzados.",
     description:
@@ -88,7 +88,7 @@ export const palas: Pala[] = [
     rating: 4.6,
     reviewCount: 278,
     editorRating: 9.0,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/bullpadel-vertex-04.jpg"],
     shortDescription:
       "Pala de forma diamante y balance alto de la gama profesional de Bullpadel, orientada a potencia y juego agresivo.",
     description:
@@ -150,7 +150,7 @@ export const palas: Pala[] = [
     rating: 4.4,
     reviewCount: 156,
     editorRating: 8.2,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/head-speed-motion.jpg"],
     shortDescription:
       "Pala de forma lágrima y balance medio, equilibrada entre control y potencia, ideal para dar el salto a nivel intermedio.",
     description:
@@ -262,7 +262,7 @@ export const palas: Pala[] = [
     rating: 4.5,
     reviewCount: 98,
     editorRating: 8.4,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/babolat-technical-veron.jpg"],
     shortDescription:
       "Pala redonda de balance bajo y tacto muy blando, pensada para jugadores de control que cuidan la articulación del codo.",
     description:
@@ -427,7 +427,7 @@ export const palas: Pala[] = [
     rating: 4.3,
     reviewCount: 76,
     editorRating: 7.9,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/wilson-bela-team.jpg"],
     shortDescription:
       "Pala redonda y ligera de la línea Bela de Wilson, pensada especialmente para jugadoras que empiezan o están en nivel intermedio.",
     description:
@@ -480,7 +480,7 @@ export const palas: Pala[] = [
     rating: 4.2,
     reviewCount: 64,
     editorRating: 7.7,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/drop-shot-conqueror-5-0.jpg"],
     shortDescription:
       "Pala lágrima equilibrada de gama media, un buen punto de entrada para jugadores de nivel intermedio con estilo variado.",
     description:
@@ -582,7 +582,7 @@ export const palas: Pala[] = [
     rating: 4.6,
     reviewCount: 203,
     editorRating: 8.7,
-    images: ["/images/products/pala-placeholder.svg"],
+    images: ["/images/products/nox-ml10-pro-cup.jpg"],
     shortDescription:
       "La pala de control más icónica de Nox, forma redonda/lágrima con balance bajo-medio y un tacto muy preciso.",
     description:

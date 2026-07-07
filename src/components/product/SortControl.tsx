@@ -38,20 +38,3 @@ export function SortControl() {
     </label>
   );
 }
-
-export function sortProducts<T extends { price: number; rating: number; editorRating: number }>(
-  products: T[],
-  sort: string | undefined
-): T[] {
-  const sorted = [...products];
-  switch (sort) {
-    case "precio-asc":
-      return sorted.sort((a, b) => a.price - b.price);
-    case "precio-desc":
-      return sorted.sort((a, b) => b.price - a.price);
-    case "valoracion":
-      return sorted.sort((a, b) => b.rating - a.rating);
-    default:
-      return sorted.sort((a, b) => b.editorRating - a.editorRating);
-  }
-}

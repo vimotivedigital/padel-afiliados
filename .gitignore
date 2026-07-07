@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# fuentes originales de imágenes de producto (ya procesadas en public/images/products)
+/imagenes producto/

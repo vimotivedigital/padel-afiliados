@@ -3,8 +3,9 @@ import { getProductsByCategory } from "@/lib/products";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
-import { SortControl, sortProducts } from "@/components/product/SortControl";
+import { SortControl } from "@/components/product/SortControl";
 import { Pagination } from "@/components/product/Pagination";
+import { sortProducts } from "@/lib/utils";
 
 const PAGE_SIZE = 12;
 

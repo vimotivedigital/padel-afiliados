@@ -52,7 +52,7 @@ export const zapatillas: Zapatilla[] = [
     rating: 4.4,
     reviewCount: 98,
     editorRating: 8.2,
-    images: ["/images/products/zapatilla-placeholder.svg"],
+    images: ["/images/products/nox-ml10-hexa.jpg"],
     shortDescription:
       "Zapatilla ligera con refuerzo lateral, orientada a jugadores pronadores que buscan estabilidad en los cambios de dirección.",
     description:
