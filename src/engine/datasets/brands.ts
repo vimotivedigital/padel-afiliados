@@ -4,7 +4,7 @@ export const brands: Brand[] = [
   {
     slug: "nox",
     name: "Nox",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/nox.svg",
     description: "Marca española de referencia en el circuito profesional, patrocinadora de Agustín Tapia.",
     history:
       "Nox nació en España a mediados de la década de los 2000 y ha crecido hasta convertirse en una de las marcas con más presencia en el World Padel Tour, gracias a jugadores de primer nivel en su plantilla.",
@@ -21,7 +21,7 @@ export const brands: Brand[] = [
   {
     slug: "bullpadel",
     name: "Bullpadel",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/bullpadel.png",
     description: "Marca española histórica del pádel, con una de las gamas más amplias del mercado.",
     history:
       "Bullpadel es una de las marcas pioneras del pádel en España, con una trayectoria de más de dos décadas y presencia constante entre los primeros puestos del ranking profesional.",
@@ -35,7 +35,7 @@ export const brands: Brand[] = [
   {
     slug: "adidas",
     name: "Adidas",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/adidas.png",
     description: "El gigante alemán del deporte con una gama de pádel cada vez más consolidada.",
     history:
       "Adidas entró al mundo del pádel apoyándose en su experiencia en otros deportes de raqueta, aportando tecnologías propias como los sistemas de contrapeso ajustable.",
@@ -49,7 +49,7 @@ export const brands: Brand[] = [
   {
     slug: "head",
     name: "Head",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/head.svg",
     description: "Marca austriaca con gran tradición en material de raqueta, ahora también referente en pádel.",
     history:
       "Head aporta al pádel su experiencia de décadas en tenis y esquí, con un catálogo especialmente fuerte en la gama media orientada a jugadores amateur.",
@@ -63,7 +63,7 @@ export const brands: Brand[] = [
   {
     slug: "wilson",
     name: "Wilson",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/wilson.jpg",
     description: "Marca estadounidense histórica del deporte, con gamas específicas para jugadoras.",
     history:
       "Wilson ha trasladado al pádel parte de su legado en tenis, con especial atención a las líneas de producto orientadas al público femenino.",
@@ -75,7 +75,7 @@ export const brands: Brand[] = [
   {
     slug: "babolat",
     name: "Babolat",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/babolat.jpg",
     description: "Marca francesa especializada en materiales técnicos para deportes de raqueta.",
     history:
       "Babolat es conocida por su investigación en materiales y su apuesta por palas de control con tacto muy cuidado, especialmente valoradas por jugadores que priorizan la comodidad del brazo.",
@@ -89,7 +89,7 @@ export const brands: Brand[] = [
   {
     slug: "siux",
     name: "Siux",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/siux.webp",
     description: "Marca española conocida por su gama accesible sin renunciar a buenas prestaciones.",
     history:
       "Siux se ha hecho un hueco relevante ofreciendo palas de entrada y gama media con muy buena relación calidad-precio, además de accesorios como overgrips muy populares.",
@@ -101,7 +101,7 @@ export const brands: Brand[] = [
   {
     slug: "starvie",
     name: "StarVie",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/starvie.jpg",
     description: "Marca española en auge, con fuerte presencia en el circuito profesional femenino y masculino.",
     history:
       "StarVie ha crecido rápidamente en los últimos años gracias a acuerdos con jugadores de primer nivel y a una gama de producto centrada en el rendimiento.",
@@ -113,7 +113,7 @@ export const brands: Brand[] = [
   {
     slug: "drop-shot",
     name: "Drop Shot",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/drop-shot.webp",
     description: "Marca española especializada en material de pádel de gama media accesible.",
     history:
       "Drop Shot ofrece un catálogo amplio pensado sobre todo para el jugador amateur que busca equipamiento completo sin un desembolso elevado.",
@@ -125,7 +125,7 @@ export const brands: Brand[] = [
   {
     slug: "lok",
     name: "Lok",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/lok.png",
     description: "Marca emergente enfocada en diseño y en palas de perfil técnico.",
     history:
       "Lok apuesta por un catálogo más reducido pero muy orientado al detalle técnico y estético, ganando popularidad entre jugadores jóvenes.",
@@ -136,7 +136,7 @@ export const brands: Brand[] = [
   {
     slug: "black-crown",
     name: "Black Crown",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/black-crown.png",
     description: "Marca española con un catálogo amplio que cubre todos los niveles de juego.",
     history:
       "Black Crown mantiene una presencia constante en el circuito amateur y profesional, con un catálogo que abarca desde la iniciación hasta la competición.",
@@ -147,7 +147,7 @@ export const brands: Brand[] = [
   {
     slug: "oxdog",
     name: "Oxdog",
-    logo: "/images/brands/brand-placeholder.svg",
+    logo: "/images/brands/oxdog.png",
     description: "Marca sueca con buena presencia en el segmento de entrada y gama media.",
     history:
       "Oxdog llega al pádel desde su experiencia en otros deportes de raqueta escandinavos, con un catálogo centrado en la accesibilidad de precio.",
