@@ -8,6 +8,9 @@ export const AMAZON_AFFILIATE_TAG = process.env.NEXT_PUBLIC_AMAZON_TAG ?? "";
 /** Código de verificación de propiedad de Google Search Console (no es un secreto: queda público en el HTML). */
 export const GOOGLE_SITE_VERIFICATION = "lnxRgdxN0mpSclj0lEEl7-yis0QqoT-EfOIE1k5y_kg";
 
+/** ID de la etiqueta de Google Ads (conversiones). Tampoco es un secreto: viaja en el HTML público. */
+export const GOOGLE_ADS_ID = "AW-17534487474";
+
 export const AFFILIATE_DISCLOSURE_TEXT =
   "Como asociados de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste adicional para ti y nos ayuda a mantener el contenido de la web.";
 

@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema } from "@/lib/seo/schema";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { GOOGLE_SITE_VERIFICATION, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
+import { GOOGLE_ADS_ID, GOOGLE_SITE_VERIFICATION, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import { GA_ID } from "@/lib/analytics/ga";
 
 const geistSans = Geist({
@@ -32,19 +32,22 @@ export const metadata: Metadata = {
   },
 };
 
+const GOOGLE_TAG_IDS = [GA_ID, GOOGLE_ADS_ID].filter(Boolean);
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <JsonLd data={organizationSchema()} />
-        {GA_ID && (
+        {GOOGLE_TAG_IDS.length > 0 && (
           <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="ga4-init" strategy="afterInteractive">
+            {/* Una sola etiqueta de Google (gtag.js): un config por cada producto (GA4, Google Ads...). */}
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_IDS[0]}`} strategy="afterInteractive" />
+            <Script id="google-tag-init" strategy="afterInteractive">
               {`window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GA_ID}');
+                ${GOOGLE_TAG_IDS.map((id) => `gtag('config', '${id}');`).join("\n                ")}
                 window.gtag = gtag;`}
             </Script>
           </>
