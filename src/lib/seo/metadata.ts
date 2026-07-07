@@ -20,7 +20,7 @@ export function buildMetadata({
   title,
   description,
   path,
-  image = "/images/og/default-og.svg",
+  image = "/images/og/default-og.jpg",
   type = "website",
   noIndex = false,
 }: BuildMetadataInput): Metadata {

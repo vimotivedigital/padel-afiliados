@@ -8,7 +8,7 @@ export const articles: Article[] = [
     excerpt:
       "Elegir la primera pala genera muchas dudas: forma, balance, peso, dureza... En esta guía explicamos qué mirar realmente cuando empiezas a jugar y qué errores evitar.",
     category: "Guías",
-    coverImage: "/images/articles/article-placeholder.svg",
+    coverImage: "/images/articles/como-elegir-tu-primera-pala.jpg",
     author: "Redacción Voleador",
     publishedAt: "2026-03-01",
     updatedAt: "2026-06-05",

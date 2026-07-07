@@ -1,8 +1,18 @@
+import Image from "next/image";
 import { LinkButton } from "@/components/ui/Button";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden rounded-3xl bg-brand-primary-dark text-white">
+      <Image
+        src="/images/hero/hero-court.jpg"
+        alt="Jugador de pádel golpeando la bola en pista"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover opacity-40"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-primary-dark via-brand-primary-dark/80 to-brand-primary-dark/40" aria-hidden />
       <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-primary/60 blur-2xl" aria-hidden />
       <div className="absolute -bottom-16 right-10 h-40 w-40 rounded-full bg-brand-accent/30 blur-xl" aria-hidden />
       <div className="relative mx-auto max-w-3xl px-6 py-16 text-center sm:py-20">
