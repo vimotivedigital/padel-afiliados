@@ -12,7 +12,7 @@ export const zapatillas: Zapatilla[] = [
     rating: 4.6,
     reviewCount: 142,
     editorRating: 8.8,
-    images: ["/images/products/zapatilla-placeholder.svg"],
+    images: ["/images/products/asics-gel-padel-pro-5.jpg"],
     shortDescription:
       "Zapatilla polivalente con amortiguación de gel, pensada para pistas rápidas y jugadores de pisada neutra.",
     description:
@@ -22,7 +22,7 @@ export const zapatillas: Zapatilla[] = [
     editorReview:
       "Es una de las zapatillas más equilibradas para jugadores que entrenan 2-3 veces por semana: aguanta bien el desgaste y protege la articulación en los frenazos.",
     faqs: [],
-    asin: "B0B56XNY31",
+    asin: "B0BN3JW755",
     featured: true,
     hasFullReview: false,
     publishedAt: "2026-03-05",
