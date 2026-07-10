@@ -203,7 +203,7 @@ export interface Article {
   publishedAt: string;
   updatedAt: string;
   readingMinutes: number;
-  sections: { heading: string; content: string }[];
+  sections: { heading: string; content: string; productSlugs?: string[] }[];
   faqs?: Faq[];
   relatedSlugs?: string[];
 }

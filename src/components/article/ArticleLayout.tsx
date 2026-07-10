@@ -1,8 +1,24 @@
+import Link from "next/link";
 import Image from "next/image";
 import type { Article } from "@/engine/types";
 import { ArticleToc } from "./ArticleToc";
 import { Faq } from "@/components/product/Faq";
+import { ProductCard } from "@/components/product/ProductCard";
+import { findProductBySlugAnyCategory } from "@/lib/products";
+import { getArticleBySlug } from "@/lib/content";
+import { getProgrammaticPage } from "@/lib/seo/programmatic-pages";
 import { formatDate, slugify } from "@/lib/utils";
+
+/** Resuelve un slug de relatedSlugs contra guías/variantes de selector o artículos, para poder enlazarlo con un título legible. */
+function resolveRelatedLink(slug: string): { href: string; label: string } {
+  const article = getArticleBySlug(slug);
+  if (article) return { href: `/blog/${slug}`, label: article.title };
+
+  const page = getProgrammaticPage(slug);
+  if (page) return { href: `/${slug}`, label: page.title };
+
+  return { href: `/${slug}`, label: slug.replace(/-/g, " ") };
+}
 
 export function ArticleLayout({ article }: { article: Article }) {
   return (
@@ -28,16 +44,50 @@ export function ArticleLayout({ article }: { article: Article }) {
       <div className="grid gap-10 lg:grid-cols-[1fr_260px]">
         <div className="prose-article max-w-none">
           <p className="text-lg text-muted">{article.excerpt}</p>
-          {article.sections.map((section) => (
-            <section key={section.heading} id={slugify(section.heading)}>
-              <h2>{section.heading}</h2>
-              <p>{section.content}</p>
-            </section>
-          ))}
+          {article.sections.map((section) => {
+            const products = section.productSlugs
+              ?.map((slug) => findProductBySlugAnyCategory(slug))
+              .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
+            return (
+              <section key={section.heading} id={slugify(section.heading)}>
+                <h2>{section.heading}</h2>
+                <p>{section.content}</p>
+                {products && products.length > 0 && (
+                  <div className="not-prose my-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {products.map((product) => (
+                      <ProductCard key={product.id} product={product} />
+                    ))}
+                  </div>
+                )}
+              </section>
+            );
+          })}
 
           {article.faqs && (
             <div className="mt-10">
               <Faq faqs={article.faqs} />
+            </div>
+          )}
+
+          {article.relatedSlugs && article.relatedSlugs.length > 0 && (
+            <div className="not-prose mt-10">
+              <h2 className="text-xl font-bold">También te puede interesar</h2>
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {article.relatedSlugs.map((slug) => {
+                  const { href, label } = resolveRelatedLink(slug);
+                  return (
+                    <li key={slug}>
+                      <Link
+                        href={href}
+                        className="block rounded-2xl border border-border p-4 font-medium capitalize hover:border-brand-primary hover:text-brand-primary"
+                      >
+                        {label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           )}
         </div>
