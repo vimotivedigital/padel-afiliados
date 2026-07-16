@@ -198,4 +198,27 @@ export const brands: Brand[] = [
     technologies: [],
     faqs: [],
   },
+  {
+    slug: "joma",
+    name: "Joma",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca española de material deportivo con una gama de pádel centrada en calzado, y una primera pala en el catálogo.",
+    history:
+      "Joma es una marca española de material deportivo con larga trayectoria en fútbol y running, que en los últimos años ha ampliado su catálogo al pádel con zapatillas técnicas y alguna pala de iniciación.",
+    country: "España",
+    technologies: [],
+    faqs: [
+      { question: "¿Joma es una marca especializada en pádel?", answer: "No es su origen: Joma viene del mundo del fútbol y el running, y su catálogo de pádel es todavía más reducido que el de marcas especializadas como Nox o Bullpadel." },
+    ],
+  },
+  {
+    slug: "barcelona-padel-tour",
+    name: "Barcelona Padel Tour",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca de ropa técnica de pádel con camisetas de secado rápido y estampados propios.",
+    history:
+      "Barcelona Padel Tour es una marca centrada en ropa técnica de pádel, con camisetas de poliéster de secado rápido y un estampado propio reconocible, sin la trayectoria histórica de otras marcas del catálogo.",
+    technologies: [],
+    faqs: [],
+  },
 ];
