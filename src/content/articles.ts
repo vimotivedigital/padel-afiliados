@@ -481,7 +481,6 @@ export const articles: Article[] = [
         heading: "Vigila el desgaste de la suela como indicador de pisada",
         content:
           "El patrón de desgaste te dice mucho: si se desgasta más por el borde interior, es señal de pisada pronadora, información útil para elegir tu siguiente par.",
-        productSlugs: ["bullpadel-vertex-23"],
       },
     ],
     faqs: [
@@ -510,7 +509,6 @@ export const articles: Article[] = [
         heading: "La ropa técnica suele tallar más ajustada",
         content:
           "A diferencia de una camiseta de algodón normal, la ropa técnica de pádel está pensada para un ajuste ceñido al cuerpo que facilite el movimiento sin holguras, así que muchas marcas recomiendan pedir una talla por encima de la habitual.",
-        productSlugs: ["bullpadel-camiseta-tech"],
       },
       {
         heading: "Diferencias entre marcas",

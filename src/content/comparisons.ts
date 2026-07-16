@@ -71,37 +71,6 @@ export const comparisons: Comparison[] = [
     updatedAt: "2026-07-03",
   },
   {
-    slug: "adidas-adizero-ubersonic-4-vs-bullpadel-vertex-23",
-    title: "Adidas Adizero Ubersonic 4 vs Bullpadel Vertex 23",
-    h1: "Adidas Adizero Ubersonic 4 vs Bullpadel Vertex 23: las mejores zapatillas de gama alta",
-    category: "zapatillas",
-    productSlugs: ["adidas-adizero-ubersonic-4-padel", "bullpadel-vertex-23"],
-    intro:
-      "Dos de las zapatillas de gama alta más valoradas del catálogo, con filosofías distintas: velocidad extrema frente a estabilidad lateral reforzada. Comparamos para ayudarte a elegir según tu tipo de pisada.",
-    prosA: ["Extremadamente ligera", "Muy buena respuesta en arranques rápidos"],
-    consA: ["Amortiguación algo justa para sesiones muy largas", "Menos recomendable para pisada pronadora"],
-    prosB: ["Muy buena estabilidad lateral", "Amortiguación equilibrada para sesiones largas"],
-    consB: ["Algo más pesada que la gama pensada para velocidad", "Precio por encima de la media"],
-    whoShouldBuyA:
-      "Jugadores de pisada neutra y estilo rápido que priorizan sentir la pista y ganar los primeros pasos hacia la bola.",
-    whoShouldBuyB:
-      "Jugadores de pisada pronadora o que necesitan un extra de soporte lateral en los cambios de dirección bruscos.",
-    verdict: {
-      winnerSlug: "bullpadel-vertex-23",
-      summary:
-        "Depende directamente de tu tipo de pisada: si eres pronador, la Vertex 23 es la opción más segura a largo plazo. Si tienes pisada neutra y priorizas la velocidad, la Adizero Ubersonic 4 es difícil de superar. En términos de versatilidad para la mayoría de jugadores, nos decantamos ligeramente por la Vertex 23.",
-    },
-    faqs: [
-      {
-        question: "¿Cómo sé si tengo pisada pronadora?",
-        answer:
-          "La forma más fiable es revisar el desgaste de tus zapatillas actuales: si se desgastan más por el borde interior de la suela, es probable que tengas pisada pronadora. Ante la duda, un podólogo deportivo puede confirmarlo con un análisis de pisada.",
-      },
-    ],
-    publishedAt: "2026-07-04",
-    updatedAt: "2026-07-04",
-  },
-  {
     slug: "babolat-technical-viper-2024-vs-adidas-metalbone-3-3",
     title: "Babolat Technical Viper 2024 vs Adidas Metalbone 3.3",
     h1: "Babolat Technical Viper 2024 vs Adidas Metalbone 3.3: duelo de gama superpremium",
