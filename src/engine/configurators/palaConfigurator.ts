@@ -9,7 +9,7 @@ export const palaConfigurator: Configurator<Pala> = {
   categoryLabel: "pala de pádel",
   urlSlug: "selector-pala",
   intro:
-    "Responde a estas 11 preguntas sobre tu nivel, tu forma de jugar y tu presupuesto y te diremos qué palas se ajustan mejor a ti, con el porcentaje de compatibilidad de cada una.",
+    "Responde a estas 8 preguntas sobre tu nivel, tu forma de jugar y tu presupuesto y te diremos qué palas se ajustan mejor a ti, con el porcentaje de compatibilidad de cada una.",
   dataset: palas,
   resultsTitle: "Tus palas recomendadas",
   buildCriteria: buildPalaCriteria,
@@ -79,16 +79,6 @@ export const palaConfigurator: Configurator<Pala> = {
       ],
     },
     {
-      id: "nivelFisico",
-      title: "¿Cómo es tu nivel físico?",
-      type: "single",
-      options: [
-        { value: "bajo", label: "Bajo" },
-        { value: "medio", label: "Medio" },
-        { value: "alto", label: "Alto" },
-      ],
-    },
-    {
       id: "presupuesto",
       title: "¿Cuál es tu presupuesto?",
       type: "single",
@@ -98,28 +88,6 @@ export const palaConfigurator: Configurator<Pala> = {
         { value: "100-150", label: "100-150 €" },
         { value: "150-250", label: "150-250 €" },
         { value: "mas-250", label: "Más de 250 €" },
-      ],
-    },
-    {
-      id: "forma",
-      title: "¿Qué forma prefieres?",
-      type: "single",
-      options: [
-        { value: "redonda", label: "Redonda" },
-        { value: "lagrima", label: "Lágrima" },
-        { value: "diamante", label: "Diamante" },
-        { value: "no_lo_se", label: "No lo sé" },
-      ],
-    },
-    {
-      id: "peso",
-      title: "¿Qué peso prefieres?",
-      type: "single",
-      options: [
-        { value: "ligera", label: "Ligera" },
-        { value: "media", label: "Media" },
-        { value: "pesada", label: "Pesada" },
-        { value: "sin_preferencia", label: "Sin preferencia" },
       ],
     },
     {

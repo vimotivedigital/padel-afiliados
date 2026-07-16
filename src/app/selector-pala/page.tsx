@@ -4,7 +4,7 @@ import { SelectorPageTemplate } from "@/components/templates/SelectorPageTemplat
 
 export const metadata: Metadata = buildMetadata({
   title: "Selector de pala de pádel: encuentra tu pala ideal",
-  description: "Responde 11 preguntas sobre tu nivel, estilo de juego y presupuesto y te diremos qué palas encajan mejor contigo.",
+  description: "Responde 8 preguntas sobre tu nivel, estilo de juego y presupuesto y te diremos qué palas encajan mejor contigo.",
   path: "/selector-pala",
 });
 

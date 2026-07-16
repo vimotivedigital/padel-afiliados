@@ -3,7 +3,7 @@ import type { ScoringCriterion } from "../scoring/scoreEngine";
 import type { Answers, HardFilter } from "../configurators/types";
 
 /**
- * Traduce las respuestas del wizard "/selector-pala" (11 pasos) en criterios
+ * Traduce las respuestas del wizard "/selector-pala" (8 pasos) en criterios
  * de puntuación ponderados sobre el dataset de palas. Esta es la única pieza
  * que conoce el vocabulario del pádel; el motor de scoring solo ve
  * atributos, pesos y objetivos.
@@ -37,10 +37,52 @@ const PESO_TARGET: Record<string, number> = {
   pesada: 365,
 };
 
-const NIVEL_FISICO_A_POTENCIA: Record<string, number> = {
-  bajo: 4,
-  medio: 6,
-  alto: 8,
+/**
+ * `forma`, `peso` y "nivel físico" (potencia) ya no se preguntan
+ * directamente: se infieren de `nivel` y `estiloJuego`, que sí son datos
+ * que cualquier jugador conoce de sí mismo sin experiencia previa. Los
+ * mapeos de abajo están calculados contra el dataset real de palas (ver
+ * commit que introduce esta inferencia): tanto `nivel` como `estiloJuego`
+ * correlacionan con `potencia` de forma monótona, así que se mantienen
+ * ambas señales — `estiloJuego` con el peso principal (0.5, como antes) y
+ * `nivel` como señal secundaria más débil (0.3) en vez de perder la
+ * dimensión de potencia por completo.
+ */
+const ESTILO_A_FORMA: Record<string, string> = {
+  defensivo: "redonda",
+  control: "redonda",
+  equilibrado: "lagrima",
+  potencia: "diamante",
+  agresivo: "diamante",
+};
+
+const NIVEL_A_PESO_BUCKET: Record<string, string> = {
+  nunca_he_jugado: "ligera",
+  principiante: "ligera",
+  intermedio: "media",
+  avanzado: "pesada",
+  competicion: "pesada",
+};
+
+// Potencia media real por nivel en el dataset: iniciación 4.6, principiante
+// 4.5, intermedio 5.9, avanzado 7.2, competición 8.1 — correlación clara,
+// aunque menos marcada que la de estiloJuego (3.0 a 8.4).
+const NIVEL_A_POTENCIA: Record<string, number> = {
+  nunca_he_jugado: 4,
+  principiante: 4,
+  intermedio: 6,
+  avanzado: 7,
+  competicion: 8,
+};
+
+// Potencia media real por estiloJuego: defensivo 3.0, control 4.8,
+// equilibrado 6.3, potencia 8.2, agresivo 8.4.
+const ESTILO_A_POTENCIA: Record<string, number> = {
+  defensivo: 3,
+  control: 5,
+  equilibrado: 6,
+  potencia: 8,
+  agresivo: 8,
 };
 
 function single(answers: Answers, id: string): string | undefined {
@@ -87,17 +129,52 @@ export function buildPalaCriteria(answers: Answers): ScoringCriterion<Pala>[] {
       weight: 1,
       label: "estilo de juego",
     });
+
+    // La potencia ya no se pregunta directamente ("nivel físico"): se
+    // infiere del estilo de juego, que es la señal más fuerte y fiable.
+    if (ESTILO_A_POTENCIA[estilo] !== undefined) {
+      criteria.push({
+        attribute: "potencia",
+        type: "numeric",
+        target: ESTILO_A_POTENCIA[estilo],
+        tolerance: 3,
+        weight: 0.5,
+        label: "potencia acorde a tu estilo de juego",
+      });
+    }
+
+    if (ESTILO_A_FORMA[estilo]) {
+      criteria.push({
+        attribute: "forma",
+        type: "categorical",
+        target: ESTILO_A_FORMA[estilo],
+        weight: 0.5,
+        label: "forma acorde a tu estilo de juego",
+      });
+    }
   }
 
-  const nivelFisico = single(answers, "nivelFisico");
-  if (nivelFisico) {
+  // Señal secundaria de potencia: nivel también correlaciona (más débil que
+  // estiloJuego), así que se suma con menos peso en vez de perderse.
+  if (nivel && NIVEL_A_POTENCIA[nivel] !== undefined) {
     criteria.push({
       attribute: "potencia",
       type: "numeric",
-      target: NIVEL_FISICO_A_POTENCIA[nivelFisico] ?? 6,
+      target: NIVEL_A_POTENCIA[nivel],
       tolerance: 3,
+      weight: 0.3,
+      label: "potencia acorde a tu nivel de juego",
+    });
+  }
+
+  if (nivel && NIVEL_A_PESO_BUCKET[nivel] && PESO_TARGET[NIVEL_A_PESO_BUCKET[nivel]]) {
+    criteria.push({
+      attribute: "pesoGramos",
+      type: "numeric",
+      target: PESO_TARGET[NIVEL_A_PESO_BUCKET[nivel]],
+      tolerance: 12,
       weight: 0.5,
-      label: "potencia acorde a tu nivel físico",
+      label: "peso acorde a tu nivel de juego",
     });
   }
 
@@ -111,29 +188,6 @@ export function buildPalaCriteria(answers: Answers): ScoringCriterion<Pala>[] {
       tolerance: range.tolerance,
       weight: 0.9,
       label: "ajuste a tu presupuesto",
-    });
-  }
-
-  const forma = single(answers, "forma");
-  if (forma && forma !== "no_lo_se") {
-    criteria.push({
-      attribute: "forma",
-      type: "categorical",
-      target: forma,
-      weight: 0.5,
-      label: "forma preferida",
-    });
-  }
-
-  const peso = single(answers, "peso");
-  if (peso && peso !== "sin_preferencia" && PESO_TARGET[peso]) {
-    criteria.push({
-      attribute: "pesoGramos",
-      type: "numeric",
-      target: PESO_TARGET[peso],
-      tolerance: 12,
-      weight: 0.5,
-      label: "peso preferido",
     });
   }
 
