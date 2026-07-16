@@ -2,14 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import type { RecommendationItem } from "@/engine/recommendation/recommend";
 import type { Product } from "@/engine/types";
+import type { LivePrice } from "@/lib/pricing/getProductPrice";
 import { Rating } from "@/components/ui/Rating";
 import { Badge } from "@/components/ui/Badge";
 import { AmazonCTA } from "@/components/product/AmazonCTA";
 import { formatPrice } from "@/lib/utils";
 
-export function ResultCard({ result, rank }: { result: RecommendationItem<Product>; rank: number }) {
+export function ResultCard({
+  result,
+  rank,
+  livePrice,
+}: {
+  result: RecommendationItem<Product>;
+  rank: number;
+  livePrice?: LivePrice | null;
+}) {
   const { product, score } = result;
   const href = `/${product.category}/${product.slug}`;
+  const price = livePrice ? livePrice.priceCurrent : product.price;
 
   return (
     <article className="relative flex flex-col gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
@@ -47,7 +57,7 @@ export function ResultCard({ result, rank }: { result: RecommendationItem<Produc
         </div>
 
         <div className="mt-4 flex flex-wrap items-center gap-4">
-          <span className="text-xl font-bold">{formatPrice(product.price)}</span>
+          <span className="text-xl font-bold">{formatPrice(price)}</span>
           <AmazonCTA asin={product.asin} productName={product.name} />
           <Link href={href} className="text-sm font-medium text-brand-primary hover:underline">
             Ver ficha completa

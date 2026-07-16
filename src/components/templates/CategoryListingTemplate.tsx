@@ -1,5 +1,6 @@
 import type { Category } from "@/engine/types";
 import { getProductsByCategory } from "@/lib/products";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
@@ -9,7 +10,7 @@ import { sortProducts } from "@/lib/utils";
 
 const PAGE_SIZE = 12;
 
-export function CategoryListingTemplate({
+export async function CategoryListingTemplate({
   category,
   sort,
   page,
@@ -23,6 +24,7 @@ export function CategoryListingTemplate({
   const currentPage = page && page > 0 ? page : 1;
   const totalPages = Math.max(1, Math.ceil(allProducts.length / PAGE_SIZE));
   const products = allProducts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const prices = await getProductPrices(products.map((p) => p.asin));
 
   return (
     <div className="space-y-6">
@@ -37,7 +39,7 @@ export function CategoryListingTemplate({
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} livePrice={prices.get(product.asin)} />
           ))}
         </div>
       )}

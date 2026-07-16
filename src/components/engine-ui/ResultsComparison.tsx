@@ -1,8 +1,15 @@
 import type { RecommendationItem } from "@/engine/recommendation/recommend";
 import type { Product } from "@/engine/types";
+import type { LivePrice } from "@/lib/pricing/getProductPrice";
 import { formatPrice } from "@/lib/utils";
 
-export function ResultsComparison({ results }: { results: RecommendationItem<Product>[] }) {
+export function ResultsComparison({
+  results,
+  priceMap,
+}: {
+  results: RecommendationItem<Product>[];
+  priceMap?: Map<string, LivePrice>;
+}) {
   if (results.length < 2) return null;
 
   return (
@@ -17,14 +24,18 @@ export function ResultsComparison({ results }: { results: RecommendationItem<Pro
           </tr>
         </thead>
         <tbody>
-          {results.map(({ product, score }) => (
-            <tr key={product.id} className="border-b border-border last:border-0 odd:bg-black/[0.015]">
-              <td className="px-4 py-3 font-medium">{product.name}</td>
-              <td className="px-4 py-3">{score}%</td>
-              <td className="px-4 py-3">{product.rating.toFixed(1)} / 5</td>
-              <td className="px-4 py-3 font-semibold">{formatPrice(product.price)}</td>
-            </tr>
-          ))}
+          {results.map(({ product, score }) => {
+            const live = priceMap?.get(product.asin);
+            const price = live ? live.priceCurrent : product.price;
+            return (
+              <tr key={product.id} className="border-b border-border last:border-0 odd:bg-black/[0.015]">
+                <td className="px-4 py-3 font-medium">{product.name}</td>
+                <td className="px-4 py-3">{score}%</td>
+                <td className="px-4 py-3">{product.rating.toFixed(1)} / 5</td>
+                <td className="px-4 py-3 font-semibold">{formatPrice(price)}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

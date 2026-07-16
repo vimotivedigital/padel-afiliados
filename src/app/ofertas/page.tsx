@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { getOnSaleProducts } from "@/lib/products";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
 import { AffiliateDisclosure } from "@/components/product/AffiliateDisclosure";
@@ -11,8 +12,9 @@ export const metadata: Metadata = buildMetadata({
   path: "/ofertas",
 });
 
-export default function OfertasPage() {
+export default async function OfertasPage() {
   const products = getOnSaleProducts(50);
+  const prices = await getProductPrices(products.map((p) => p.asin));
 
   return (
     <div className="space-y-6">
@@ -25,7 +27,7 @@ export default function OfertasPage() {
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} livePrice={prices.get(product.asin)} />
           ))}
         </div>
       )}

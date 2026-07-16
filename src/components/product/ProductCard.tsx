@@ -1,14 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/engine/types";
+import type { LivePrice } from "@/lib/pricing/getProductPrice";
 import { Rating } from "@/components/ui/Rating";
 import { Badge } from "@/components/ui/Badge";
 import { AmazonCTA } from "@/components/product/AmazonCTA";
 import { formatPrice } from "@/lib/utils";
 
-export function ProductCard({ product, matchScore }: { product: Product; matchScore?: number }) {
+/**
+ * `livePrice` es opcional: si el llamante ya resolvió el precio en vivo
+ * (Supabase, vía Keepa) se lo pasa aquí para que la tarjeta muestre
+ * exactamente el mismo precio que la ficha de producto (`PriceDisplay`).
+ * Si no se pasa (o no hay fila en `product_prices`), cae de vuelta al
+ * precio del dataset, igual que hacía antes.
+ */
+export function ProductCard({
+  product,
+  matchScore,
+  livePrice,
+}: {
+  product: Product;
+  matchScore?: number;
+  livePrice?: LivePrice | null;
+}) {
   const href = `/${product.category}/${product.slug}`;
-  const price = product.onSale && product.salePrice ? product.salePrice : product.price;
+  const datasetPrice = product.onSale && product.salePrice ? product.salePrice : product.price;
+  const price = livePrice ? livePrice.priceCurrent : datasetPrice;
+  const previousPrice = livePrice
+    ? livePrice.pricePrevious
+    : product.onSale && product.salePrice
+      ? product.price
+      : null;
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-lg">
@@ -36,8 +58,8 @@ export function ProductCard({ product, matchScore }: { product: Product; matchSc
 
         <div className="mt-auto flex items-center justify-between gap-3 pt-2">
           <div>
-            {product.onSale && product.salePrice && (
-              <span className="mr-2 text-sm text-muted line-through">{formatPrice(product.price)}</span>
+            {previousPrice && previousPrice > price && (
+              <span className="mr-2 text-sm text-muted line-through">{formatPrice(previousPrice)}</span>
             )}
             <span className="text-lg font-bold">{formatPrice(price)}</span>
           </div>

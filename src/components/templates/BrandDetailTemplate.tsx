@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { Brand } from "@/engine/types";
 import { getProductsByBrand } from "@/lib/products";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Faq } from "@/components/product/Faq";
 
-export function BrandDetailTemplate({ brand, path }: { brand: Brand; path: string }) {
+export async function BrandDetailTemplate({ brand, path }: { brand: Brand; path: string }) {
   const products = getProductsByBrand(brand.name);
+  const prices = await getProductPrices(products.map((p) => p.asin));
 
   return (
     <div className="space-y-10">
@@ -55,7 +57,7 @@ export function BrandDetailTemplate({ brand, path }: { brand: Brand; path: strin
         ) : (
           <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} livePrice={prices.get(product.asin)} />
             ))}
           </div>
         )}

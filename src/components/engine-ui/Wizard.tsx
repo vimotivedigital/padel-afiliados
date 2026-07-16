@@ -7,6 +7,7 @@ import type { Answers } from "@/engine/configurators/types";
 import type { Product } from "@/engine/types";
 import { sendGAEvent } from "@/lib/analytics/ga";
 import { useUserProfile } from "@/lib/hooks/useUserProfile";
+import { useLivePrices } from "@/lib/pricing/useLivePrices";
 import { WizardProgress } from "./WizardProgress";
 import { QuestionCard } from "./QuestionCard";
 import { AnswerSummary } from "./AnswerSummary";
@@ -42,6 +43,17 @@ export function Wizard({ configuratorId, initialAnswers }: { configuratorId: str
   const totalSteps = configurator.questions.length;
   const currentQuestion = configurator.questions[stepIndex];
 
+  const topProduct = output?.results[0]?.product;
+  const crossSell = useMemo(
+    () => (topProduct && configurator.buildCrossSell ? configurator.buildCrossSell(topProduct, answers) : []),
+    [topProduct, configurator, answers]
+  );
+  const resultAsins = useMemo(
+    () => [...(output?.results.map((r) => r.product.asin) ?? []), ...crossSell.map((p) => p.asin)],
+    [output, crossSell]
+  );
+  const livePrices = useLivePrices(resultAsins);
+
   const handleAnswer = (value: string | string[]) => {
     const nextAnswers = { ...answers, [currentQuestion.id]: value };
     setAnswers(nextAnswers);
@@ -68,10 +80,6 @@ export function Wizard({ configuratorId, initialAnswers }: { configuratorId: str
   };
 
   if (output) {
-    const topProduct = output.results[0]?.product;
-    const crossSell =
-      topProduct && configurator.buildCrossSell ? configurator.buildCrossSell(topProduct, answers) : [];
-
     return (
       <div className="space-y-8">
         <div className="rounded-2xl border-2 border-brand-primary/20 bg-brand-primary/5 p-5">
@@ -81,11 +89,11 @@ export function Wizard({ configuratorId, initialAnswers }: { configuratorId: str
 
         <div className="space-y-4">
           {output.results.map((result, i) => (
-            <ResultCard key={result.product.id} result={result} rank={i + 1} />
+            <ResultCard key={result.product.id} result={result} rank={i + 1} livePrice={livePrices.get(result.product.asin)} />
           ))}
         </div>
 
-        <ResultsComparison results={output.results} />
+        <ResultsComparison results={output.results} priceMap={livePrices} />
 
         <AnswerSummary questions={configurator.questions} answers={answers} />
 
@@ -94,7 +102,7 @@ export function Wizard({ configuratorId, initialAnswers }: { configuratorId: str
           <RestartButton onRestart={handleRestart} />
         </div>
 
-        {crossSell.length > 0 && <RelatedProducts products={crossSell} />}
+        {crossSell.length > 0 && <RelatedProducts products={crossSell} priceMap={livePrices} />}
       </div>
     );
   }

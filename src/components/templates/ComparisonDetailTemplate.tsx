@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Comparison } from "@/engine/types";
 import { findProductBySlugAnyCategory } from "@/lib/products";
 import { buildSpecRows } from "@/lib/specs";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ComparisonTable } from "@/components/comparison/ComparisonTable";
 import { ProsConsBox } from "@/components/product/ProsConsBox";
@@ -10,11 +11,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/seo/schema";
 import { formatDate } from "@/lib/utils";
 
-export function ComparisonDetailTemplate({ comparison, path }: { comparison: Comparison; path: string }) {
+export async function ComparisonDetailTemplate({ comparison, path }: { comparison: Comparison; path: string }) {
   const [slugA, slugB] = comparison.productSlugs;
   const productA = findProductBySlugAnyCategory(slugA);
   const productB = findProductBySlugAnyCategory(slugB);
   if (!productA || !productB) notFound();
+
+  const prices = await getProductPrices([productA.asin, productB.asin]);
 
   const specsA = buildSpecRows(productA);
   const specsB = buildSpecRows(productB);
@@ -38,7 +41,13 @@ export function ComparisonDetailTemplate({ comparison, path }: { comparison: Com
         <p className="mt-4 text-lg text-muted">{comparison.intro}</p>
       </header>
 
-      <ComparisonTable productA={productA} productB={productB} rows={rows} />
+      <ComparisonTable
+        productA={productA}
+        productB={productB}
+        rows={rows}
+        priceA={prices.get(productA.asin)}
+        priceB={prices.get(productB.asin)}
+      />
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div>

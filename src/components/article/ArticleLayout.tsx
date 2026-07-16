@@ -7,6 +7,7 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { findProductBySlugAnyCategory } from "@/lib/products";
 import { getArticleBySlug } from "@/lib/content";
 import { getProgrammaticPage } from "@/lib/seo/programmatic-pages";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { formatDate, slugify } from "@/lib/utils";
 
 /** Resuelve un slug de relatedSlugs contra guías/variantes de selector o artículos, para poder enlazarlo con un título legible. */
@@ -20,7 +21,13 @@ function resolveRelatedLink(slug: string): { href: string; label: string } {
   return { href: `/${slug}`, label: slug.replace(/-/g, " ") };
 }
 
-export function ArticleLayout({ article }: { article: Article }) {
+export async function ArticleLayout({ article }: { article: Article }) {
+  const allEmbeddedAsins = article.sections
+    .flatMap((section) => section.productSlugs ?? [])
+    .map((slug) => findProductBySlugAnyCategory(slug)?.asin)
+    .filter((asin): asin is string => Boolean(asin));
+  const prices = await getProductPrices(allEmbeddedAsins);
+
   return (
     <article>
       <header className="mb-8">
@@ -56,7 +63,7 @@ export function ArticleLayout({ article }: { article: Article }) {
                 {products && products.length > 0 && (
                   <div className="not-prose my-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {products.map((product) => (
-                      <ProductCard key={product.id} product={product} />
+                      <ProductCard key={product.id} product={product} livePrice={prices.get(product.asin)} />
                     ))}
                   </div>
                 )}

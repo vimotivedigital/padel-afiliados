@@ -2,6 +2,7 @@ import type { Overgrip, Pelota, Product, Protector } from "@/engine/types";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { buildSpecRows } from "@/lib/specs";
 import { getSimilarProducts } from "@/lib/products";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { buildCrossSellPack } from "@/engine/recommendation/crossSell";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Rating } from "@/components/ui/Rating";
@@ -18,7 +19,7 @@ import { PriceDisplay } from "@/components/product/PriceDisplay";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema } from "@/lib/seo/schema";
 
-export function ProductDetailTemplate({ product, path }: { product: Product; path: string }) {
+export async function ProductDetailTemplate({ product, path }: { product: Product; path: string }) {
   const label = CATEGORY_LABELS[product.category];
   const similar = getSimilarProducts(product, 4);
   const crossSell: Product[] =
@@ -27,6 +28,7 @@ export function ProductDetailTemplate({ product, path }: { product: Product; pat
           (p): p is Overgrip | Protector | Pelota => Boolean(p)
         )
       : [];
+  const prices = await getProductPrices([...similar, ...crossSell].map((p) => p.asin));
 
   return (
     <div className="space-y-10">
@@ -68,9 +70,9 @@ export function ProductDetailTemplate({ product, path }: { product: Product; pat
 
       <Faq faqs={product.faqs} />
 
-      {crossSell.length > 0 && <RelatedProducts products={crossSell} />}
+      {crossSell.length > 0 && <RelatedProducts products={crossSell} priceMap={prices} />}
 
-      <SimilarProducts products={similar} />
+      <SimilarProducts products={similar} priceMap={prices} />
     </div>
   );
 }

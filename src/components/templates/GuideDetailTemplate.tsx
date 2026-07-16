@@ -1,12 +1,14 @@
 import type { GuidePage } from "@/lib/seo/programmatic-pages";
 import { getGuideProducts } from "@/lib/seo/programmatic-pages";
+import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Faq } from "@/components/product/Faq";
 
-export function GuideDetailTemplate({ guide, path }: { guide: GuidePage; path: string }) {
+export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; path: string }) {
   const products = getGuideProducts(guide);
+  const prices = await getProductPrices(products.map((p) => p.asin));
   const categoryLabel = CATEGORY_LABELS[guide.category];
 
   return (
@@ -32,7 +34,7 @@ export function GuideDetailTemplate({ guide, path }: { guide: GuidePage; path: s
               <span className="absolute -left-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-white">
                 {index + 1}
               </span>
-              <ProductCard product={product} />
+              <ProductCard product={product} livePrice={prices.get(product.asin)} />
             </li>
           ))}
         </ol>
