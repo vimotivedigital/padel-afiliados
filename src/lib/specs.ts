@@ -22,6 +22,15 @@ const LESION_LABELS: Record<string, string> = {
  * de cada categoría. Es el único sitio que "conoce" los campos extra de cada
  * subtipo de producto; el componente <SpecsTable> es genérico.
  */
+/**
+ * `pesoGramos: 0` es el sentinel para "no verificado todavía" (Keepa no
+ * siempre lo reporta) — nunca es un peso real, así que la fila se omite en
+ * vez de mostrar "0 g", con el mismo criterio que rating/reviewCount.
+ */
+function pesoRow(pesoGramos: number): Spec[] {
+  return pesoGramos > 0 ? [{ label: "Peso", value: `${pesoGramos} g` }] : [];
+}
+
 export function buildSpecRows(product: Product): Spec[] {
   const common: Spec[] = [
     { label: "Marca", value: product.brand },
@@ -36,7 +45,7 @@ export function buildSpecRows(product: Product): Spec[] {
         { label: "Estilo de juego", value: product.estiloJuego },
         { label: "Forma", value: product.forma },
         { label: "Balance", value: product.balance },
-        { label: "Peso", value: `${product.pesoGramos} g` },
+        ...pesoRow(product.pesoGramos),
         { label: "Dureza", value: `${product.dureza}/10` },
         { label: "Potencia", value: `${product.potencia}/10` },
         { label: "Control", value: `${product.control}/10` },
@@ -58,7 +67,7 @@ export function buildSpecRows(product: Product): Spec[] {
         { label: "Amortiguación", value: `${product.amortiguacion}/10` },
         { label: "Estabilidad", value: `${product.estabilidad}/10` },
         { label: "Agarre", value: `${product.agarre}/10` },
-        { label: "Peso", value: `${product.pesoGramos} g` },
+        ...pesoRow(product.pesoGramos),
         { label: "Tallas disponibles", value: product.tallasDisponibles.join(", ") },
       ];
     case "paleteros":
@@ -93,7 +102,7 @@ export function buildSpecRows(product: Product): Spec[] {
     case "protectores":
       return [
         ...common,
-        { label: "Peso", value: `${product.pesoGramos} g` },
+        ...pesoRow(product.pesoGramos),
         { label: "Grosor", value: `${product.grosorMm} mm` },
         { label: "Nivel de protección", value: `${product.nivelProteccion}/10` },
         { label: "Formas compatibles", value: product.compatibleFormas.join(", ") },

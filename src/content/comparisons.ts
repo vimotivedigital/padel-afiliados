@@ -46,68 +46,6 @@ export const comparisons: Comparison[] = [
     updatedAt: "2026-06-10",
   },
   {
-    slug: "adidas-metalbone-33-vs-bullpadel-hack-03",
-    title: "Adidas Metalbone 3.3 vs Bullpadel Hack 03",
-    h1: "Adidas Metalbone 3.3 vs Bullpadel Hack 03: duelo de gama alta",
-    category: "palas",
-    productSlugs: ["adidas-metalbone-3-3", "bullpadel-hack-03"],
-    intro:
-      "Dos de las palas de potencia más agresivas de la gama alta actual, ambas pensadas para jugadores de nivel avanzado con estilo ofensivo. Comparamos sus diferencias para ayudarte a elegir entre las dos.",
-    prosA: ["Pegada muy elevada en el remate", "Materiales de gama alta con muy buena sensación de solidez"],
-    consA: ["Punto dulce reducido", "Exige buena técnica para no sufrir en la muñeca"],
-    prosB: ["Estilo agresivo con muy buena salida de bola", "Construcción muy rígida orientada a competición"],
-    consB: ["Tacto duro, poco indulgente con golpes descentrados", "Precio elevado"],
-    whoShouldBuyA:
-      "Jugadores avanzados que ya conocen la gama Metalbone y buscan la máxima potencia sin cambiar de familia de pala.",
-    whoShouldBuyB:
-      "Jugadores de competición con técnica consolidada que priorizan un estilo agresivo por encima de la comodidad.",
-    verdict: {
-      winnerSlug: "adidas-metalbone-3-3",
-      summary:
-        "Ambas son palas de gama alta muy exigentes, pensadas exclusivamente para nivel avanzado o competición. La Metalbone 3.3 se lleva una ligera ventaja por ofrecer un punto dulce algo más manejable sin renunciar a la potencia, aunque la Hack 03 es igual de válida para quien prioriza un estilo puramente agresivo.",
-    },
-    faqs: [
-      {
-        question: "¿Alguna de las dos es recomendable para nivel intermedio?",
-        answer:
-          "No es lo ideal: ambas son palas muy exigentes técnicamente. Para nivel intermedio recomendamos opciones más equilibradas como la Lok Rebel Pro o la Head Extreme Pro.",
-      },
-    ],
-    publishedAt: "2026-07-01",
-    updatedAt: "2026-07-01",
-  },
-  {
-    slug: "babolat-air-viper-vs-siux-tsunami-2-pro",
-    title: "Babolat Air Viper vs Siux Tsunami 2 Pro",
-    h1: "Babolat Air Viper vs Siux Tsunami 2 Pro: control contra potencia",
-    category: "palas",
-    productSlugs: ["babolat-air-viper", "siux-tsunami-2-pro"],
-    intro:
-      "Dos filosofías de juego opuestas: la Air Viper prioriza el control y la comodidad articular, mientras que la Tsunami 2 Pro busca la máxima potencia. Te ayudamos a decidir según tu estilo de juego.",
-    prosA: ["Muy cómoda para el brazo, recomendable con molestias articulares", "Control muy preciso en la definición de puntos"],
-    consA: ["Pegada limitada en el remate", "Poco recomendable para estilos muy ofensivos"],
-    prosB: ["Pegada muy elevada en el remate", "Buena salida de bola en golpes de ataque"],
-    consB: ["Tacto duro, poco recomendable con molestias en el codo", "Punto dulce reducido"],
-    whoShouldBuyA:
-      "Jugadores que priorizan el control y la salud articular sobre la potencia, o que ya tienen molestias en codo o muñeca.",
-    whoShouldBuyB:
-      "Jugadores de estilo agresivo, sin molestias articulares, que buscan maximizar la pegada en el remate.",
-    verdict: {
-      winnerSlug: "babolat-air-viper",
-      summary:
-        "No hay un ganador claro porque son palas para perfiles de juego opuestos. Si tuviéramos que recomendar una por su mayor versatilidad y menor riesgo de lesión a largo plazo, nos quedamos con la Air Viper, aunque la Tsunami 2 Pro es la opción lógica para quien prioriza la potencia sobre todo lo demás.",
-    },
-    faqs: [
-      {
-        question: "¿Cuál es mejor si tengo epicondilitis (codo de tenista)?",
-        answer:
-          "Sin duda la Air Viper: su tacto más blando y su núcleo pensado para absorber vibración la hacen mucho más recomendable si tienes molestias en el codo.",
-      },
-    ],
-    publishedAt: "2026-07-02",
-    updatedAt: "2026-07-02",
-  },
-  {
     slug: "head-extreme-pro-vs-head-speed-motion",
     title: "Head Extreme Pro vs Head Speed Motion",
     h1: "Head Extreme Pro vs Head Speed Motion: misma marca, distinta gama",

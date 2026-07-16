@@ -155,4 +155,47 @@ export const brands: Brand[] = [
     technologies: [],
     faqs: [],
   },
+  {
+    slug: "munich",
+    name: "Munich",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca española de calzado deportivo con una línea específica de zapatillas de pádel (PADX).",
+    history:
+      "Munich es una marca catalana con más de un siglo de historia en calzado deportivo, tradicionalmente asociada al fútbol sala. En los últimos años ha extendido su línea PADX al pádel, aplicando su experiencia en calzado de suela técnica a este deporte.",
+    country: "España",
+    technologies: [],
+    faqs: [],
+  },
+  {
+    slug: "dunlop",
+    name: "Dunlop",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca británica histórica del deporte de raqueta, con una gama de pádel centrada en la accesibilidad.",
+    history:
+      "Dunlop es una marca centenaria nacida en Reino Unido, tradicionalmente asociada al tenis y al golf. Su entrada en el pádel aprovecha esa experiencia en materiales de raqueta para ofrecer un catálogo orientado sobre todo al jugador de iniciación y nivel medio.",
+    country: "Reino Unido",
+    technologies: [],
+    faqs: [],
+  },
+  {
+    slug: "k-swiss",
+    name: "K-Swiss",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca estadounidense histórica del calzado de tenis, con modelos adaptados al pádel.",
+    history:
+      "K-Swiss es una marca estadounidense fundada en California con una larga trayectoria en calzado de tenis. Su gama Ultra Court y Express Light traslada al pádel la experiencia acumulada en calzado de pista dura para deportes de raqueta.",
+    country: "Estados Unidos",
+    technologies: [],
+    faqs: [],
+  },
+  {
+    slug: "palbea",
+    name: "Palbea",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca de accesorios de pádel centrada en overgrips y protectores de pala.",
+    history:
+      "Palbea es una marca especializada en accesorios de pádel de consumo, con un catálogo centrado en overgrips y protectores de pala vendidos en packs de varias unidades.",
+    technologies: [],
+    faqs: [],
+  },
 ];

@@ -324,13 +324,13 @@ export const articles: Article[] = [
         heading: "Lágrima: el término medio",
         content:
           "La forma lágrima desplaza algo de peso hacia la cabeza sin llegar al extremo de la diamante, buscando un equilibrio entre punto dulce amplio y algo más de pegada. Es la forma más habitual en palas de gama media pensadas para nivel intermedio.",
-        productSlugs: ["lok-rebel-pro", "head-extreme-pro"],
+        productSlugs: ["head-extreme-pro", "nox-x-zero"],
       },
       {
         heading: "Diamante: máxima potencia, punto dulce reducido",
         content:
           "En la forma diamante el peso se concentra en la parte superior de la cabeza, lo que multiplica la potencia en el golpeo pero reduce el margen de error: los golpes descentrados se notan mucho más que en una redonda. Exige buena técnica y suele ir asociada a niveles avanzados.",
-        productSlugs: ["black-crown-piton-5-0", "adidas-metalbone-3-3"],
+        productSlugs: ["nox-at10-genius-18k", "bullpadel-vertex-04"],
       },
       {
         heading: "Entonces, ¿qué forma elijo?",
@@ -422,7 +422,7 @@ export const articles: Article[] = [
         heading: "El material influye, y mucho",
         content:
           "Una pala dura, pesada y con balance alto transmite más vibración al brazo en cada golpeo. Cambiar a una pala más ligera, de núcleo blando y balance bajo o medio puede reducir notablemente esa transmisión, aunque no sustituye una buena técnica.",
-        productSlugs: ["babolat-air-viper"],
+        productSlugs: ["babolat-technical-veron"],
       },
       {
         heading: "El overgrip y el encordado también cuentan",
