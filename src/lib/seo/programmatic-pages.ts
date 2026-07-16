@@ -234,6 +234,104 @@ export const programmaticPages: ProgrammaticPage[] = [
     faqs: [],
   },
   {
+    type: "guide",
+    slug: "mejores-pelotas-competicion",
+    title: "Las mejores pelotas de competición",
+    h1: "Las mejores pelotas de competición de pádel",
+    category: "pelotas",
+    intro:
+      "Pelotas pensadas para partidos serios y competición, con una presión y durabilidad de bote pensadas para aguantar varios sets sin perder prestaciones.",
+    filter: (p) => p.category === "pelotas" && p.uso === "competicion",
+    sortBy: byEditorRating,
+    faqs: [
+      {
+        question: "¿Cuántos partidos aguanta una pelota de competición antes de perder presión?",
+        answer:
+          "Como referencia general, entre 2 y 3 partidos de nivel competitivo, aunque varía según la marca y las condiciones de la pista.",
+      },
+    ],
+  },
+  {
+    type: "guide",
+    slug: "mejores-pelotas-calidad-precio",
+    title: "Las mejores pelotas calidad-precio",
+    h1: "Las mejores pelotas calidad-precio de pádel",
+    category: "pelotas",
+    intro:
+      "Ordenamos el catálogo de pelotas por relación entre valoración editorial y precio, para encontrar las que más rinden por cada euro.",
+    sortBy: byValueForMoney,
+    faqs: [],
+  },
+  {
+    type: "guide",
+    slug: "mejores-overgrips",
+    title: "Los mejores overgrips de pádel",
+    h1: "Los mejores overgrips de pádel",
+    category: "overgrips",
+    intro:
+      "El catálogo completo de overgrips ordenado por valoración editorial, con opciones para todo tipo de sudoración y preferencia de tacto.",
+    sortBy: byEditorRating,
+    faqs: [
+      {
+        question: "¿Cada cuánto hay que cambiar el overgrip?",
+        answer:
+          "Si juegas 2-3 veces por semana, entre 2 y 4 semanas antes de perder capacidad de absorción, aunque depende mucho de cuánto sudes de manos.",
+      },
+    ],
+  },
+  {
+    type: "guide",
+    slug: "mejores-overgrips-sudoracion",
+    title: "Los mejores overgrips para manos sudorosas",
+    h1: "Los mejores overgrips si sudas mucho de manos",
+    category: "overgrips",
+    intro:
+      "Overgrips con mayor absorción de sudor del catálogo, pensados para quien nota que la pala se le escapa de las manos en partidos largos.",
+    filter: (p) => p.category === "overgrips" && p.absorcionSudor >= 7,
+    sortBy: byEditorRating,
+    faqs: [],
+  },
+  {
+    type: "guide",
+    slug: "mejores-protectores",
+    title: "Los mejores protectores de pala",
+    h1: "Los mejores protectores de pala de pádel",
+    category: "protectores",
+    intro:
+      "El catálogo completo de protectores de marco ordenado por valoración editorial, para proteger tu pala de los golpes bajos sin penalizar el peso.",
+    sortBy: byEditorRating,
+    faqs: [],
+  },
+  {
+    type: "guide",
+    slug: "mejores-camisetas-padel",
+    title: "Las mejores camisetas de pádel",
+    h1: "Las mejores camisetas de pádel",
+    category: "ropa",
+    intro:
+      "Camisetas técnicas de pádel ordenadas por valoración editorial, de gama de entrada a camisetas oficiales de jugadores profesionales.",
+    filter: (p) => p.category === "ropa" && p.tipo === "camiseta",
+    sortBy: byEditorRating,
+    faqs: [],
+  },
+  {
+    type: "guide",
+    slug: "regalos-para-jugadores-de-padel",
+    title: "Ideas de regalo para jugadores de pádel",
+    h1: "Ideas de regalo para jugadores de pádel",
+    category: "accesorios",
+    intro:
+      "Accesorios de pádel pensados como regalo: gorras, toallas, grips antivibración y otros complementos que cualquier jugador agradece, ordenados por valoración editorial.",
+    sortBy: byEditorRating,
+    faqs: [
+      {
+        question: "¿Qué accesorio es un acierto seguro si no sé el nivel del jugador?",
+        answer:
+          "Los accesorios genéricos (gorra, toalla) son más seguros como regalo que los técnicos (grip antivibración, overgrips específicos), que dependen más de las preferencias de juego de cada persona.",
+      },
+    ],
+  },
+  {
     type: "selector-variant",
     slug: "selector-pala-principiante",
     configuratorId: "pala",

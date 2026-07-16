@@ -533,4 +533,273 @@ export const articles: Article[] = [
     ],
     relatedSlugs: ["cuidados-basicos-zapatillas-padel"],
   },
+  {
+    slug: "paletero-segun-numero-de-palas",
+    title: "Qué paletero necesitas según cuántas palas juegues",
+    h1: "Qué paletero necesitas según cuántas palas juegues",
+    excerpt:
+      "No todos los paleteros están pensados para lo mismo: si juegas solo, en pareja habitual o entrenas con más gente, la capacidad que necesitas cambia. Te ayudamos a elegir según tu caso.",
+    category: "Guías",
+    coverImage: "/images/articles/paletero-numero-palas.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 5,
+    sections: [
+      {
+        heading: "Si juegas con una sola pala habitual",
+        content:
+          "Con una pala de uso principal (y quizá una de repuesto ocasional), un paletero de 2 palas es suficiente. No tiene sentido cargar con espacio de sobra que no vas a usar — un paletero pequeño también pesa menos vacío.",
+        productSlugs: ["bullpadel-mochila-xplo", "wilson-mochila-de-padel-tour"],
+      },
+      {
+        heading: "Si sueles llevar pala de repuesto o juegas en pareja fija",
+        content:
+          "A partir de 3 palas ya tiene sentido pensar en compartimento térmico, sobre todo si vas directo de casa a la pista con temperaturas extremas. Es el rango donde más opciones intermedias hay en el catálogo.",
+        productSlugs: ["nox-paletero-street-series", "bullpadel-mochila-hack"],
+      },
+      {
+        heading: "Si entrenas con frecuencia o compites",
+        content:
+          "Para 4 palas o más, busca compartimento térmico y zapatillero independiente — a este nivel de uso, la organización interna importa tanto como la capacidad bruta.",
+        productSlugs: ["nox-paletero-at10-competition-xl-compact", "nox-paletero-ml10-competition-xl-compact"],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Un paletero muy grande resta algo si solo llevo 2 palas?",
+        answer:
+          "Sobre todo peso extra y espacio desaprovechado. No hay problema funcional en usar un paletero grande medio vacío, pero si viajas mucho a pie hasta la pista, uno ajustado a tu uso real pesa menos.",
+      },
+    ],
+    relatedSlugs: ["mejores-paleteros", "mejores-paleteros-termicos", "nox-paletero-at10-vs-ml10-competition-xl-compact"],
+  },
+  {
+    slug: "overgrip-vs-grip-original-padel",
+    title: "Overgrip vs grip original: cuándo y por qué cambiarlo",
+    h1: "Overgrip vs grip original de la pala: cuándo y por qué cambiarlo",
+    excerpt:
+      "El grip original que trae la pala de fábrica no está pensado para durar toda la vida útil de la pala. Explicamos la diferencia con el overgrip y cuándo merece la pena tocar cada uno.",
+    category: "Guías",
+    coverImage: "/images/articles/overgrip-vs-grip-original.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 5,
+    sections: [
+      {
+        heading: "El grip original: la base, no el repuesto habitual",
+        content:
+          "El grip de fábrica va pegado directamente al mango y está pensado para aguantar meses, no semanas. Cambiarlo es más laborioso (hay que retirar el anterior por completo) y no es algo que debas hacer con la frecuencia de un overgrip.",
+      },
+      {
+        heading: "El overgrip: el que sí cambias con regularidad",
+        content:
+          "El overgrip va encima del grip original y es el que realmente absorbe el desgaste del día a día — sudor, roce, pérdida de adherencia. Es barato, rápido de cambiar y pensado para sustituirse cada pocas semanas de uso frecuente.",
+        productSlugs: ["siux-pro-perforated-x60", "nerusgrip-pack-6"],
+      },
+      {
+        heading: "Señales de que toca cambiar cada uno",
+        content:
+          "Si el overgrip se ha quedado liso, pegajoso de forma desagradable o se despega en los bordes, toca cambiarlo — es normal y frecuente. Si notas el mango original duro, agrietado o con zonas hundidas por el uso, ahí sí hay que ir al grip base, algo mucho menos habitual.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Puedo poner overgrip directamente sin haber cambiado nunca el grip original?",
+        answer:
+          "Sí, de hecho es lo más habitual: la mayoría de jugadores nunca llegan a cambiar el grip original porque el overgrip absorbe casi todo el desgaste diario antes de que el de fábrica se resienta.",
+      },
+    ],
+    relatedSlugs: ["mejores-overgrips", "mejores-overgrips-sudoracion", "nerusgrip-pack-6-vs-siux-pro-perforated-x60"],
+  },
+  {
+    slug: "mantenimiento-material-padel",
+    title: "Cómo cuidar y mantener tu material de pádel",
+    h1: "Cómo cuidar y mantener tu material de pádel",
+    excerpt:
+      "Pala, zapatillas, protector y overgrip no se cuidan igual. Repasamos lo básico para que tu equipo dure más sin gastar en mantenimiento innecesario.",
+    category: "Guías",
+    coverImage: "/images/articles/mantenimiento-material-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 6,
+    sections: [
+      {
+        heading: "La pala: evita cambios bruscos de temperatura",
+        content:
+          "Dejar la pala en el maletero del coche en pleno verano o invierno acelera el envejecimiento del núcleo más que el propio uso en pista. Si tu paletero tiene compartimento térmico, es precisamente para esto.",
+      },
+      {
+        heading: "El protector de marco: revísalo antes de que sea tarde",
+        content:
+          "Un protector despegado en una esquina no protege nada — revísalo cada pocas semanas y cámbialo en cuanto veas que empieza a levantarse, no cuando ya se ha caído del todo.",
+        productSlugs: ["palbea-protector-pala-transparente", "ebbom-protector-vinilo-calandrado"],
+      },
+      {
+        heading: "Las zapatillas: no las uses fuera de la pista",
+        content:
+          "Usar las zapatillas de pádel para el día a día desgasta la suela mucho más rápido de lo que lo haría solo jugando — están pensadas para el agarre en césped artificial o cemento poroso, no para asfalto.",
+      },
+      {
+        heading: "El overgrip: el mantenimiento más barato y más olvidado",
+        content:
+          "Es el elemento que menos cuesta reponer y el que más se descuida. Un overgrip degradado obliga a apretar más fuerte para no perder agarre, lo que acaba trasladando tensión extra al brazo.",
+      },
+    ],
+    faqs: [],
+    relatedSlugs: ["mejores-protectores", "cuidados-basicos-zapatillas-padel", "overgrip-vs-grip-original-padel"],
+  },
+  {
+    slug: "ideas-regalo-jugadores-de-padel",
+    title: "Ideas de regalo para jugadores de pádel",
+    h1: "Ideas de regalo para jugadores de pádel",
+    excerpt:
+      "Si no conoces bien el nivel o las preferencias de juego de la persona, hay regalos de pádel que son un acierto casi seguro y otros que es mejor evitar. Te lo explicamos.",
+    category: "Guías",
+    coverImage: "/images/articles/ideas-regalo-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 4,
+    sections: [
+      {
+        heading: "Aciertos seguros: accesorios genéricos",
+        content:
+          "Una gorra, una toalla o un spray de agarre son regalos que cualquier jugador puede usar independientemente de su nivel o de la pala con la que juegue — no dependen de preferencias técnicas específicas.",
+        productSlugs: ["toalla-bullpadel-premier-padel", "mibandera-gorra-bandera-espana", "araclinch-spray-grip-padel"],
+      },
+      {
+        heading: "Con más riesgo: overgrips y protectores",
+        content:
+          "Son útiles pero dependen del gusto de cada jugador (tacto liso o perforado, nivel de absorción) — un buen regalo solo si sabes qué suele usar la persona habitualmente.",
+      },
+      {
+        heading: "Evitar salvo que lo pidan expresamente: la pala",
+        content:
+          "Es la decisión más personal de todo el equipo — depende del nivel, el estilo de juego y hasta molestias físicas concretas. Regalar una pala sin consultar es el error más habitual y caro.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Un vale o tarjeta regalo es mejor opción que un producto concreto?",
+        answer:
+          "Si tienes dudas sobre el nivel o las preferencias de juego de la persona, sí — sobre todo para cualquier cosa relacionada con la pala en sí.",
+      },
+    ],
+    relatedSlugs: ["regalos-para-jugadores-de-padel", "mejores-protectores", "mejores-overgrips"],
+  },
+  {
+    slug: "pelotas-padel-presion-duracion-cuando-cambiarlas",
+    title: "Pelotas de pádel: presión, duración y cuándo cambiarlas",
+    h1: "Pelotas de pádel: presión, duración y cuándo cambiarlas",
+    excerpt:
+      "Una pelota de pádel no dura para siempre, y notarlo a mitad de partido no es agradable. Explicamos qué influye en su duración y cuándo merece la pena abrir un bote nuevo.",
+    category: "Guías",
+    coverImage: "/images/articles/pelotas-presion-duracion.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 5,
+    sections: [
+      {
+        heading: "Por qué una pelota pierde presión con el uso",
+        content:
+          "Cada impacto libera una pequeña cantidad de la presión interna del bote. Es un proceso normal e inevitable, no un defecto — la velocidad a la que ocurre depende de la calidad del fieltro y de cuánto se juega.",
+      },
+      {
+        heading: "Competición vs entrenamiento: no es solo marketing",
+        content:
+          "Las pelotas de competición suelen mantener mejor la presión durante más tiempo, lo que se nota en partidos largos. Para entrenar, una pelota de gama de entrenamiento es perfectamente válida y más económica.",
+        productSlugs: ["dunlop-pro-padel", "dunlop-team-padel"],
+      },
+      {
+        heading: "Señales de que toca abrir un bote nuevo",
+        content:
+          "Si notas que la pelota bota claramente más bajo que al principio del partido, o que cuesta más generar velocidad con el mismo golpe, ha perdido presión — no esperes a que sea evidente para todos en la pista.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cuántos partidos aguanta un bote de pelotas de media?",
+        answer:
+          "Como referencia general, entre 2 y 3 partidos de nivel competitivo con pelotas de gama de competición; con pelotas de entrenamiento, la caída de presión suele notarse algo antes.",
+      },
+    ],
+    relatedSlugs: ["mejores-pelotas-competicion", "mejores-pelotas-calidad-precio", "nox-pro-titanium-vs-wilson-premier-padel-speed"],
+  },
+  {
+    slug: "camiseta-tecnica-padel-que-mirar",
+    title: "Camiseta técnica de pádel: qué mirar antes de comprar",
+    h1: "Camiseta técnica de pádel: qué mirar antes de comprar",
+    excerpt:
+      "No todas las camisetas de pádel están pensadas para lo mismo: hay diferencias reales entre una técnica de tejido sintético y una de algodón, más allá del precio o la marca.",
+    category: "Guías",
+    coverImage: "/images/articles/camiseta-tecnica-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 4,
+    sections: [
+      {
+        heading: "Poliéster y mezclas técnicas: la opción mayoritaria",
+        content:
+          "La mayoría de camisetas técnicas de pádel usan poliéster o mezclas con elastano, pensadas para evacuar el sudor y secarse rápido durante el partido. Es la opción más lógica si juegas con intensidad.",
+        productSlugs: ["nox-camiseta-at10-agustin-tapia-2026", "head-camiseta-we-are-padel"],
+      },
+      {
+        heading: "Algodón: más tacto, menos rendimiento técnico",
+        content:
+          "Alguna opción del catálogo prioriza el algodón sobre las mezclas técnicas — un tacto más agradable a costa de retener más la humedad durante el ejercicio intenso. Tiene sentido si priorizas la comodidad de tacto sobre el rendimiento puro en sudoración.",
+        productSlugs: ["babolat-camiseta-padel-men"],
+      },
+      {
+        heading: "Camisetas oficiales de jugador: el extra de precio",
+        content:
+          "Las camisetas vinculadas a un jugador o jugadora profesional suelen costar más que el resto del catálogo de la misma marca, sin que eso implique necesariamente un tejido técnicamente superior — el extra de precio es sobre todo por la licencia de marca.",
+      },
+    ],
+    faqs: [],
+    relatedSlugs: ["mejores-camisetas-padel", "nox-camiseta-at10-tapia-vs-bullpadel-camiseta-edrar-triay"],
+  },
+  {
+    slug: "protector-de-pala-merece-la-pena",
+    title: "Protector de pala: ¿merece la pena y cuál elegir?",
+    h1: "Protector de pala de pádel: ¿merece la pena y cuál elegir?",
+    excerpt:
+      "Es de los accesorios más baratos de todo el equipo, pero también de los que más se pasan por alto. Explicamos por qué merece la pena y qué diferencia a unos protectores de otros.",
+    category: "Guías",
+    coverImage: "/images/articles/protector-pala-merece-la-pena.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+    readingMinutes: 4,
+    sections: [
+      {
+        heading: "Por qué merece la pena, aunque cueste poco",
+        content:
+          "Un protector de pocos euros evita que los golpes bajos (habituales en la volea baja y la salida de pared) desgasten directamente el marco de la pala, que es mucho más caro de reparar o sustituir.",
+      },
+      {
+        heading: "Transparente vs acabado dentado o de vinilo",
+        content:
+          "La mayoría de protectores del catálogo son transparentes, pensados para no alterar el diseño de la pala. Algunas opciones usan acabados más agresivos (vinilo calandrado, dentado) que declaran mayor protección a cambio de ser más visibles.",
+        productSlugs: ["palbea-protector-pala-transparente", "ebbom-protector-vinilo-calandrado"],
+      },
+      {
+        heading: "Cuándo cambiarlo",
+        content:
+          "En cuanto veas que empieza a despegarse por una esquina, no esperes a que se caiga del todo — un protector parcialmente despegado deja precisamente la zona de más impacto sin cubrir.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿El protector afecta al peso o al tacto de la pala?",
+        answer:
+          "El peso añadido es mínimo (la mayoría ronda los 10g), prácticamente imperceptible en el juego. No debería notarse ningún cambio relevante de tacto.",
+      },
+    ],
+    relatedSlugs: ["mejores-protectores", "ebbom-vinilo-calandrado-vs-palbea-protector-transparente"],
+  },
 ];
