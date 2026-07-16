@@ -12,7 +12,7 @@ import { config } from "dotenv";
 import path from "node:path";
 import { getRealAsins, syncKeepaPrices } from "../src/lib/pricing/syncKeepaPrices";
 
-config({ path: path.resolve(__dirname, "../.env.local") });
+config({ path: path.resolve(__dirname, "../.env.local"), quiet: true });
 
 async function main() {
   const asins = getRealAsins();
