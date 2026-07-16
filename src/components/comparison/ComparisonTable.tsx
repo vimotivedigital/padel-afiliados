@@ -24,7 +24,7 @@ export function ComparisonTable({ productA, productB, rows }: { productA: Produc
                     <Image src={product.images[0]} alt={product.name} fill sizes="64px" className="object-contain" />
                   </div>
                   <span className="font-semibold">{product.name}</span>
-                  <Rating value={product.rating} count={product.reviewCount} />
+                  {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} />}
                   <span className="font-bold">{formatPrice(product.price)}</span>
                   <AmazonCTA asin={product.asin} productName={product.name} size="sm" />
                 </div>

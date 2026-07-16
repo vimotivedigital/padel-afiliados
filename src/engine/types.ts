@@ -48,6 +48,8 @@ export interface BaseProduct {
   hasFullReview?: boolean;
   publishedAt: string;
   updatedAt: string;
+  /** Nota editorial interna, nunca renderizada en el frontend (ver grep "internalNotes" antes de usarla en UI). */
+  internalNotes?: string;
 }
 
 export type Nivel =

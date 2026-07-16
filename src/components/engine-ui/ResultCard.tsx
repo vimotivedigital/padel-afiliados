@@ -30,7 +30,7 @@ export function ResultCard({ result, rank }: { result: RecommendationItem<Produc
         <Link href={href} className="mt-1 block text-lg font-bold hover:text-brand-primary">
           {product.name}
         </Link>
-        <Rating value={product.rating} count={product.reviewCount} className="mt-1" />
+        {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} className="mt-1" />}
         <p className="mt-2 text-sm text-muted">{product.shortDescription}</p>
 
         <div className="mt-3 grid gap-3 sm:grid-cols-2">

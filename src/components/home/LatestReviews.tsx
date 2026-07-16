@@ -23,7 +23,7 @@ export function LatestReviews() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-muted">{product.brand}</p>
               <p className="font-semibold">{product.name}</p>
-              <Rating value={product.rating} count={product.reviewCount} className="mt-1" />
+              {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} className="mt-1" />}
             </div>
           </Link>
         ))}

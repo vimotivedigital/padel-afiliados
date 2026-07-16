@@ -45,7 +45,7 @@ export function ProductDetailTemplate({ product, path }: { product: Product; pat
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-primary">{product.brand}</p>
           <h1 className="text-3xl font-extrabold leading-tight">{product.name}</h1>
-          <Rating value={product.rating} count={product.reviewCount} />
+          {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} />}
           <p className="text-muted">{product.shortDescription}</p>
 
           <PriceDisplay product={product} />

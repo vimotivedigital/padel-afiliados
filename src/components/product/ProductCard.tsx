@@ -31,7 +31,7 @@ export function ProductCard({ product, matchScore }: { product: Product; matchSc
         <Link href={href} className="font-semibold leading-snug hover:text-brand-primary">
           {product.name}
         </Link>
-        <Rating value={product.rating} count={product.reviewCount} />
+        {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} />}
         <p className="line-clamp-2 text-sm text-muted">{product.shortDescription}</p>
 
         <div className="mt-auto flex items-center justify-between gap-3 pt-2">
