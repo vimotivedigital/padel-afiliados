@@ -24,7 +24,8 @@ export interface SyncResult {
 interface KeepaProduct {
   asin: string;
   title?: string;
-  imagesCSV?: string;
+  /** Cada entrada trae el nombre de fichero en el CDN de Amazon (m.media-amazon.com/images/I/<archivo>), no una URL completa. */
+  images?: { l?: string; m?: string }[];
   stats?: {
     current?: number[];
   };
@@ -133,7 +134,7 @@ export async function syncKeepaPrices(): Promise<SyncResult> {
 
       const ratingRaw = current[17];
       const reviewCountRaw = current[18];
-      const firstImage = product.imagesCSV?.split(",")[0];
+      const firstImage = product.images?.[0]?.l ?? product.images?.[0]?.m;
 
       const { error } = await supabase.from("product_prices").upsert(
         {

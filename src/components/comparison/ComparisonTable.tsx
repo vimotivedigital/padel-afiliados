@@ -39,7 +39,7 @@ export function ComparisonTable({
               <th key={product.id} className="px-4 py-4 text-left">
                 <div className="flex flex-col items-start gap-2">
                   <div className="relative h-16 w-16 shrink-0">
-                    <Image src={product.images[0]} alt={product.name} fill sizes="64px" className="object-contain" />
+                    <Image src={live?.imageUrl ?? product.images[0]} alt={product.name} fill sizes="64px" className="object-contain" />
                   </div>
                   <span className="font-semibold">{product.name}</span>
                   {product.reviewCount > 0 && <Rating value={product.rating} count={product.reviewCount} />}

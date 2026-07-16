@@ -20,6 +20,7 @@ export function ResultCard({
   const { product, score } = result;
   const href = `/${product.category}/${product.slug}`;
   const price = livePrice ? livePrice.priceCurrent : product.price;
+  const imageSrc = livePrice?.imageUrl ?? product.images[0];
 
   return (
     <article className="relative flex flex-col gap-4 rounded-2xl border border-border bg-surface p-5 sm:flex-row">
@@ -29,7 +30,7 @@ export function ResultCard({
         </span>
       )}
       <Link href={href} className="relative mx-auto h-32 w-32 shrink-0 sm:mx-0">
-        <Image src={product.images[0]} alt={product.name} fill sizes="128px" className="object-contain" />
+        <Image src={imageSrc} alt={product.name} fill sizes="128px" className="object-contain" />
       </Link>
 
       <div className="flex-1">

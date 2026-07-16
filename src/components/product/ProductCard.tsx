@@ -24,6 +24,7 @@ export function ProductCard({
   livePrice?: LivePrice | null;
 }) {
   const href = `/${product.category}/${product.slug}`;
+  const imageSrc = livePrice?.imageUrl ?? product.images[0];
   const datasetPrice = product.onSale && product.salePrice ? product.salePrice : product.price;
   const price = livePrice ? livePrice.priceCurrent : datasetPrice;
   const previousPrice = livePrice
@@ -36,7 +37,7 @@ export function ProductCard({
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-lg">
       <Link href={href} className="relative block aspect-square bg-black/[0.03]">
         <Image
-          src={product.images[0]}
+          src={imageSrc}
           alt={product.name}
           fill
           sizes="(max-width: 768px) 50vw, 25vw"

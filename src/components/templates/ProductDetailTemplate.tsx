@@ -2,6 +2,7 @@ import type { Overgrip, Pelota, Product, Protector } from "@/engine/types";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { buildSpecRows } from "@/lib/specs";
 import { getSimilarProducts } from "@/lib/products";
+import { getProductPrice } from "@/lib/pricing/getProductPrice";
 import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { buildCrossSellPack } from "@/engine/recommendation/crossSell";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -29,6 +30,10 @@ export async function ProductDetailTemplate({ product, path }: { product: Produc
         )
       : [];
   const prices = await getProductPrices([...similar, ...crossSell].map((p) => p.asin));
+  const mainLive = await getProductPrice(product.asin);
+  // Solo tenemos una foto real por producto (la principal de Keepa), no una
+  // galería completa — si existe, sustituye al placeholder en vez de convivir con él.
+  const galleryImages = mainLive?.imageUrl ? [mainLive.imageUrl] : product.images;
 
   return (
     <div className="space-y-10">
@@ -42,7 +47,7 @@ export async function ProductDetailTemplate({ product, path }: { product: Produc
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <ProductGallery images={product.images} name={product.name} />
+        <ProductGallery images={galleryImages} name={product.name} />
 
         <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-primary">{product.brand}</p>
