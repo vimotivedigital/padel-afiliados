@@ -14,9 +14,9 @@ import { AffiliateDisclosure } from "@/components/product/AffiliateDisclosure";
 import { SimilarProducts } from "@/components/product/SimilarProducts";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { Faq } from "@/components/product/Faq";
+import { PriceDisplay } from "@/components/product/PriceDisplay";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema } from "@/lib/seo/schema";
-import { formatPrice } from "@/lib/utils";
 
 export function ProductDetailTemplate({ product, path }: { product: Product; path: string }) {
   const label = CATEGORY_LABELS[product.category];
@@ -48,14 +48,7 @@ export function ProductDetailTemplate({ product, path }: { product: Product; pat
           <Rating value={product.rating} count={product.reviewCount} />
           <p className="text-muted">{product.shortDescription}</p>
 
-          <div className="flex items-baseline gap-3">
-            {product.onSale && product.salePrice && (
-              <span className="text-lg text-muted line-through">{formatPrice(product.price)}</span>
-            )}
-            <span className="text-3xl font-extrabold">
-              {formatPrice(product.onSale && product.salePrice ? product.salePrice : product.price)}
-            </span>
-          </div>
+          <PriceDisplay product={product} />
 
           <AmazonCTA asin={product.asin} productName={product.name} size="lg" />
           <AffiliateDisclosure />

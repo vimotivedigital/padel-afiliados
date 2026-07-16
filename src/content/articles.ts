@@ -302,4 +302,235 @@ export const articles: Article[] = [
     ],
     relatedSlugs: ["selector-overgrip-sudor"],
   },
+  {
+    slug: "forma-diamante-vs-lagrima-vs-redonda-padel",
+    title: "Forma diamante, lágrima o redonda: qué diferencia hay realmente",
+    h1: "Forma diamante, lágrima o redonda: qué diferencia hay entre las palas de pádel",
+    excerpt:
+      "La forma es, junto al balance, lo que más condiciona el carácter de una pala. Explicamos qué aporta cada forma y cuál encaja mejor con cada estilo de juego.",
+    category: "Guías",
+    coverImage: "/images/articles/forma-pala-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-01",
+    updatedAt: "2026-07-01",
+    readingMinutes: 5,
+    sections: [
+      {
+        heading: "Redonda: el punto dulce más amplio",
+        content:
+          "En una pala redonda, el peso se concentra cerca del mango, lo que sitúa el punto dulce (la zona de máximo rendimiento al golpear) más cerca del centro geométrico de la pala. Es la forma que más perdona los golpes descentrados, ideal para quien empieza o prioriza el control.",
+      },
+      {
+        heading: "Lágrima: el término medio",
+        content:
+          "La forma lágrima desplaza algo de peso hacia la cabeza sin llegar al extremo de la diamante, buscando un equilibrio entre punto dulce amplio y algo más de pegada. Es la forma más habitual en palas de gama media pensadas para nivel intermedio.",
+        productSlugs: ["lok-rebel-pro", "head-extreme-pro"],
+      },
+      {
+        heading: "Diamante: máxima potencia, punto dulce reducido",
+        content:
+          "En la forma diamante el peso se concentra en la parte superior de la cabeza, lo que multiplica la potencia en el golpeo pero reduce el margen de error: los golpes descentrados se notan mucho más que en una redonda. Exige buena técnica y suele ir asociada a niveles avanzados.",
+        productSlugs: ["black-crown-piton-5-0", "adidas-metalbone-3-3"],
+      },
+      {
+        heading: "Entonces, ¿qué forma elijo?",
+        content:
+          "Como regla general: si estás empezando o priorizas cuidar el brazo, redonda. Si ya tienes cierto nivel y quieres un equilibrio entre control y pegada, lágrima. Si tu técnica está consolidada y buscas máxima potencia, diamante.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿La forma influye en el riesgo de lesión?",
+        answer:
+          "Indirectamente sí: las formas diamante, al concentrar más peso en la cabeza, suelen transmitir algo más de vibración en golpes descentrados, lo que puede agravar molestias en codo o muñeca si ya existen.",
+      },
+      {
+        question: "¿Puedo notar la diferencia de forma sin fijarme en la ficha técnica?",
+        answer:
+          "Sí, con la vista: la redonda tiene un contorno prácticamente circular, la lágrima tiene forma de gota alargada, y la diamante tiene un vértice claramente marcado hacia la parte superior.",
+      },
+    ],
+    relatedSlugs: ["pala-control-vs-potencia-cual-elegir", "mejores-palas-control", "mejores-palas-potencia"],
+  },
+  {
+    slug: "cuando-cambiar-de-pala-de-padel",
+    title: "Cuándo cambiar de pala de pádel: señales que no deberías ignorar",
+    h1: "Cuándo cambiar de pala de pádel",
+    excerpt:
+      "Una pala no dura para siempre, aunque no se rompa. Repasamos las señales que indican que tu pala ha perdido prestaciones y es momento de renovarla.",
+    category: "Guías",
+    coverImage: "/images/articles/cuando-cambiar-pala-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+    readingMinutes: 5,
+    sections: [
+      {
+        heading: "Una pala pierde prestaciones antes de romperse",
+        content:
+          "El núcleo de goma o EVA de una pala se va endureciendo con el uso y los golpes repetidos, incluso sin que aparezca ninguna grieta visible. Esa pérdida de elasticidad se traduce en menos punto dulce y menos sensación de control, aunque la pala siga pareciendo intacta por fuera.",
+      },
+      {
+        heading: "Señales claras de que toca cambiar",
+        content:
+          "Grietas o marcas blancas en el marco, un sonido más sordo al golpear comparado con cuando era nueva, o la sensación de que la bola 'no sale' igual que antes son las señales más habituales. También cuenta el desgaste del grip original y del protector, aunque esos son más baratos de sustituir por separado.",
+      },
+      {
+        heading: "Con qué frecuencia hay que renovar la pala",
+        content:
+          "Como referencia orientativa: jugando 2-3 veces por semana, entre 12 y 24 meses suele ser el ciclo de vida útil antes de notar una pérdida de prestaciones significativa. Jugadores de competición que entrenan a diario pueden notar el desgaste en pocos meses.",
+      },
+      {
+        heading: "Aprovecha para revisar tu nivel actual",
+        content:
+          "Cambiar de pala es un buen momento para reevaluar qué buscas: si tu técnica ha mejorado desde tu última compra, quizás ya puedas dar el salto a una pala más exigente en potencia sin sacrificar demasiado control.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Merece la pena reparar una pala agrietada en vez de cambiarla?",
+        answer:
+          "Para grietas superficiales existen resinas de reparación, pero si la grieta afecta al marco estructural, es más seguro y rentable a medio plazo cambiar de pala antes de que se rompa por completo durante un partido.",
+      },
+      {
+        question: "¿El protector y el overgrip cuentan como parte del ciclo de vida de la pala?",
+        answer:
+          "No directamente: son consumibles que se cambian de forma independiente y mucho más a menudo (semanas o pocos meses) que la propia pala.",
+      },
+    ],
+    relatedSlugs: ["como-elegir-tu-primera-pala-de-padel", "mejores-palas-avanzadas"],
+  },
+  {
+    slug: "epicondilitis-codo-de-tenista-en-padel-como-evitarlo",
+    title: "Cómo evitar el codo de tenista (epicondilitis) jugando al pádel",
+    h1: "Cómo evitar el codo de tenista en pádel",
+    excerpt:
+      "La epicondilitis es una de las lesiones más frecuentes entre jugadores amateur de pádel. Explicamos qué la provoca y cómo el material puede ayudar a prevenirla.",
+    category: "Guías",
+    coverImage: "/images/articles/epicondilitis-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-03",
+    updatedAt: "2026-07-03",
+    readingMinutes: 6,
+    sections: [
+      {
+        heading: "Qué es la epicondilitis y por qué es tan común en pádel",
+        content:
+          "La epicondilitis, conocida como codo de tenista, es una inflamación de los tendones del antebrazo que se insertan en el codo, provocada por la repetición de impactos y microvibraciones. En pádel es especialmente frecuente por la superficie rígida de la pala, muy distinta a una raqueta encordada que amortigua parte del impacto.",
+      },
+      {
+        heading: "El material influye, y mucho",
+        content:
+          "Una pala dura, pesada y con balance alto transmite más vibración al brazo en cada golpeo. Cambiar a una pala más ligera, de núcleo blando y balance bajo o medio puede reducir notablemente esa transmisión, aunque no sustituye una buena técnica.",
+        productSlugs: ["babolat-air-viper"],
+      },
+      {
+        heading: "El overgrip y el encordado también cuentan",
+        content:
+          "Un overgrip en mal estado obliga a apretar más fuerte el mango para no perder agarre, lo que aumenta la tensión en el antebrazo. Mantenerlo en buen estado es una medida sencilla y barata de prevención.",
+      },
+      {
+        heading: "Más allá del material: técnica y descanso",
+        content:
+          "Ningún cambio de material sustituye una técnica correcta ni el descanso necesario tras sobrecargar la zona. Si ya tienes molestias persistentes, lo recomendable es consultar con un fisioterapeuta antes de que la inflamación vaya a más.",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Qué tipo de pala se recomienda si ya tengo epicondilitis?",
+        answer:
+          "Palas ligeras (340-360g), de forma redonda, balance bajo y núcleo de goma blanda. Puedes filtrar directamente por esta lesión en nuestro selector de pala.",
+      },
+      {
+        question: "¿Una muñequera ayuda a prevenir la epicondilitis?",
+        answer:
+          "Una muñequera no actúa sobre el codo directamente, pero una coderas o bandas de compresión específicas sí pueden aliviar la tensión del tendón durante el juego, siempre como complemento y no como solución única.",
+      },
+    ],
+    relatedSlugs: ["epicondilitis-padel-como-elegir-material", "mejores-palas-epicondilitis", "selector-pala-epicondilitis"],
+  },
+  {
+    slug: "cuidados-basicos-zapatillas-padel",
+    title: "Cómo cuidar tus zapatillas de pádel para que duren más",
+    h1: "Cómo cuidar tus zapatillas de pádel para que duren más",
+    excerpt:
+      "Una zapatilla de pádel es una inversión que se puede alargar bastante con unos cuidados básicos. Repasamos los errores más comunes y cómo evitarlos.",
+    category: "Guías",
+    coverImage: "/images/articles/cuidado-zapatillas-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-04",
+    updatedAt: "2026-07-04",
+    readingMinutes: 4,
+    sections: [
+      {
+        heading: "Usa las zapatillas solo para pádel",
+        content:
+          "Es tentador usar las mismas zapatillas para el día a día, pero eso acelera muchísimo el desgaste de la suela, pensada específicamente para el agarre en pista de césped artificial o cemento poroso, no para caminar por asfalto.",
+      },
+      {
+        heading: "Dos pares en rotación, si juegas mucho",
+        content:
+          "Si entrenas o compites varias veces por semana, alternar entre dos pares permite que la espuma de la mediasuela recupere su forma entre sesión y sesión, alargando la vida útil de amortiguación de ambos pares.",
+      },
+      {
+        heading: "Sécalas bien y evita el calor directo",
+        content:
+          "Tras jugar con calor o lluvia, deja que se sequen a temperatura ambiente, lejos de radiadores o del sol directo, que pueden deformar los materiales adhesivos de la suela.",
+      },
+      {
+        heading: "Vigila el desgaste de la suela como indicador de pisada",
+        content:
+          "El patrón de desgaste te dice mucho: si se desgasta más por el borde interior, es señal de pisada pronadora, información útil para elegir tu siguiente par.",
+        productSlugs: ["bullpadel-vertex-23"],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Se pueden lavar en lavadora?",
+        answer:
+          "No se recomienda: el tambor y el centrifugado pueden dañar la estructura y los adhesivos de la zapatilla. Lo mejor es limpiarlas a mano con un cepillo suave y agua tibia.",
+      },
+    ],
+    relatedSlugs: ["zapatillas-padel-segun-tipo-pisada", "mejores-zapatillas", "mejores-zapatillas-pronador"],
+  },
+  {
+    slug: "guia-tallas-ropa-tecnica-padel",
+    title: "Guía de tallas para ropa técnica de pádel",
+    h1: "Guía de tallas para ropa técnica de pádel",
+    excerpt:
+      "Comprar ropa técnica de pádel por internet genera dudas de talla frecuentes. Te damos algunas claves para acertar a la primera.",
+    category: "Guías",
+    coverImage: "/images/articles/guia-tallas-ropa-padel.jpg",
+    author: "Redacción Voleador",
+    publishedAt: "2026-07-05",
+    updatedAt: "2026-07-05",
+    readingMinutes: 4,
+    sections: [
+      {
+        heading: "La ropa técnica suele tallar más ajustada",
+        content:
+          "A diferencia de una camiseta de algodón normal, la ropa técnica de pádel está pensada para un ajuste ceñido al cuerpo que facilite el movimiento sin holguras, así que muchas marcas recomiendan pedir una talla por encima de la habitual.",
+        productSlugs: ["bullpadel-camiseta-tech"],
+      },
+      {
+        heading: "Diferencias entre marcas",
+        content:
+          "No todas las marcas tallan igual: algunas mantienen un patronaje más europeo estándar, mientras que otras, especialmente las de origen americano, tienden a tallar algo más grande. Revisar la tabla de medidas específica de cada producto es más fiable que guiarte solo por tu talla habitual.",
+      },
+      {
+        heading: "Faldas y pantalones: el short interior importa",
+        content:
+          "En el caso de las faldas técnicas con short interior integrado, el ajuste del short suele ser más determinante que el de la propia falda a la hora de elegir talla, ya que es la parte que va más pegada al cuerpo.",
+        productSlugs: ["adidas-club-skirt-falda-mujer", "wilson-falda-team"],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Qué hago si estoy entre dos tallas?",
+        answer:
+          "Como norma general, si vas a usar la prenda para jugar (movimiento constante), es preferible pedir la talla superior antes que una prenda demasiado ajustada que limite el movimiento.",
+      },
+    ],
+    relatedSlugs: ["cuidados-basicos-zapatillas-padel"],
+  },
 ];

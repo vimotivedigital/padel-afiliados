@@ -8,6 +8,11 @@ import type { Category } from "@/engine/types";
 
 const CATEGORY_SLUGS = Object.keys(CATEGORY_LABELS) as Category[];
 
+// El precio se lee de Supabase (product_prices) en cada regeneración; ISR
+// cada hora evita servir un precio desactualizado durante mucho tiempo sin
+// convertir la página en completamente dinámica.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   return CATEGORY_SLUGS.flatMap((slug) =>
     getProductsByCategory(slug).map((product) => ({ slug, productSlug: product.slug }))
