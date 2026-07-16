@@ -221,4 +221,19 @@ export const brands: Brand[] = [
     technologies: [],
     faqs: [],
   },
+  {
+    slug: "futura8",
+    name: "FUTURA8",
+    logo: "/images/products/brand-placeholder.svg",
+    description: "Marca centrada en paleteros y pelotas de pádel, con fichas técnicas completas pese a ser reciente en el catálogo.",
+    history:
+      "FUTURA8 es una marca sin trayectoria histórica conocida, presente en el catálogo con un paletero con compartimento térmico y capacidad para 4 palas, y unas pelotas de pádel, ambos con ficha técnica (peso, material) más completa de lo habitual para una marca de esta escala.",
+    technologies: [],
+    faqs: [
+      {
+        question: "¿FUTURA8 es una marca especializada en pádel?",
+        answer: "Es una marca reciente en el catálogo, sin la trayectoria de marcas históricas como Nox o Bullpadel. Su catálogo actual se limita a un paletero y a pelotas de pádel.",
+      },
+    ],
+  },
 ];
