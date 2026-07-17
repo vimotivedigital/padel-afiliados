@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Product } from "@/engine/types";
 import { CATEGORY_LABELS } from "@/lib/constants";
+import { getProductPrice } from "@/lib/pricing/getProductPrice";
 import { buildSpecRows } from "@/lib/specs";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Rating } from "@/components/ui/Rating";
@@ -18,8 +19,10 @@ import { formatDate } from "@/lib/utils";
  * rápida), la review pone el foco en el veredicto editorial y usa el
  * schema.org Review además de Product.
  */
-export function ReviewDetailTemplate({ product, path }: { product: Product; path: string }) {
+export async function ReviewDetailTemplate({ product, path }: { product: Product; path: string }) {
   const label = CATEGORY_LABELS[product.category];
+  const livePrice = await getProductPrice(product.asin);
+  const imageSrc = livePrice?.imageUrl ?? product.images[0];
 
   return (
     <div className="space-y-10">
@@ -35,7 +38,7 @@ export function ReviewDetailTemplate({ product, path }: { product: Product; path
 
       <header className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <div className="relative h-28 w-28 shrink-0">
-          <Image src={product.images[0]} alt={product.name} fill sizes="112px" className="object-contain" />
+          <Image src={imageSrc} alt={product.name} fill sizes="112px" className="object-contain" />
         </div>
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-brand-primary">Review · {label}</p>
