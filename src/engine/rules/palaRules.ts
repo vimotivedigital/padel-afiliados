@@ -64,6 +64,22 @@ const NIVEL_A_PESO_BUCKET: Record<string, string> = {
   competicion: "pesada",
 };
 
+/**
+ * Respaldo cuando el usuario responde "Todavía no lo sé" en estiloJuego: en
+ * vez de asumir un "equilibrado" fijo (que sesgaría a todo el mundo hacia
+ * las mismas palas), `nivel` pasa de señal secundaria a señal principal
+ * para forma y potencia, con el mismo razonamiento de madurez que ya usa
+ * NIVEL_A_PESO_BUCKET (menos nivel -> más perdón/control, más nivel ->
+ * más potencia/exigencia).
+ */
+const NIVEL_A_FORMA: Record<string, string> = {
+  nunca_he_jugado: "redonda",
+  principiante: "redonda",
+  intermedio: "lagrima",
+  avanzado: "diamante",
+  competicion: "diamante",
+};
+
 // Potencia media real por nivel en el dataset: iniciación 4.6, principiante
 // 4.5, intermedio 5.9, avanzado 7.2, competición 8.1 — correlación clara,
 // aunque menos marcada que la de estiloJuego (3.0 a 8.4).
@@ -121,7 +137,9 @@ export function buildPalaCriteria(answers: Answers): ScoringCriterion<Pala>[] {
   }
 
   const estilo = single(answers, "estiloJuego");
-  if (estilo) {
+  const estiloConocido = estilo && estilo !== "no_se";
+
+  if (estiloConocido) {
     criteria.push({
       attribute: "estiloJuego",
       type: "categorical",
@@ -154,16 +172,30 @@ export function buildPalaCriteria(answers: Answers): ScoringCriterion<Pala>[] {
     }
   }
 
-  // Señal secundaria de potencia: nivel también correlaciona (más débil que
-  // estiloJuego), así que se suma con menos peso en vez de perderse.
+  // Señal de potencia desde nivel: si el estilo es conocido, nivel actúa
+  // como señal secundaria más débil (0.3, se suma a la de estilo). Si el
+  // usuario respondió "Todavía no lo sé", nivel asciende a señal principal
+  // (0.5) para no perder la dimensión de potencia por completo.
   if (nivel && NIVEL_A_POTENCIA[nivel] !== undefined) {
     criteria.push({
       attribute: "potencia",
       type: "numeric",
       target: NIVEL_A_POTENCIA[nivel],
       tolerance: 3,
-      weight: 0.3,
-      label: "potencia acorde a tu nivel de juego",
+      weight: estiloConocido ? 0.3 : 0.5,
+      label: estiloConocido ? "potencia acorde a tu nivel de juego" : "potencia estimada según tu nivel de juego",
+    });
+  }
+
+  // Forma desde nivel: solo se usa como respaldo cuando no hay estilo
+  // conocido (si lo hay, la forma ya viene de ESTILO_A_FORMA arriba).
+  if (!estiloConocido && nivel && NIVEL_A_FORMA[nivel]) {
+    criteria.push({
+      attribute: "forma",
+      type: "categorical",
+      target: NIVEL_A_FORMA[nivel],
+      weight: 0.5,
+      label: "forma estimada según tu nivel de juego",
     });
   }
 

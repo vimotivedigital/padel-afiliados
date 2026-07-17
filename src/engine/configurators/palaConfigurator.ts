@@ -76,6 +76,7 @@ export const palaConfigurator: Configurator<Pala> = {
         { value: "equilibrado", label: "Equilibrado" },
         { value: "potencia", label: "De potencia" },
         { value: "agresivo", label: "Muy agresivo" },
+        { value: "no_se", label: "Todavía no lo sé" },
       ],
     },
     {

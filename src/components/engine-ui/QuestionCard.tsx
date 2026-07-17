@@ -29,7 +29,11 @@ export function QuestionCard({ question, value, onAnswer }: QuestionCardProps) {
               onClick={() => onAnswer(option.value)}
               className={cn(
                 "rounded-2xl border p-4 text-left transition-colors hover:border-brand-primary hover:bg-brand-primary/5",
-                selected === option.value ? "border-brand-primary bg-brand-primary/10" : "border-border"
+                selected === option.value
+                  ? "border-brand-primary bg-brand-primary/10"
+                  : option.value === "cualquiera"
+                    ? "border-border shadow-md"
+                    : "border-border"
               )}
             >
               <p className="font-semibold">{option.label}</p>
