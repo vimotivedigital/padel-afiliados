@@ -16,7 +16,10 @@ const KEEPA_BATCH_SIZE = 20;
 const KEEPA_API_BASE = "https://api.keepa.com/product";
 
 export interface SyncResult {
+  /** Fila escrita con precio real. */
   updated: number;
+  /** Fila escrita solo con imagen/rating (Keepa no reporta oferta activa, pero sí ficha del producto). */
+  imageOnly: number;
   skipped: number;
   errors: { asin: string; reason: string }[];
 }
@@ -79,7 +82,7 @@ export async function syncKeepaPrices(): Promise<SyncResult> {
   const asins = getRealAsins();
   const supabase = getSupabaseAdminClient();
 
-  const result: SyncResult = { updated: 0, skipped: 0, errors: [] };
+  const result: SyncResult = { updated: 0, imageOnly: 0, skipped: 0, errors: [] };
 
   // Precios ya guardados, para poder desplazarlos a `price_previous` al
   // sobrescribir con el valor nuevo de esta pasada.
@@ -127,23 +130,30 @@ export async function syncKeepaPrices(): Promise<SyncResult> {
       const priceCents = amazonPriceCents !== undefined && amazonPriceCents >= 0 ? amazonPriceCents : newPriceCents;
       const priceCurrent = centsToEuros(priceCents);
 
-      if (priceCurrent === null) {
-        result.errors.push({ asin: product.asin, reason: "sin_precio_disponible" });
-        continue;
-      }
-
       const ratingRaw = current[17];
       const reviewCountRaw = current[18];
       const firstImage = product.images?.[0]?.l ?? product.images?.[0]?.m;
+      const imageUrl = firstImage ? `https://m.media-amazon.com/images/I/${firstImage}` : null;
+
+      // Precio e imagen son datos independientes en la respuesta de Keepa:
+      // un ASIN sin oferta activa (sin_precio_disponible) igualmente puede
+      // traer ficha de producto completa, incluida la imagen. Antes se
+      // descartaba la fila entera si no había precio, perdiendo también la
+      // imagen sin necesidad — ahora se escribe siempre que Keepa devuelva
+      // *algo* (precio o imagen), dejando price_current en null si no hay oferta.
+      if (priceCurrent === null && !imageUrl) {
+        result.errors.push({ asin: product.asin, reason: "sin_precio_ni_imagen_disponible" });
+        continue;
+      }
 
       const { error } = await supabase.from("product_prices").upsert(
         {
           asin: product.asin,
           price_current: priceCurrent,
-          price_previous: previousPriceByAsin.get(product.asin) ?? null,
+          price_previous: priceCurrent !== null ? (previousPriceByAsin.get(product.asin) ?? null) : null,
           currency: "EUR",
           availability: priceCurrent !== null ? "in_stock" : "out_of_stock",
-          image_url: firstImage ? `https://m.media-amazon.com/images/I/${firstImage}` : null,
+          image_url: imageUrl,
           rating: ratingRaw !== undefined && ratingRaw >= 0 ? ratingRaw / 10 : null,
           review_count: reviewCountRaw !== undefined && reviewCountRaw >= 0 ? reviewCountRaw : null,
           last_updated: new Date().toISOString(),
@@ -153,6 +163,9 @@ export async function syncKeepaPrices(): Promise<SyncResult> {
 
       if (error) {
         result.errors.push({ asin: product.asin, reason: `supabase: ${error.message}` });
+      } else if (priceCurrent === null) {
+        result.imageOnly += 1;
+        result.errors.push({ asin: product.asin, reason: "sin_precio_disponible (imagen sí sincronizada)" });
       } else {
         result.updated += 1;
       }

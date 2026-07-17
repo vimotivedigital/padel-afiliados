@@ -2,7 +2,8 @@ import { cache } from "react";
 import { getSupabasePublicClient } from "../supabase/publicClient";
 
 export interface LivePrice {
-  priceCurrent: number;
+  /** null cuando Keepa no reporta oferta activa para este ASIN — la fila puede seguir trayendo imagen/rating igualmente. */
+  priceCurrent: number | null;
   pricePrevious: number | null;
   currency: string;
   availability: string | null;

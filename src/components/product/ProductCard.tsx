@@ -26,9 +26,10 @@ export function ProductCard({
   const href = `/${product.category}/${product.slug}`;
   const imageSrc = livePrice?.imageUrl ?? product.images[0];
   const datasetPrice = product.onSale && product.salePrice ? product.salePrice : product.price;
-  const price = livePrice ? livePrice.priceCurrent : datasetPrice;
-  const previousPrice = livePrice
-    ? livePrice.pricePrevious
+  const liveCurrent = livePrice?.priceCurrent ?? null;
+  const price = liveCurrent ?? datasetPrice;
+  const previousPrice = liveCurrent !== null
+    ? livePrice!.pricePrevious
     : product.onSale && product.salePrice
       ? product.price
       : null;

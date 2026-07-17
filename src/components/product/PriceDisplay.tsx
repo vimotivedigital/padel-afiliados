@@ -20,7 +20,7 @@ export async function PriceDisplay({ product }: { product: Product }) {
   const live = await getProductPrice(product.asin);
   const datasetPrice = product.onSale && product.salePrice ? product.salePrice : product.price;
 
-  if (live) {
+  if (live && live.priceCurrent !== null) {
     return (
       <div className="space-y-1">
         <div className="flex items-baseline gap-3">

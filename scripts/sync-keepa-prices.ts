@@ -20,12 +20,13 @@ async function main() {
 
   const result = await syncKeepaPrices();
 
-  console.log(`\nActualizados: ${result.updated}`);
+  console.log(`\nActualizados (precio + imagen): ${result.updated}`);
+  console.log(`Solo imagen (sin oferta activa): ${result.imageOnly}`);
   console.log(`Sin cambios/omitidos: ${result.skipped}`);
   console.log(`Errores: ${result.errors.length}`);
 
   if (result.errors.length > 0) {
-    console.log("\nDetalle de errores:");
+    console.log("\nDetalle:");
     for (const err of result.errors) {
       console.log(`  - ${err.asin}: ${err.reason}`);
     }

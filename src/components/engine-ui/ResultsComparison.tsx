@@ -26,7 +26,7 @@ export function ResultsComparison({
         <tbody>
           {results.map(({ product, score }) => {
             const live = priceMap?.get(product.asin);
-            const price = live ? live.priceCurrent : product.price;
+            const price = live?.priceCurrent ?? product.price;
             return (
               <tr key={product.id} className="border-b border-border last:border-0 odd:bg-black/[0.015]">
                 <td className="px-4 py-3 font-medium">{product.name}</td>

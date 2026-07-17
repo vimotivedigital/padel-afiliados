@@ -19,7 +19,7 @@ export function ResultCard({
 }) {
   const { product, score } = result;
   const href = `/${product.category}/${product.slug}`;
-  const price = livePrice ? livePrice.priceCurrent : product.price;
+  const price = livePrice?.priceCurrent ?? product.price;
   const imageSrc = livePrice?.imageUrl ?? product.images[0];
 
   return (

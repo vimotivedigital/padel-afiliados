@@ -24,7 +24,7 @@ export function ComparisonTable({
   priceA?: LivePrice | null;
   priceB?: LivePrice | null;
 }) {
-  const displayPrice = (product: Product, live?: LivePrice | null) => (live ? live.priceCurrent : product.price);
+  const displayPrice = (product: Product, live?: LivePrice | null) => live?.priceCurrent ?? product.price;
 
   return (
     <div className="overflow-x-auto rounded-2xl border border-border">
