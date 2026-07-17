@@ -508,17 +508,17 @@ export const articles: Article[] = [
       {
         heading: "La ropa técnica suele tallar más ajustada",
         content:
-          "A diferencia de una camiseta de algodón normal, la ropa técnica de pádel está pensada para un ajuste ceñido al cuerpo que facilite el movimiento sin holguras, así que muchas marcas recomiendan pedir una talla por encima de la habitual.",
+          "A diferencia de una camiseta de algodón normal, la ropa técnica de pádel está pensada para un ajuste ceñido al cuerpo que facilite el movimiento sin holguras, así que muchas marcas recomiendan pedir una talla por encima de la habitual. Ese ajuste ceñido no es un capricho estético: una prenda holgada roza más con el propio movimiento del juego y puede generar rozaduras en partidos largos, además de que el tejido técnico pierde parte de su función de evacuar el sudor si no queda pegado a la piel. Si es tu primera compra de ropa técnica y siempre has llevado tallas de algodón normal, parte de la base de que necesitarás repasar la tabla de medidas en vez de fiarte de tu talla habitual.",
       },
       {
         heading: "Diferencias entre marcas",
         content:
-          "No todas las marcas tallan igual: algunas mantienen un patronaje más europeo estándar, mientras que otras, especialmente las de origen americano, tienden a tallar algo más grande. Revisar la tabla de medidas específica de cada producto es más fiable que guiarte solo por tu talla habitual.",
+          "No todas las marcas tallan igual: algunas mantienen un patronaje más europeo estándar, mientras que otras, especialmente las de origen americano, tienden a tallar algo más grande. Revisar la tabla de medidas específica de cada producto es más fiable que guiarte solo por tu talla habitual, sobre todo si compras una marca por primera vez. Como referencia general: si sueles llevar una M en una marca europea, no des por hecho que la M de una marca distinta te va a quedar igual — una diferencia de 2-3 cm de contorno de pecho o cintura entre marcas es más habitual de lo que parece, y puede ser la diferencia entre una prenda cómoda y una que aprieta en los movimientos de estirada.",
       },
       {
         heading: "Faldas y pantalones: el short interior importa",
         content:
-          "En el caso de las faldas técnicas con short interior integrado, el ajuste del short suele ser más determinante que el de la propia falda a la hora de elegir talla, ya que es la parte que va más pegada al cuerpo.",
+          "En el caso de las faldas técnicas con short interior integrado, el ajuste del short suele ser más determinante que el de la propia falda a la hora de elegir talla, ya que es la parte que va más pegada al cuerpo y la que realmente condiciona la libertad de movimiento en los desplazamientos laterales. Una falda puede quedar perfecta de talla en la cintura y aun así resultar incómoda si el short interior queda demasiado ajustado o, al contrario, demasiado suelto y con tendencia a moverse durante el partido. Si dudas entre dos tallas, prioriza la comodidad del short antes que el ajuste exacto de la falda por fuera.",
         productSlugs: ["adidas-club-skirt-falda-mujer", "wilson-falda-team"],
       },
     ],
@@ -529,7 +529,7 @@ export const articles: Article[] = [
           "Como norma general, si vas a usar la prenda para jugar (movimiento constante), es preferible pedir la talla superior antes que una prenda demasiado ajustada que limite el movimiento.",
       },
     ],
-    relatedSlugs: ["cuidados-basicos-zapatillas-padel"],
+    relatedSlugs: ["cuidados-basicos-zapatillas-padel", "camiseta-tecnica-padel-que-mirar", "mejores-camisetas-padel"],
   },
   {
     slug: "paletero-segun-numero-de-palas",
@@ -547,19 +547,19 @@ export const articles: Article[] = [
       {
         heading: "Si juegas con una sola pala habitual",
         content:
-          "Con una pala de uso principal (y quizá una de repuesto ocasional), un paletero de 2 palas es suficiente. No tiene sentido cargar con espacio de sobra que no vas a usar — un paletero pequeño también pesa menos vacío.",
+          "Con una pala de uso principal (y quizá una de repuesto ocasional), un paletero de 2 palas es suficiente. No tiene sentido cargar con espacio de sobra que no vas a usar — un paletero pequeño también pesa menos vacío y es más cómodo de llevar si vas caminando o en bici hasta la pista. En este rango tampoco suele haber compartimento térmico, porque no está pensado para quien entrena a diario con temperaturas extremas: es la opción de quien juega de forma más esporádica y prioriza ligereza sobre organización interna.",
         productSlugs: ["bullpadel-mochila-xplo", "wilson-mochila-de-padel-tour"],
       },
       {
         heading: "Si sueles llevar pala de repuesto o juegas en pareja fija",
         content:
-          "A partir de 3 palas ya tiene sentido pensar en compartimento térmico, sobre todo si vas directo de casa a la pista con temperaturas extremas. Es el rango donde más opciones intermedias hay en el catálogo.",
-        productSlugs: ["nox-paletero-street-series", "bullpadel-mochila-hack"],
+          "A partir de 3 palas ya tiene sentido pensar en compartimento térmico, sobre todo si vas directo de casa a la pista con temperaturas extremas — el núcleo de la pala se degrada más rápido con cambios bruscos de calor o frío que con el propio uso en pista. Es el rango donde más opciones intermedias hay en el catálogo: paleteros que ya incorporan bolsillos separados para accesorios (overgrip, protector, muñequera) sin llegar a la capacidad ni al precio de los modelos de competición.",
+        productSlugs: ["wilson-team-paletero", "bullpadel-mochila-hack"],
       },
       {
         heading: "Si entrenas con frecuencia o compites",
         content:
-          "Para 4 palas o más, busca compartimento térmico y zapatillero independiente — a este nivel de uso, la organización interna importa tanto como la capacidad bruta.",
+          "Para 4 palas o más, busca compartimento térmico y zapatillero independiente — a este nivel de uso, la organización interna importa tanto como la capacidad bruta. No es solo comodidad: separar las zapatillas del compartimento de las palas evita que la suela (con restos de arena o polvo de la pista) ensucie el interior térmico donde van las palas. Es también el rango donde tiene más sentido invertir algo más, porque el desgaste diario de entrenar o competir con frecuencia se nota antes en un paletero básico que en uno pensado para ese uso intensivo.",
         productSlugs: ["nox-paletero-at10-competition-xl-compact", "nox-paletero-ml10-competition-xl-compact"],
       },
     ],
@@ -627,23 +627,26 @@ export const articles: Article[] = [
       {
         heading: "La pala: evita cambios bruscos de temperatura",
         content:
-          "Dejar la pala en el maletero del coche en pleno verano o invierno acelera el envejecimiento del núcleo más que el propio uso en pista. Si tu paletero tiene compartimento térmico, es precisamente para esto.",
+          "Dejar la pala en el maletero del coche en pleno verano o invierno acelera el envejecimiento del núcleo más que el propio uso en pista — las temperaturas extremas afectan a la elasticidad de la goma o EVA interior de forma más agresiva que los golpes normales de un partido. Si tu paletero tiene compartimento térmico, es precisamente para esto: mantener la pala en un rango de temperatura estable entre que sales de casa y llegas a la pista, sobre todo en trayectos largos o en días de calor o frío intensos. Si tu paletero actual no lo tiene y juegas con frecuencia, es una de las mejoras más rentables que puedes hacer a tu equipo, más incluso que cambiar de pala.",
+        productSlugs: ["nox-paletero-at10-competition-xl-compact"],
       },
       {
         heading: "El protector de marco: revísalo antes de que sea tarde",
         content:
-          "Un protector despegado en una esquina no protege nada — revísalo cada pocas semanas y cámbialo en cuanto veas que empieza a levantarse, no cuando ya se ha caído del todo.",
+          "Un protector despegado en una esquina no protege nada — revísalo cada pocas semanas y cámbialo en cuanto veas que empieza a levantarse, no cuando ya se ha caído del todo. Es la revisión de mantenimiento más rápida de todas: apenas toma unos segundos antes o después de jugar, y detectar el problema a tiempo evita que el marco de la pala empiece a desgastarse en la zona que debería estar protegida. Si notas que se despega repetidamente en el mismo punto, puede ser señal de que ese protector concreto no se ajusta bien a la forma de tu pala y conviene probar otro modelo.",
         productSlugs: ["palbea-protector-pala-transparente", "ebbom-protector-vinilo-calandrado"],
       },
       {
         heading: "Las zapatillas: no las uses fuera de la pista",
         content:
-          "Usar las zapatillas de pádel para el día a día desgasta la suela mucho más rápido de lo que lo haría solo jugando — están pensadas para el agarre en césped artificial o cemento poroso, no para asfalto.",
+          "Usar las zapatillas de pádel para el día a día desgasta la suela mucho más rápido de lo que lo haría solo jugando — están pensadas para el agarre en césped artificial o cemento poroso, no para asfalto, que es una superficie mucho más abrasiva para ese tipo de goma. El desgaste en asfalto no solo acorta la vida útil: también reduce el agarre específico que la suela ofrece en pista, precisamente la prestación por la que pagaste de más frente a una zapatilla genérica. Si vas a caminar mucho fuera de la pista el mismo día que juegas, lleva un segundo calzado y resérvalas solo para el tiempo de juego.",
+        productSlugs: ["asics-gel-padel-pro-5"],
       },
       {
         heading: "El overgrip: el mantenimiento más barato y más olvidado",
         content:
-          "Es el elemento que menos cuesta reponer y el que más se descuida. Un overgrip degradado obliga a apretar más fuerte para no perder agarre, lo que acaba trasladando tensión extra al brazo.",
+          "Es el elemento que menos cuesta reponer y el que más se descuida. Un overgrip degradado obliga a apretar más fuerte para no perder agarre, lo que acaba trasladando tensión extra al brazo — el mismo mecanismo que puede agravar molestias como la epicondilitis si se mantiene en el tiempo. Al ser tan barato y rápido de cambiar, no hay motivo real para dejarlo degradarse: revisarlo junto al protector en esa misma inspección rápida antes o después de jugar evita tener que acordarte de él por separado.",
+        productSlugs: ["siux-pro-perforated-x60"],
       },
     ],
     faqs: [],
@@ -665,18 +668,19 @@ export const articles: Article[] = [
       {
         heading: "Aciertos seguros: accesorios genéricos",
         content:
-          "Una gorra, una toalla o un spray de agarre son regalos que cualquier jugador puede usar independientemente de su nivel o de la pala con la que juegue — no dependen de preferencias técnicas específicas.",
+          "Una gorra, una toalla o un spray de agarre son regalos que cualquier jugador puede usar independientemente de su nivel o de la pala con la que juegue — no dependen de preferencias técnicas específicas, y son baratos si tienes dudas sobre cuánto gastar. La gorra es probablemente la opción más segura de todas: no hay tallas que fallar (la mayoría son ajustables) y sirve tanto para entrenar como para competir. La toalla técnica de secado rápido es otro acierto casi garantizado, sobre todo para quien juega en verano o en pistas indoor con calor. El spray de agarre es el regalo \"de repuesto\" perfecto para dejar en la bolsa de cualquier jugador: se usa poco a poco, no caduca de un día para otro y siempre viene bien tener uno de más.",
         productSlugs: ["toalla-bullpadel-premier-padel", "mibandera-gorra-bandera-espana", "araclinch-spray-grip-padel"],
       },
       {
         heading: "Con más riesgo: overgrips y protectores",
         content:
-          "Son útiles pero dependen del gusto de cada jugador (tacto liso o perforado, nivel de absorción) — un buen regalo solo si sabes qué suele usar la persona habitualmente.",
+          "Son útiles pero dependen del gusto de cada jugador — tacto liso o perforado en el overgrip, transparente o de acabado más agresivo en el protector — así que solo son un buen regalo si sabes qué suele usar la persona habitualmente. Si no tienes ni idea de sus preferencias, un pack de varias unidades de overgrip reduce el riesgo: aunque no acierte con el tacto exacto que prefiere, es un consumible que va a gastar tarde o temprano. Con el protector pasa algo parecido: los modelos transparentes son la apuesta más segura porque no alteran el diseño de la pala, mientras que los de acabado dentado o de vinilo son más una decisión estética que hay que conocer de antemano.",
+        productSlugs: ["nerusgrip-pack-6", "palbea-protector-pala-transparente"],
       },
       {
         heading: "Evitar salvo que lo pidan expresamente: la pala",
         content:
-          "Es la decisión más personal de todo el equipo — depende del nivel, el estilo de juego y hasta molestias físicas concretas. Regalar una pala sin consultar es el error más habitual y caro.",
+          "Es la decisión más personal de todo el equipo — depende del nivel, el estilo de juego y hasta molestias físicas concretas como el codo o la muñeca. Regalar una pala sin consultar es el error más habitual y caro: incluso una pala objetivamente buena puede ser un mal regalo si el balance o el peso no encajan con quien la recibe. Si aun así quieres acertar con una pala, la única forma fiable es preguntar directamente por su nivel y estilo de juego, o recurrir a un vale para que la elija ella misma con calma — mejor eso que arriesgarte a que acabe en un cajón sin usar.",
       },
     ],
     faqs: [
@@ -704,18 +708,19 @@ export const articles: Article[] = [
       {
         heading: "Por qué una pelota pierde presión con el uso",
         content:
-          "Cada impacto libera una pequeña cantidad de la presión interna del bote. Es un proceso normal e inevitable, no un defecto — la velocidad a la que ocurre depende de la calidad del fieltro y de cuánto se juega.",
+          "Cada impacto libera una pequeña cantidad de la presión interna del bote. Es un proceso normal e inevitable, no un defecto — la velocidad a la que ocurre depende de la calidad del fieltro y de cuánto se juega. Un fieltro de mejor calidad retiene la presión durante más golpes porque su tejido es más resistente a la abrasión constante contra la pista y el marco de la pala; uno de peor calidad se abre y pierde fieltro más rápido, lo que acelera la pérdida de presión interna. También influye la superficie de la pista: el césped artificial más nuevo o abrasivo desgasta el fieltro algo más rápido que uno ya rodado.",
       },
       {
         heading: "Competición vs entrenamiento: no es solo marketing",
         content:
-          "Las pelotas de competición suelen mantener mejor la presión durante más tiempo, lo que se nota en partidos largos. Para entrenar, una pelota de gama de entrenamiento es perfectamente válida y más económica.",
+          "Las pelotas de competición suelen mantener mejor la presión durante más tiempo, lo que se nota sobre todo en partidos largos donde una pelota que pierde presión a mitad de set cambia el ritmo del juego. Para entrenar, una pelota de gama de entrenamiento es perfectamente válida y más económica: al no jugarse a la máxima intensidad de un partido competitivo, la diferencia de duración se nota mucho menos, y comprar pelotas de competición para entrenar es un gasto que no se traduce en mejor rendimiento real.",
         productSlugs: ["dunlop-pro-padel", "dunlop-team-padel"],
       },
       {
         heading: "Señales de que toca abrir un bote nuevo",
         content:
-          "Si notas que la pelota bota claramente más bajo que al principio del partido, o que cuesta más generar velocidad con el mismo golpe, ha perdido presión — no esperes a que sea evidente para todos en la pista.",
+          "Si notas que la pelota bota claramente más bajo que al principio del partido, o que cuesta más generar velocidad con el mismo golpe, ha perdido presión — no esperes a que sea evidente para todos en la pista. Un truco rápido para comprobarlo: deja caer la pelota desde la altura del hombro sobre la pista — si notas que bota claramente más bajo de lo que esperarías con una pelota nueva, ya ha perdido presión significativa. Tener siempre un bote de reserva de una gama polivalente evita quedarte a mitad de partido sin una alternativa a mano.",
+        productSlugs: ["babolat-court-padel-x3"],
       },
     ],
     faqs: [
@@ -743,19 +748,20 @@ export const articles: Article[] = [
       {
         heading: "Poliéster y mezclas técnicas: la opción mayoritaria",
         content:
-          "La mayoría de camisetas técnicas de pádel usan poliéster o mezclas con elastano, pensadas para evacuar el sudor y secarse rápido durante el partido. Es la opción más lógica si juegas con intensidad.",
+          "La mayoría de camisetas técnicas de pádel usan poliéster o mezclas con elastano, pensadas para evacuar el sudor y secarse rápido durante el partido. Es la opción más lógica si juegas con intensidad: el tejido técnico transporta la humedad hacia la superficie exterior en vez de retenerla pegada a la piel, lo que evita esa sensación de camiseta empapada a mitad de partido. El elastano añadido en algunas mezclas también aporta algo de elasticidad extra, útil en los movimientos de estirada y el golpe de smash por encima de la cabeza.",
         productSlugs: ["nox-camiseta-at10-agustin-tapia-2026", "head-camiseta-we-are-padel"],
       },
       {
         heading: "Algodón: más tacto, menos rendimiento técnico",
         content:
-          "Alguna opción del catálogo prioriza el algodón sobre las mezclas técnicas — un tacto más agradable a costa de retener más la humedad durante el ejercicio intenso. Tiene sentido si priorizas la comodidad de tacto sobre el rendimiento puro en sudoración.",
+          "Alguna opción del catálogo prioriza el algodón sobre las mezclas técnicas — un tacto más agradable a costa de retener más la humedad durante el ejercicio intenso. Tiene sentido si priorizas la comodidad de tacto sobre el rendimiento puro en sudoración, por ejemplo para partidos recreativos de baja intensidad o para llevarla fuera de la pista. Lo que no tiene mucho sentido es usar algodón para entrenar a alta intensidad en verano: la camiseta se empapa y pesa notablemente más, algo que sí se nota con el paso de los sets.",
         productSlugs: ["babolat-camiseta-padel-men"],
       },
       {
         heading: "Camisetas oficiales de jugador: el extra de precio",
         content:
-          "Las camisetas vinculadas a un jugador o jugadora profesional suelen costar más que el resto del catálogo de la misma marca, sin que eso implique necesariamente un tejido técnicamente superior — el extra de precio es sobre todo por la licencia de marca.",
+          "Las camisetas vinculadas a un jugador o jugadora profesional suelen costar más que el resto del catálogo de la misma marca, sin que eso implique necesariamente un tejido técnicamente superior — el extra de precio es sobre todo por la licencia de marca y el diseño asociado al jugador. Tiene sentido para quien quiere sentirse identificado con un jugador concreto o busca la réplica más fiel a lo que se ve en el circuito profesional; no tiene mucho sentido si tu prioridad es únicamente el rendimiento técnico, donde una camiseta sin licencia de la misma gama de tejido cumple exactamente igual.",
+        productSlugs: ["bullpadel-camiseta-edrar-gemma-triay"],
       },
     ],
     faqs: [],
@@ -777,18 +783,19 @@ export const articles: Article[] = [
       {
         heading: "Por qué merece la pena, aunque cueste poco",
         content:
-          "Un protector de pocos euros evita que los golpes bajos (habituales en la volea baja y la salida de pared) desgasten directamente el marco de la pala, que es mucho más caro de reparar o sustituir.",
+          "Un protector de pocos euros evita que los golpes bajos (habituales en la volea baja y la salida de pared) desgasten directamente el marco de la pala, que es mucho más caro de reparar o sustituir. Sin protector, el roce constante contra el suelo o la pared va limando poco a poco el borde inferior del marco, hasta el punto de dejarlo visiblemente desgastado o incluso agrietado en pocos meses de juego intenso. Es, junto al overgrip, el accesorio con mejor relación entre lo que cuesta y lo que protege: unos euros de protector pueden ahorrarte tener que sustituir una pala de 100-200€ antes de tiempo.",
+        productSlugs: ["nox-protector-de-pala"],
       },
       {
         heading: "Transparente vs acabado dentado o de vinilo",
         content:
-          "La mayoría de protectores del catálogo son transparentes, pensados para no alterar el diseño de la pala. Algunas opciones usan acabados más agresivos (vinilo calandrado, dentado) que declaran mayor protección a cambio de ser más visibles.",
+          "La mayoría de protectores del catálogo son transparentes, pensados para no alterar el diseño de la pala — es la opción por defecto si no tienes preferencia estética. Algunas opciones usan acabados más agresivos (vinilo calandrado, dentado) que declaran mayor protección a cambio de ser más visibles y, en algunos casos, de añadir algo más de fricción con el aire en el golpeo. La diferencia real de protección entre unos y otros es menor de lo que el marketing sugiere: lo que más influye en la durabilidad es la calidad de la adherencia del propio protector, no tanto el acabado superficial.",
         productSlugs: ["palbea-protector-pala-transparente", "ebbom-protector-vinilo-calandrado"],
       },
       {
         heading: "Cuándo cambiarlo",
         content:
-          "En cuanto veas que empieza a despegarse por una esquina, no esperes a que se caiga del todo — un protector parcialmente despegado deja precisamente la zona de más impacto sin cubrir.",
+          "En cuanto veas que empieza a despegarse por una esquina, no esperes a que se caiga del todo — un protector parcialmente despegado deja precisamente la zona de más impacto sin cubrir, que es el peor momento posible para perder esa protección. Cambiarlo cuesta pocos minutos y no requiere ninguna herramienta especial: basta con retirar el resto del adhesivo antiguo, limpiar bien la superficie del marco y aplicar el nuevo protector alineado con el borde. Hacerlo a tiempo es más barato que dejar que el marco se desgaste y tener que valorar cambiar de pala antes de lo previsto.",
       },
     ],
     faqs: [
