@@ -13,6 +13,7 @@ import { ProsConsBox } from "@/components/product/ProsConsBox";
 import { EditorReviewBox } from "@/components/product/EditorReviewBox";
 import { AmazonCTA } from "@/components/product/AmazonCTA";
 import { AffiliateDisclosure } from "@/components/product/AffiliateDisclosure";
+import { ProductTrustBadges } from "@/components/product/ProductTrustBadges";
 import { SimilarProducts } from "@/components/product/SimilarProducts";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { Faq } from "@/components/product/Faq";
@@ -58,6 +59,7 @@ export async function ProductDetailTemplate({ product, path }: { product: Produc
           <PriceDisplay product={product} />
 
           <AmazonCTA asin={product.asin} productName={product.name} size="lg" />
+          <ProductTrustBadges asin={product.asin} />
           <AffiliateDisclosure />
         </div>
       </div>
