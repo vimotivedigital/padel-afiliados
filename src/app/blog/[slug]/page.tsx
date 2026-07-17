@@ -39,7 +39,7 @@ export default async function ArticlePage({ params }: PageProps) {
     <div className="space-y-6">
       <JsonLd data={breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Blog", path: "/blog" }, { name: article.title, path: `/blog/${slug}` }])} />
       <Breadcrumbs items={[{ name: "Inicio", path: "/" }, { name: "Blog", path: "/blog" }, { name: article.title, path: `/blog/${slug}` }]} />
-      <ArticleLayout article={article} />
+      <ArticleLayout article={article} path={`/blog/${slug}`} />
     </div>
   );
 }

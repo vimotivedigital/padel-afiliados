@@ -1,14 +1,17 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Comparison } from "@/engine/types";
 import { findProductBySlugAnyCategory } from "@/lib/products";
+import { resolveRelatedLink } from "@/lib/content";
 import { buildSpecRows } from "@/lib/specs";
 import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ComparisonTable } from "@/components/comparison/ComparisonTable";
 import { ProsConsBox } from "@/components/product/ProsConsBox";
+import { AmazonCTA } from "@/components/product/AmazonCTA";
 import { Faq } from "@/components/product/Faq";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { breadcrumbSchema } from "@/lib/seo/schema";
+import { breadcrumbSchema, productSchema } from "@/lib/seo/schema";
 import { formatDate } from "@/lib/utils";
 
 export async function ComparisonDetailTemplate({ comparison, path }: { comparison: Comparison; path: string }) {
@@ -30,9 +33,14 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
 
   const winner = comparison.verdict.winnerSlug === productA.slug ? productA : productB;
 
+  const pathA = `/${productA.category}/${productA.slug}`;
+  const pathB = `/${productB.category}/${productB.slug}`;
+
   return (
     <div className="space-y-10">
       <JsonLd data={breadcrumbSchema([{ name: "Inicio", path: "/" }, { name: "Comparativas", path: "/comparativas" }, { name: comparison.title, path }])} />
+      <JsonLd data={productSchema(productA, pathA)} />
+      <JsonLd data={productSchema(productB, pathB)} />
       <Breadcrumbs items={[{ name: "Inicio", path: "/" }, { name: "Comparativas", path: "/comparativas" }, { name: comparison.title, path }]} />
 
       <header>
@@ -56,6 +64,7 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
           <div className="mt-3">
             <ProsConsBox pros={comparison.prosA} cons={comparison.consA} />
           </div>
+          <AmazonCTA asin={productA.asin} productName={productA.name} size="sm" className="mt-4 w-full" />
         </div>
         <div>
           <h2 className="text-lg font-bold">{productB.name}</h2>
@@ -63,6 +72,7 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
           <div className="mt-3">
             <ProsConsBox pros={comparison.prosB} cons={comparison.consB} />
           </div>
+          <AmazonCTA asin={productB.asin} productName={productB.name} size="sm" className="mt-4 w-full" />
         </div>
       </div>
 
@@ -72,9 +82,31 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
           Ganadora de esta comparativa: <strong>{winner.name}</strong>
         </p>
         <p className="mt-3 leading-relaxed">{comparison.verdict.summary}</p>
+        <AmazonCTA asin={winner.asin} productName={winner.name} size="lg" className="mt-4" />
       </section>
 
       <Faq faqs={comparison.faqs} />
+
+      {comparison.relatedSlugs && comparison.relatedSlugs.length > 0 && (
+        <div>
+          <h2 className="text-xl font-bold">También te puede interesar</h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {comparison.relatedSlugs.map((slug) => {
+              const { href, label } = resolveRelatedLink(slug);
+              return (
+                <li key={slug}>
+                  <Link
+                    href={href}
+                    className="block rounded-2xl border border-border p-4 font-medium capitalize hover:border-brand-primary hover:text-brand-primary"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

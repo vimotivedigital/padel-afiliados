@@ -222,6 +222,8 @@ export interface Comparison {
   category: Category;
   productSlugs: [string, string];
   intro: string;
+  /** Versión corta (~150 caracteres) para meta description; si falta, se usa `intro` (puede truncarse en el SERP). */
+  metaDescription?: string;
   prosA: string[];
   consA: string[];
   prosB: string[];
@@ -232,4 +234,5 @@ export interface Comparison {
   faqs: Faq[];
   publishedAt: string;
   updatedAt: string;
+  relatedSlugs?: string[];
 }

@@ -1,5 +1,5 @@
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
-import type { Faq, Product } from "@/engine/types";
+import type { Article, Faq, Product } from "@/engine/types";
 
 export function organizationSchema() {
   return {
@@ -61,6 +61,25 @@ export function productSchema(product: Product, path: string) {
             reviewCount: product.reviewCount,
           }
         : undefined,
+  };
+}
+
+export function articleSchema(article: Article, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.h1,
+    description: article.excerpt,
+    image: `${SITE_URL}${article.coverImage}`,
+    author: { "@type": "Organization", name: article.author },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/images/logo-voleador.png` },
+    },
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}${path}` },
   };
 }
 

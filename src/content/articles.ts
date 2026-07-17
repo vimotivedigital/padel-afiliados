@@ -490,7 +490,7 @@ export const articles: Article[] = [
           "No se recomienda: el tambor y el centrifugado pueden dañar la estructura y los adhesivos de la zapatilla. Lo mejor es limpiarlas a mano con un cepillo suave y agua tibia.",
       },
     ],
-    relatedSlugs: ["zapatillas-padel-segun-tipo-pisada", "mejores-zapatillas", "mejores-zapatillas-pronador"],
+    relatedSlugs: ["zapatillas-padel-segun-tipo-pisada", "mejores-zapatillas", "mejores-zapatillas-pronador", "mantenimiento-material-padel"],
   },
   {
     slug: "guia-tallas-ropa-tecnica-padel",

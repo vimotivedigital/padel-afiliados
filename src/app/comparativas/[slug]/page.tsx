@@ -18,7 +18,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!comparison) {
     return buildMetadata({ title: "Comparativa no encontrada", description: "Contenido no disponible.", path: `/comparativas/${slug}`, noIndex: true });
   }
-  return buildMetadata({ title: comparison.title, description: comparison.intro, path: `/comparativas/${slug}` });
+  return buildMetadata({
+    title: comparison.title,
+    description: comparison.metaDescription ?? comparison.intro,
+    path: `/comparativas/${slug}`,
+  });
 }
 
 export default async function ComparisonPage({ params }: PageProps) {

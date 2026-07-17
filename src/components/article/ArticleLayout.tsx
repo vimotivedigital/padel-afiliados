@@ -5,23 +5,13 @@ import { ArticleToc } from "./ArticleToc";
 import { Faq } from "@/components/product/Faq";
 import { ProductCard } from "@/components/product/ProductCard";
 import { findProductBySlugAnyCategory } from "@/lib/products";
-import { getArticleBySlug } from "@/lib/content";
-import { getProgrammaticPage } from "@/lib/seo/programmatic-pages";
+import { resolveRelatedLink } from "@/lib/content";
 import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { formatDate, slugify } from "@/lib/utils";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { articleSchema } from "@/lib/seo/schema";
 
-/** Resuelve un slug de relatedSlugs contra guías/variantes de selector o artículos, para poder enlazarlo con un título legible. */
-function resolveRelatedLink(slug: string): { href: string; label: string } {
-  const article = getArticleBySlug(slug);
-  if (article) return { href: `/blog/${slug}`, label: article.title };
-
-  const page = getProgrammaticPage(slug);
-  if (page) return { href: `/${slug}`, label: page.title };
-
-  return { href: `/${slug}`, label: slug.replace(/-/g, " ") };
-}
-
-export async function ArticleLayout({ article }: { article: Article }) {
+export async function ArticleLayout({ article, path }: { article: Article; path: string }) {
   const allEmbeddedAsins = article.sections
     .flatMap((section) => section.productSlugs ?? [])
     .map((slug) => findProductBySlugAnyCategory(slug)?.asin)
@@ -30,6 +20,7 @@ export async function ArticleLayout({ article }: { article: Article }) {
 
   return (
     <article>
+      <JsonLd data={articleSchema(article, path)} />
       <header className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-wide text-brand-primary">{article.category}</p>
         <h1 className="mt-2 text-3xl font-extrabold leading-tight sm:text-4xl">{article.h1}</h1>

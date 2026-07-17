@@ -44,6 +44,9 @@ export const comparisons: Comparison[] = [
     ],
     publishedAt: "2026-04-01",
     updatedAt: "2026-06-10",
+    relatedSlugs: ["mejores-palas-potencia", "adidas-metalbone-hrd-3-4-2025-vs-nox-at10-genius-18k", "babolat-technical-viper-2024-vs-adidas-metalbone-3-3"],
+    metaDescription:
+      "Nox AT10 Genius 18K vs Bullpadel Vertex 04: comparamos estas dos palas de potencia de gama alta para ayudarte a elegir la que mejor encaja contigo.",
   },
   {
     slug: "head-extreme-pro-vs-head-speed-motion",
@@ -69,6 +72,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-03",
     updatedAt: "2026-07-03",
+    relatedSlugs: ["mejores-palas-principiantes", "pala-control-vs-potencia-cual-elegir", "cuanto-debe-pesar-tu-pala-de-padel"],
+    metaDescription:
+      "Head Extreme Pro vs Head Speed Motion: dos palas de Head para niveles distintos. Te ayudamos a elegir la que mejor encaja con tu progresión.",
   },
   {
     slug: "babolat-technical-viper-2024-vs-adidas-metalbone-3-3",
@@ -103,6 +109,9 @@ export const comparisons: Comparison[] = [
     ],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-palas-potencia", "nox-at10-genius-vs-bullpadel-vertex-04", "babolat-air-viper-2-6-vs-babolat-technical-viper-2024"],
+    metaDescription:
+      "Babolat Technical Viper 2024 vs Adidas Metalbone 3.3: comparamos las dos palas de potencia más caras del catálogo para jugadores avanzados.",
   },
   {
     slug: "nox-nextgen-pro-hybrid-3k-2025-vs-nox-at10-genius-18k",
@@ -131,6 +140,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-palas-hibridas", "forma-diamante-vs-lagrima-vs-redonda-padel", "nox-at10-genius-vs-bullpadel-vertex-04"],
+    metaDescription:
+      "Nox Nextgen Pro Hybrid vs AT10 Genius: pala híbrida contra potencia pura dentro del propio catálogo Nox. Te ayudamos a decidir.",
   },
   {
     slug: "bullpadel-impulse-pwr-2026-vs-bullpadel-impulse-ctrl-2026",
@@ -160,6 +172,7 @@ export const comparisons: Comparison[] = [
     ],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["pala-control-vs-potencia-cual-elegir", "mejores-palas-control", "mejores-palas-potencia"],
   },
   {
     slug: "nox-at10-pro-padel-vs-nox-ml10-hexa",
@@ -186,6 +199,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-zapatillas-pronador", "zapatillas-padel-segun-tipo-pisada", "wilson-bela-tour-vs-nox-at10-pro-padel"],
+    metaDescription:
+      "Nox AT10 Pro Padel vs Nox ML10 Hexa: comparamos estas dos zapatillas de Nox para ayudarte a elegir según tu presupuesto y pisada.",
   },
   {
     slug: "kswiss-ultra-court-padel-vs-munich-padx-63",
@@ -209,6 +225,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-zapatillas", "zapatillas-padel-segun-tipo-pisada", "cuidados-basicos-zapatillas-padel"],
+    metaDescription:
+      "K-Swiss Ultra Court Padel vs Munich PADX 63: dos zapatillas de precio similar con planteamientos de diseño distintos.",
   },
   {
     slug: "nox-paletero-at10-vs-ml10-competition-xl-compact",
@@ -232,6 +251,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-paleteros-termicos", "paletero-segun-numero-de-palas", "futura8-paletero-vs-nox-paletero-at10-competition-xl-compact"],
+    metaDescription:
+      "Nox Paletero AT10 vs ML10 Competition XL Compact: misma capacidad y compartimento térmico, ¿compensa pagar más por el nombre?",
   },
   {
     slug: "bullpadel-mochila-hack-vs-black-crown-raptor-v2",
@@ -255,6 +277,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-paleteros", "paletero-segun-numero-de-palas"],
+    metaDescription:
+      "Bullpadel Mochila Hack vs Black Crown Raptor V2: comparamos dos paleteros de gama media de marcas distintas.",
   },
   {
     slug: "nox-pro-titanium-vs-wilson-premier-padel-speed",
@@ -278,6 +303,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-pelotas-competicion", "pelotas-padel-presion-duracion-cuando-cambiarlas", "palbea-pro-padel-vs-nox-pro-titanium"],
+    metaDescription:
+      "Nox Pro Titanium vs Wilson Premier Padel Speed: comparamos las dos pelotas más premium del catálogo.",
   },
   {
     slug: "dunlop-pro-padel-vs-dunlop-team-padel",
@@ -301,6 +329,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-pelotas-calidad-precio", "pelotas-padel-presion-duracion-cuando-cambiarlas"],
+    metaDescription:
+      "Dunlop Pro Padel vs Team Padel: mismo fabricante, ¿competición o entrenamiento? Te ayudamos a elegir.",
   },
   {
     slug: "nox-camiseta-at10-tapia-vs-bullpadel-camiseta-edrar-triay",
@@ -324,6 +355,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-camisetas-padel", "camiseta-tecnica-padel-que-mirar"],
+    metaDescription:
+      "Camiseta AT10 de Agustín Tapia vs Camiseta Edrar de Gemma Triay: las dos prendas oficiales de jugador del catálogo.",
   },
   {
     slug: "bullpadel-falda-euken-005-vs-falda-basica-dalia",
@@ -347,6 +381,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["guia-tallas-ropa-tecnica-padel", "camiseta-tecnica-padel-que-mirar"],
+    metaDescription:
+      "Bullpadel Falda EUKEN 005 vs Falda Básica Dalia: ¿compensa pagar más por la malla interior de refuerzo?",
   },
   {
     slug: "nerusgrip-pack-6-vs-siux-pro-perforated-x60",
@@ -376,6 +413,9 @@ export const comparisons: Comparison[] = [
     ],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-overgrips", "overgrip-vs-grip-original-padel", "head-padel-pro-vs-head-prime-tour-overgrip"],
+    metaDescription:
+      "Nerusgrip Pack 6 vs Siux Pro Perforated X60: instalación tipo funda contra perforado tradicional a granel.",
   },
   {
     slug: "head-padel-pro-vs-head-prime-tour-overgrip",
@@ -402,6 +442,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-overgrips-sudoracion", "overgrips-sudoracion-manos-padel", "nerusgrip-pack-6-vs-siux-pro-perforated-x60"],
+    metaDescription:
+      "HEAD Padel Pro vs HEAD Prime Tour: comparamos dos líneas de overgrip de la misma marca.",
   },
   {
     slug: "ebbom-vinilo-calandrado-vs-palbea-protector-transparente",
@@ -425,6 +468,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["mejores-protectores", "protector-de-pala-merece-la-pena", "black-crown-protector-adamantium-vs-nox-protector-de-pala"],
+    metaDescription:
+      "EBBOM Vinilo Calandrado vs Palbea Transparente: dos acabados de protector de pala a precio similar.",
   },
   {
     slug: "gladiator-padel-vs-spartan-padel-grip-antivibraciones",
@@ -448,6 +494,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
+    relatedSlugs: ["epicondilitis-codo-de-tenista-en-padel-como-evitarlo", "ideas-regalo-jugadores-de-padel", "mejores-palas-epicondilitis"],
+    metaDescription:
+      "Gladiator Padel vs Spartan Padel: comparamos los dos grips antivibración del catálogo.",
   },
   {
     slug: "adidas-metalbone-carbon-ctrl-3-3-vs-nox-ml10-pro-cup",
@@ -471,6 +520,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-palas-control", "pala-control-vs-potencia-cual-elegir", "bullpadel-impulse-pwr-2026-vs-bullpadel-impulse-ctrl-2026"],
+    metaDescription:
+      "Adidas Metalbone Carbon Ctrl 3.3 vs Nox ML10 Pro Cup: dos palas de control de marcas distintas.",
   },
   {
     slug: "adidas-metalbone-hrd-3-4-2025-vs-nox-at10-genius-18k",
@@ -494,6 +546,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-palas-avanzadas", "nox-at10-genius-vs-bullpadel-vertex-04", "babolat-technical-viper-2024-vs-adidas-metalbone-3-3"],
+    metaDescription:
+      "Adidas Metalbone HRD+ 3.4 vs Nox AT10 Genius 18K: las dos gamas altas más caras del catálogo de palas.",
   },
   {
     slug: "bullpadel-elite-w-25-mujer-vs-starvie-titania-pro",
@@ -517,6 +572,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-palas-mujer", "cuanto-debe-pesar-tu-pala-de-padel"],
+    metaDescription:
+      "Bullpadel Elite W 25 Mujer vs StarVie Titania Pro: dos palas de gama alta femenina de marcas distintas.",
   },
   {
     slug: "babolat-air-viper-2-6-vs-babolat-technical-viper-2024",
@@ -545,6 +603,9 @@ export const comparisons: Comparison[] = [
     ],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["babolat-technical-viper-2024-vs-adidas-metalbone-3-3", "mejores-palas-avanzadas"],
+    metaDescription:
+      "Babolat Air Viper 2.6 vs Technical Viper 2024: dos gamas altas de la misma marca. Te ayudamos a elegir.",
   },
   {
     slug: "wilson-endure-v1-vs-wilson-defy-pro-v1-2025",
@@ -568,6 +629,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["cuando-cambiar-de-pala-de-padel", "mejores-palas-avanzadas"],
+    metaDescription:
+      "Wilson Endure V1 vs Defy Pro V1 2025: durabilidad contra rendimiento puro dentro del catálogo Wilson.",
   },
   {
     slug: "wilson-bela-tour-vs-nox-at10-pro-padel",
@@ -591,6 +655,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-zapatillas", "nox-at10-pro-padel-vs-nox-ml10-hexa"],
+    metaDescription:
+      "Wilson Bela Tour vs Nox AT10 Pro Padel: dos zapatillas de gama alta de marcas distintas.",
   },
   {
     slug: "asics-solution-swift-ff-2-vs-asics-gel-padel-pro-5",
@@ -614,10 +681,13 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-zapatillas", "cuidados-basicos-zapatillas-padel"],
+    metaDescription:
+      "Asics Solution Swift FF 2 vs Gel-Padel Pro 5: dos líneas de Asics con amortiguación distinta.",
   },
   {
     slug: "futura8-paletero-vs-nox-paletero-at10-competition-xl-compact",
-    title: "FUTURA8 Paletero de Pádel vs Nox Paletero AT10 Competition XL Compact",
+    title: "FUTURA8 vs Nox AT10 Competition XL Compact",
     h1: "FUTURA8 vs Nox AT10 Competition XL Compact: marca nueva contra referencia consolidada",
     category: "paleteros",
     productSlugs: ["futura8-paletero-de-padel", "nox-paletero-at10-competition-xl-compact"],
@@ -637,6 +707,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-paleteros-termicos", "nox-paletero-at10-vs-ml10-competition-xl-compact"],
+    metaDescription:
+      "FUTURA8 vs Nox AT10 Competition XL Compact: marca nueva contra referencia consolidada en paleteros.",
   },
   {
     slug: "palbea-pro-padel-vs-nox-pro-titanium",
@@ -660,6 +733,9 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-pelotas-competicion", "nox-pro-titanium-vs-wilson-premier-padel-speed"],
+    metaDescription:
+      "Palbea Pro Padel vs Nox Pro Titanium: dos pelotas de gama alta con aprobaciones distintas.",
   },
   {
     slug: "black-crown-protector-adamantium-vs-nox-protector-de-pala",
@@ -683,5 +759,8 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-18",
     updatedAt: "2026-07-18",
+    relatedSlugs: ["mejores-protectores", "protector-de-pala-merece-la-pena", "ebbom-vinilo-calandrado-vs-palbea-protector-transparente"],
+    metaDescription:
+      "Black Crown Adamantium vs Nox Protector de Pala: diseño llamativo contra ligereza en protectores.",
   },
 ];
