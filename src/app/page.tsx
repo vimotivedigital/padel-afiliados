@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
+import { TrustSection } from "@/components/home/TrustSection";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { LatestReviews } from "@/components/home/LatestReviews";
 import { PopularComparisons } from "@/components/home/PopularComparisons";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div className="space-y-16">
       <Hero />
+      <TrustSection />
       <CategoryGrid />
       <FeaturedProducts />
       <DealsSection />

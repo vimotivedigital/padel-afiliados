@@ -46,11 +46,27 @@ export function Footer() {
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
               <li><Link href="/marcas" className="hover:text-white">Marcas</Link></li>
               <li><Link href="/ofertas" className="hover:text-white">Ofertas</Link></li>
+              <li><Link href="/sobre-nosotros" className="hover:text-white">Sobre nosotros</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-xs text-white/60">
+        <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-white/10 pt-6">
+          <span className="inline-flex items-center rounded-full border border-white/20 px-3 py-1 text-xs font-medium text-white/80">
+            Afiliado oficial de Amazon
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-full border border-white/20 px-3 py-1 text-xs font-medium text-white/80">
+            🔒 Conexión segura (HTTPS)
+          </span>
+          <Link
+            href="/sobre-nosotros"
+            className="inline-flex items-center rounded-full border border-white/20 px-3 py-1 text-xs font-medium text-white/80 hover:text-white"
+          >
+            Nuestro criterio de verificación
+          </Link>
+        </div>
+
+        <div className="mt-4 text-xs text-white/60">
           <p>{AFFILIATE_DISCLOSURE_TEXT}</p>
           <p className="mt-2">© {year} {SITE_NAME}. Todos los derechos reservados.</p>
         </div>

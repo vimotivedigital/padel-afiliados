@@ -8,7 +8,10 @@ export function Rating({ value, count, className }: { value: number; count?: num
   });
 
   return (
-    <div className={cn("flex items-center gap-1", className)} aria-label={`Valoración ${value} de 5`}>
+    <div
+      className={cn("flex items-center gap-1", className)}
+      aria-label={count !== undefined ? `Valoración en Amazon: ${value} de 5 (${count} valoraciones)` : `Valoración ${value} de 5`}
+    >
       <div className="flex">
         {stars.map((fill, i) => (
           <span key={i} className="relative inline-block w-4 h-4 text-sm leading-none">
@@ -20,7 +23,7 @@ export function Rating({ value, count, className }: { value: number; count?: num
         ))}
       </div>
       <span className="text-sm font-medium text-foreground">{value.toFixed(1)}</span>
-      {count !== undefined && <span className="text-sm text-muted">({count})</span>}
+      {count !== undefined && <span className="text-sm text-muted">({count} en Amazon)</span>}
     </div>
   );
 }
