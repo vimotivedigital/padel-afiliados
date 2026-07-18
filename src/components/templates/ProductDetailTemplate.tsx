@@ -17,6 +17,7 @@ import { ProductTrustBadges } from "@/components/product/ProductTrustBadges";
 import { SimilarProducts } from "@/components/product/SimilarProducts";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { Faq } from "@/components/product/Faq";
+import { ProductVideoReview } from "@/components/product/ProductVideoReview";
 import { PriceDisplay } from "@/components/product/PriceDisplay";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { productSchema } from "@/lib/seo/schema";
@@ -72,6 +73,8 @@ export async function ProductDetailTemplate({ product, path }: { product: Produc
       <ProsConsBox pros={product.pros} cons={product.cons} />
 
       <EditorReviewBox editorRating={product.editorRating} editorReview={product.editorReview} />
+
+      {product.videoReview && <ProductVideoReview video={product.videoReview} />}
 
       <SpecsTable specs={buildSpecRows(product)} />
 

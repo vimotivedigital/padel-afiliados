@@ -22,6 +22,14 @@ export interface Faq {
   answer: string;
 }
 
+/** Vídeo-review real de terceros (YouTube), nunca contenido editorial propio ni inventado. */
+export interface VideoReview {
+  videoId: string;
+  title: string;
+  channelTitle: string;
+  publishedAt: string;
+}
+
 export interface BaseProduct {
   id: string;
   slug: string;
@@ -50,6 +58,8 @@ export interface BaseProduct {
   updatedAt: string;
   /** Nota editorial interna, nunca renderizada en el frontend (ver grep "internalNotes" antes de usarla en UI). */
   internalNotes?: string;
+  /** Vídeo-review real de YouTube, verificado manualmente. Opcional — la mayoría de productos no tienen uno. */
+  videoReview?: VideoReview;
 }
 
 export type Nivel =

@@ -1,5 +1,5 @@
 import { SITE_NAME, SITE_URL } from "@/lib/constants";
-import type { Article, Faq, Product } from "@/engine/types";
+import type { Article, Faq, Product, VideoReview } from "@/engine/types";
 
 export function organizationSchema() {
   return {
@@ -61,6 +61,24 @@ export function productSchema(product: Product, path: string) {
             reviewCount: product.reviewCount,
           }
         : undefined,
+    video: product.videoReview ? videoObjectSchema(product.videoReview) : undefined,
+  };
+}
+
+/**
+ * Vídeo de terceros (YouTube), nunca alojado ni producido por nosotros —
+ * por eso `uploadDate` viene del propio vídeo y no hay `author` editorial.
+ */
+export function videoObjectSchema(video: VideoReview) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: video.title,
+    description: `Vídeo-review de terceros publicado por el canal de YouTube "${video.channelTitle}".`,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`],
+    uploadDate: video.publishedAt,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${video.videoId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${video.videoId}`,
   };
 }
 

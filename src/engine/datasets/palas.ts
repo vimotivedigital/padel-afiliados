@@ -76,6 +76,12 @@ export const palas: Pala[] = [
       overgrips: ["og-siux-supergrip"],
       protectores: ["pr-nox-at10"],
     },
+    videoReview: {
+      videoId: "ruWlk0m3Rsg",
+      title: "NOX AT10 Genius 18K By Agustin Tapia 2025 REVIEW!",
+      channelTitle: "Justpadel",
+      publishedAt: "2025-06-06",
+    },
   },
   {
     id: "pala-bullpadel-vertex-04",
@@ -138,6 +144,12 @@ export const palas: Pala[] = [
       overgrips: ["og-siux-supergrip"],
       protectores: ["pr-bullpadel-vertex"],
     },
+    videoReview: {
+      videoId: "2aBSv7sluhA",
+      title: "Bullpadel VERTEX 04 2025 ¡Es Super COMPLETA! Probamos los nuevos Easy Vibe #padel",
+      channelTitle: "Probando Palas",
+      publishedAt: "2025-01-12",
+    },
   },
   {
     id: "pala-head-speed-motion",
@@ -199,6 +211,12 @@ export const palas: Pala[] = [
       overgrips: ["og-babolat-syntec"],
       protectores: ["pr-nox-at10"],
     },
+    videoReview: {
+      videoId: "E6e3Kdf0H4E",
+      title: "Head SPEED MOTION Vs EXTREME MOTION [La pala de Ari Sanchez Vs Paula Josemaria] #padel",
+      channelTitle: "Probando Palas",
+      publishedAt: "2024-02-05",
+    },
   },
   {
     id: "pala-adidas-adipower-multiweight-32",
@@ -250,6 +268,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 84,
+    videoReview: {
+      videoId: "FbCZngi9ZU4",
+      title: "👉REVIEW · Como es la pala ADIDAS ADIPOWER MULTIWEIGHT CTRL 2023🎾 | Padelarte.com",
+      channelTitle: "PADELARTE",
+      publishedAt: "2023-02-11",
+    },
   },
   {
     id: "pala-babolat-technical-veron",
@@ -310,6 +334,12 @@ export const palas: Pala[] = [
     compatibleAccesorios: {
       overgrips: ["og-babolat-syntec"],
       protectores: ["pr-bullpadel-vertex"],
+    },
+    videoReview: {
+      videoId: "ebhhnejcDas",
+      title: "BABOLAT TECHNICAL VERON 🐺 // Review y sensaciones- Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2025-05-26",
     },
   },
   {
@@ -466,6 +496,12 @@ export const palas: Pala[] = [
     genero: "mujer",
     lesionesRecomendadas: ["epicondilitis", "muneca"],
     puntuacionInterna: 74,
+    videoReview: {
+      videoId: "x3N_-8624pw",
+      title: "🥇Comparativa Palas de pádel Wilson Bela 2023 y 2024  🔥 REVIEW Wilson Bela Team V2 y V2.5 PRO",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2024-04-11",
+    },
   },
   {
     id: "pala-drop-shot-conqueror-9",
@@ -519,6 +555,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 72,
+    videoReview: {
+      videoId: "NipkUzkAYVI",
+      title: "La pala de pádel de Juan Martín Díaz - Drop Shot Conqueror 5.0",
+      channelTitle: "Paddelea",
+      publishedAt: "2017-07-14",
+    },
   },
   {
     id: "pala-oxdog-course-pro",
@@ -570,6 +612,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 62,
+    videoReview: {
+      videoId: "v9zjdHdZVQ8",
+      title: "OXDOG Ultimate PRO+, PRO y PRO LIGHT 2024...Convierte toda la ENERGÍA en POTENCIA #padel",
+      channelTitle: "Probando Palas",
+      publishedAt: "2024-03-17",
+    },
   },
   {
     id: "pala-nox-ml10-pro-cup",
@@ -630,6 +678,12 @@ export const palas: Pala[] = [
     compatibleAccesorios: {
       overgrips: ["og-siux-supergrip"],
       protectores: ["pr-bullpadel-vertex"],
+    },
+    videoReview: {
+      videoId: "WmuXnW5wrdc",
+      title: "Review of NOX ML10 Pro Cup 3K 2024 | Miguel Lamperti",
+      channelTitle: "Padel Smash TV",
+      publishedAt: "2024-02-01",
     },
   },
   {
@@ -764,6 +818,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 86,
+    videoReview: {
+      videoId: "X6R3yv6UMdo",
+      title: "👉 Head Extreme Motion 2025 Review | Padel Racket Test & Full Carbon Features",
+      channelTitle: "PADELREVIEW ENG",
+      publishedAt: "2025-09-04",
+    },
   },
   {
     id: "pala-head-vibe-2025",
@@ -806,6 +866,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["epicondilitis"],
     puntuacionInterna: 60,
+    videoReview: {
+      videoId: "e5YS_NsrwFs",
+      title: "Head Coello Vibe 2025 Review Padel Racket | Is This the Best Padel Racket for You?",
+      channelTitle: "God of Sports",
+      publishedAt: "2025-11-05",
+    },
   },
   {
     id: "pala-head-zephyr-ul",
@@ -849,6 +915,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["epicondilitis", "muneca"],
     puntuacionInterna: 70,
+    videoReview: {
+      videoId: "CZZa_e0qKec",
+      title: "🪶Head Zephyr UL Ultra Light 2024 🪶 ¿Es la pala más ligera del mercado? 🤔 Prueba en pista y opiniones",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2024-07-25",
+    },
   },
   {
     id: "pala-head-flash-2023",
@@ -891,6 +963,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 55,
+    videoReview: {
+      videoId: "nDy1QyL03MQ",
+      title: "Head Flash Plus 2.0 2023 🚀 defensa y ataque con excelente relación calidad-precio 💵💵💵",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2023-07-19",
+    },
   },
   {
     id: "pala-bullpadel-impulse-pwr-2026",
@@ -1025,6 +1103,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 73,
+    videoReview: {
+      videoId: "MdwcxMxOBuA",
+      title: "Top ten padel rackets under £100: Nox X-Zero Padel Racket 26 reviewed by pdhsports.com ",
+      channelTitle: "pdhsports",
+      publishedAt: "2026-04-20",
+    },
   },
   {
     id: "pala-nox-nextgen-pro-hybrid-3k-2025",
@@ -1201,6 +1285,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 88,
+    videoReview: {
+      videoId: "tF8tQSWQtjw",
+      title: "Babolat Technical Viper 2025...Es mejor que la versión 2024? Yo creo que SI! #padel",
+      channelTitle: "Probando Palas",
+      publishedAt: "2025-05-04",
+    },
   },
   {
     id: "pala-wilson-defy-pro-v1-2025",
@@ -1244,6 +1334,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 73,
+    videoReview: {
+      videoId: "nr-2fMa6KpY",
+      title: "Comparativa Wilson Bela PRO V3 2025 vs Defy V1 PRO 🚀 Las mejores palas de pádel de Wilson 2025",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2025-09-02",
+    },
   },
   {
     id: "pala-adidas-metalbone-carbon-ctrl-3-3",
@@ -1292,6 +1388,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 76,
+    videoReview: {
+      videoId: "n4tRvEDj53g",
+      title: "ADIDAS METALBONE CARBON CONTROL 3.3 // Review y sensaciones - Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2024-04-22",
+    },
   },
   {
     id: "pala-adidas-metalbone-hrd-3-4-2025",
@@ -1340,6 +1442,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 85,
+    videoReview: {
+      videoId: "syCg_oP-ATU",
+      title: "ADIDAS METALBONE HRD+ 3.4 // Review y sensaciones - Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2025-04-22",
+    },
   },
   {
     id: "pala-adidas-metalbone-team-3-4-2025",
@@ -1383,6 +1491,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 68,
+    videoReview: {
+      videoId: "sXqz6YTcRSA",
+      title: "Adidas Metalbone Team 3.4 2025 Padel Racket Review – Best Value Racket? 🔥🎾",
+      channelTitle: "Padel Smash TV",
+      publishedAt: "2025-03-10",
+    },
   },
   {
     id: "pala-adidas-match-blue-3-4",
@@ -1431,6 +1545,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 62,
+    videoReview: {
+      videoId: "v7qkJUui8oA",
+      title: "🎾 Reseña ≫ Adidas Match Blue 3.4",
+      channelTitle: "Padel Star",
+      publishedAt: "2025-07-18",
+    },
   },
   {
     id: "pala-bullpadel-hack-03-comfort-24",
@@ -1473,6 +1593,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 75,
+    videoReview: {
+      videoId: "M4CdAGq__rI",
+      title: "Probamos la BULLPADEL HACK 03 COMFORT 2024: ¡Salida de bola BRUTAL! - Padelarte",
+      channelTitle: "PADELARTE",
+      publishedAt: "2025-06-19",
+    },
   },
   {
     id: "pala-bullpadel-vertex-03-cmf-x-series",
@@ -1515,6 +1641,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 74,
+    videoReview: {
+      videoId: "ccpaC5DpI3A",
+      title: "BULLPADEL VERTEX 03 CMF VS HACK 03 CMF , COMPARATIVA -Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2023-10-02",
+    },
   },
   {
     id: "pala-bullpadel-elite-w-25-mujer",
@@ -1604,6 +1736,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 65,
+    videoReview: {
+      videoId: "nZCBG4SELeY",
+      title: "Reseña ≫ Bullpadel Indiga Power 2026",
+      channelTitle: "Padel Star",
+      publishedAt: "2026-01-06",
+    },
   },
   {
     id: "pala-drop-shot-canyon-pro-1-0-pablo-lima",
@@ -1647,6 +1785,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 81,
+    videoReview: {
+      videoId: "p_a334s1cOI",
+      title: "🔥Drop shot CANYON PRO 1.0🔥La pala de Pablo Lima",
+      channelTitle: "El chini consejo",
+      publishedAt: "2023-03-26",
+    },
   },
   {
     id: "pala-drop-shot-axion-attack-2-0-jon-sanz",
@@ -1688,6 +1832,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 80,
+    videoReview: {
+      videoId: "UQ5Ga7EKH8Q",
+      title: "Análisis Completo🤯: PALAS DROP SHOT 2025 de CAMPA EXPLORER PRO ATTACK y JON SANZ AXION ATTACK",
+      channelTitle: "Mejora Tu Padel",
+      publishedAt: "2025-01-20",
+    },
   },
   {
     id: "pala-nox-future-hybrid-12k-alum",
@@ -1735,6 +1885,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 75,
+    videoReview: {
+      videoId: "knqDFqcS8aE",
+      title: "Probando la pala de pádel Nox Future Hybrid 12K Alum 2025",
+      channelTitle: "Padel Iberico Tienda Padel",
+      publishedAt: "2026-04-27",
+    },
   },
   {
     id: "pala-nox-future-attack-12k-alum",
@@ -1776,6 +1932,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 71,
+    videoReview: {
+      videoId: "ZXUyPa2rEoM",
+      title: "Probando la pala de pádel Nox Future Attack 12K Alum 2025",
+      channelTitle: "Padel Iberico Tienda Padel",
+      publishedAt: "2026-04-15",
+    },
   },
   {
     id: "pala-siux-fenix-pro-5-2025",
@@ -1817,6 +1979,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 80,
+    videoReview: {
+      videoId: "quKwuhAewBI",
+      title: "Review SIUX Fenix PRO 2025 🔥 La pala de Leo Augsburguer y Alex Chozas",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2025-04-01",
+    },
   },
   {
     id: "pala-siux-electra-elite-6",
@@ -1943,6 +2111,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 76,
+    videoReview: {
+      videoId: "sx5rMVpBXdc",
+      title: "¿Mejor que la Viper? Review HONESTA de la Babolat Technical Veron 2025 🧨",
+      channelTitle: "Peter Consuegra",
+      publishedAt: "2025-03-27",
+    },
   },
   {
     id: "pala-babolat-air-viper-2-6",
@@ -1990,6 +2164,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 83,
+    videoReview: {
+      videoId: "3YSlCWJhuUU",
+      title: "NUEVA Babolat Air Viper 2.6 | Review y Sensaciones",
+      channelTitle: "Hotel Palas",
+      publishedAt: "2026-02-26",
+    },
   },
   {
     id: "pala-wilson-endure-v1",
@@ -2037,6 +2217,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 74,
+    videoReview: {
+      videoId: "CkJZEA5Rd1g",
+      title: "Wilson Endure V1 vs LS – Steve’s On‑Court Verdict (Advanced Racket Test)",
+      channelTitle: "PADEL WORLD",
+      publishedAt: "2026-06-24",
+    },
   },
   {
     id: "pala-varlion-wpt-bourne-stockholm",
@@ -2285,6 +2471,12 @@ export const palas: Pala[] = [
     genero: "mujer",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 66,
+    videoReview: {
+      videoId: "zkMBcnF4-zQ",
+      title: "ADIDAS CROSS IT LIGHT CON MARTA ORTEGA // Review y sensaciones  -Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2023-12-26",
+    },
   },
   {
     id: "pala-adidas-metalbone-2026-ale-galan",
@@ -2367,6 +2559,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 78,
+    videoReview: {
+      videoId: "AHNYsKqmm4M",
+      title: "Nox ML10 Ventus Control 3k: Review | Cambia il telaio ma la solita pala di Miguel LAMPERTI",
+      channelTitle: "Padel Review",
+      publishedAt: "2026-03-16",
+    },
   },
   {
     id: "pala-nox-x-auro-2026",
@@ -2572,6 +2770,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 84,
+    videoReview: {
+      videoId: "nGGA7eXcbsI",
+      title: "HACK de PAQUITO NAVARRO Vs JUAN TELLO 🦸🏻‍♂️ VERTEX 05 vs HACK 04 🔥 ¿La mejor pala Bullpadel 2026?",
+      channelTitle: "Mejora Tu Padel",
+      publishedAt: "2025-09-29",
+    },
   },
   {
     id: "pala-bullpadel-vertex-05-geo",
@@ -2613,6 +2817,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 80,
+    videoReview: {
+      videoId: "txXmdiURKXk",
+      title: "Bullpadel Vertex 05 & Vertex 05 Geo | 2026 Racket Review",
+      channelTitle: "The Padel School",
+      publishedAt: "2025-09-22",
+    },
   },
   {
     id: "pala-bullpadel-hack-04-2025-paquito-navarro",
@@ -2654,6 +2864,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 77,
+    videoReview: {
+      videoId: "rzNmbjMlKco",
+      title: "Probando la Bullpadel Hack 04 de Paquito Navarro #Padel #palareview #Hack04",
+      channelTitle: "xTRES Padel",
+      publishedAt: "2024-11-26",
+    },
   },
   {
     id: "pala-bullpadel-neuron-25",
@@ -2695,6 +2911,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 72,
+    videoReview: {
+      videoId: "PNQwF8-HUzA",
+      title: "BULLPADEL NEURON 2025 // Review y sensaciones - Dani13",
+      channelTitle: "Dani 13",
+      publishedAt: "2024-12-01",
+    },
   },
   {
     id: "pala-bullpadel-xplo-26",
@@ -2736,6 +2958,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 79,
+    videoReview: {
+      videoId: "vm77bXMLwms",
+      title: "Probamos las NUEVAS BULLPADEL 2026 🔥 NEURON 02 y XPLO al límite en pista | Mejora tu Padel",
+      channelTitle: "Mejora Tu Padel",
+      publishedAt: "2025-09-23",
+    },
   },
   {
     id: "pala-bullpadel-pearl-2026",
@@ -2777,6 +3005,12 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 66,
+    videoReview: {
+      videoId: "iPNPDfmtryE",
+      title: "Review Bullpadel Pearl 2026 💎 La pala de Bea Gonzalez",
+      channelTitle: "Zona de Pádel - Tienda Pádel",
+      publishedAt: "2025-09-15",
+    },
   },
   {
     id: "pala-bullpadel-indiga-control-2025",
@@ -2941,5 +3175,11 @@ export const palas: Pala[] = [
     genero: "unisex",
     lesionesRecomendadas: ["ninguna"],
     puntuacionInterna: 62,
+    videoReview: {
+      videoId: "SH4plmn15Go",
+      title: "Head Evo Speed 2025 REVIEW!",
+      channelTitle: "Justpadel",
+      publishedAt: "2025-04-22",
+    },
   },
 ];

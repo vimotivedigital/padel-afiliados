@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: "m.media-amazon.com",
         pathname: "/images/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        pathname: "/vi/**",
+      },
     ],
   },
 };
