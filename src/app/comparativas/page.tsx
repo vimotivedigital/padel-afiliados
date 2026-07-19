@@ -3,6 +3,7 @@ import Link from "next/link";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { getAllComparisons } from "@/lib/content";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { TrustSection } from "@/components/home/TrustSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Comparativas de material de pádel",
@@ -17,6 +18,7 @@ export default function ComparativasPage() {
     <div className="space-y-6">
       <Breadcrumbs items={[{ name: "Inicio", path: "/" }, { name: "Comparativas", path: "/comparativas" }]} />
       <h1 className="text-3xl font-extrabold">Comparativas</h1>
+      <TrustSection />
       <div className="grid gap-4 sm:grid-cols-2">
         {comparisons.map((comparison) => (
           <Link

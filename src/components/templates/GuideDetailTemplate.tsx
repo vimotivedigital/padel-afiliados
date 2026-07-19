@@ -5,6 +5,7 @@ import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Faq } from "@/components/product/Faq";
+import { TrustSection } from "@/components/home/TrustSection";
 
 export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; path: string }) {
   const products = getGuideProducts(guide);
@@ -20,6 +21,8 @@ export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; p
           { name: guide.title, path },
         ]}
       />
+      <TrustSection compact />
+
       <div>
         <h1 className="text-3xl font-extrabold leading-tight">{guide.h1}</h1>
         <p className="mt-3 max-w-3xl text-lg text-muted">{guide.intro}</p>

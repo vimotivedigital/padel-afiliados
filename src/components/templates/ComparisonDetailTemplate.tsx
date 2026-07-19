@@ -10,6 +10,7 @@ import { ComparisonTable } from "@/components/comparison/ComparisonTable";
 import { ProsConsBox } from "@/components/product/ProsConsBox";
 import { AmazonCTA } from "@/components/product/AmazonCTA";
 import { Faq } from "@/components/product/Faq";
+import { TrustSection } from "@/components/home/TrustSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, productSchema } from "@/lib/seo/schema";
 import { formatDate } from "@/lib/utils";
@@ -42,6 +43,8 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
       <JsonLd data={productSchema(productA, pathA)} />
       <JsonLd data={productSchema(productB, pathB)} />
       <Breadcrumbs items={[{ name: "Inicio", path: "/" }, { name: "Comparativas", path: "/comparativas" }, { name: comparison.title, path }]} />
+
+      <TrustSection compact />
 
       <header>
         <h1 className="text-3xl font-extrabold leading-tight">{comparison.h1}</h1>
