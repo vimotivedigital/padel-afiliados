@@ -1,7 +1,7 @@
 "use client";
 
 import { AMAZON_AFFILIATE_TAG } from "@/lib/constants";
-import { sendGAEvent, sendGoogleAdsConversion } from "@/lib/analytics/ga";
+import { sendGAEvent } from "@/lib/analytics/ga";
 import { cn } from "@/lib/utils";
 
 interface AmazonCTAProps {
@@ -29,7 +29,6 @@ export function AmazonCTA({ asin, productName, size = "md", className, label = "
       rel="nofollow sponsored noopener"
       onClick={() => {
         sendGAEvent("amazon_click", { asin, product_name: productName });
-        sendGoogleAdsConversion();
       }}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-full bg-[#FF9900] font-bold text-[#0B1120] transition-transform hover:scale-[1.02]",
