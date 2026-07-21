@@ -43,7 +43,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const page = getProgrammaticPage(slug);
   if (page) {
-    return buildMetadata({ title: page.title, description: page.intro, path: `/${slug}` });
+    const description = (page.type === "guide" ? page.metaDescription : undefined) ?? page.intro;
+    return buildMetadata({ title: page.title, description, path: `/${slug}` });
   }
 
   return buildMetadata({ title: "Página no encontrada", description: "Contenido no disponible.", path: `/${slug}`, noIndex: true });

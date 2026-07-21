@@ -17,8 +17,14 @@ export default function ComparativasPage() {
   return (
     <div className="space-y-6">
       <Breadcrumbs items={[{ name: "Inicio", path: "/" }, { name: "Comparativas", path: "/comparativas" }]} />
+      <TrustSection compact />
       <h1 className="text-3xl font-extrabold">Comparativas</h1>
-      <TrustSection />
+      <p className="max-w-3xl text-lg text-muted">
+        Enfrentamos cara a cara los modelos que más dudas generan al comprar: misma gama y precio parecido pero
+        planteamientos distintos, la última versión frente a la anterior, o la referencia consolidada de una marca
+        frente a la alternativa más reciente. Cada comparativa incluye tabla de especificaciones, precio actualizado,
+        pros y contras de cada producto y un veredicto claro sobre cuál elegir según tu perfil de juego.
+      </p>
       <div className="grid gap-4 sm:grid-cols-2">
         {comparisons.map((comparison) => (
           <Link

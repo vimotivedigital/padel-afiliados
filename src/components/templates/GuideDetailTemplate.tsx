@@ -1,6 +1,8 @@
+import Link from "next/link";
 import type { GuidePage } from "@/lib/seo/programmatic-pages";
 import { getGuideProducts } from "@/lib/seo/programmatic-pages";
 import { getProductPrices } from "@/lib/pricing/getProductPrices";
+import { resolveRelatedLink } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
@@ -44,6 +46,27 @@ export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; p
       )}
 
       <Faq faqs={guide.faqs} />
+
+      {guide.relatedSlugs && guide.relatedSlugs.length > 0 && (
+        <div>
+          <h2 className="text-xl font-bold">También te puede interesar</h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {guide.relatedSlugs.map((slug) => {
+              const { href, label } = resolveRelatedLink(slug);
+              return (
+                <li key={slug}>
+                  <Link
+                    href={href}
+                    className="block rounded-2xl border border-border p-4 font-medium capitalize hover:border-brand-primary hover:text-brand-primary"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

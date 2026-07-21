@@ -16,9 +16,12 @@ export interface GuidePage {
   h1: string;
   category: Category;
   intro: string;
+  /** Versión corta (~150 caracteres) para meta description; si falta, se usa `intro` (puede truncarse en el SERP). */
+  metaDescription?: string;
   filter?: (product: Product) => boolean;
   sortBy?: (a: Product, b: Product) => number;
   faqs: Faq[];
+  relatedSlugs?: string[];
 }
 
 export interface SelectorVariantPage {
@@ -46,7 +49,9 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Las mejores palas de control de pádel",
     category: "palas",
     intro:
-      "Si tu prioridad es la precisión y cuidar el brazo por encima de la potencia, estas son las palas de control mejor valoradas de nuestro catálogo.",
+      "Una pala de control se reconoce por tres rasgos que van casi siempre juntos: forma redonda, balance bajo (el peso concentrado cerca del mango) y un núcleo de goma más blando que el de las palas de potencia. Esa combinación amplía el punto dulce —la zona de la pala que golpea con más acierto— y reduce la vibración que llega al brazo en cada impacto, por eso son la opción que solemos recomendar tanto a quien empieza como a quien ya nota molestias en el codo o la muñeca. Lo que se sacrifica a cambio es algo de pegada: una pala de control nunca va a rematar tan fuerte como una diamante de balance alto, pero a cambio perdona mucho más los golpes descentrados, que son la inmensa mayoría cuando la técnica todavía no está consolidada. Si tu estilo de juego es defensivo o simplemente prefieres construir el punto con seguridad antes que buscar el golpe ganador, este es el grupo de palas donde deberías mirar primero. En este ranking ordenamos por valoración editorial las palas de control de todo el catálogo, cubriendo distintos precios y niveles de juego, desde opciones de entrada hasta modelos de gama alta pensados para jugadores ya consolidados que simplemente priorizan la precisión sobre la potencia.",
+    metaDescription:
+      "Palas de control de pádel ordenadas por valoración editorial: forma redonda, balance bajo y núcleo blando para máxima precisión y cuidar el brazo.",
     filter: (p) => p.category === "palas" && p.estiloJuego === "control",
     sortBy: byEditorRating,
     faqs: [
@@ -56,6 +61,7 @@ export const programmaticPages: ProgrammaticPage[] = [
           "Las palas de control suelen tener forma redonda, balance bajo y un núcleo más blando, lo que amplía el punto dulce y facilita la precisión a costa de algo de pegada.",
       },
     ],
+    relatedSlugs: ["mejores-overgrips", "pala-control-vs-potencia-cual-elegir", "adidas-metalbone-carbon-ctrl-3-3-vs-nox-ml10-pro-cup"],
   },
   {
     type: "guide",
@@ -63,10 +69,35 @@ export const programmaticPages: ProgrammaticPage[] = [
     title: "Las mejores palas de potencia",
     h1: "Las mejores palas de potencia de pádel",
     category: "palas",
-    intro: "Palas de forma diamante y balance alto pensadas para jugadores con nivel avanzado que priorizan el remate y la pegada.",
+    intro:
+      "Las palas de potencia se identifican por su forma diamante, con el peso concentrado en la parte superior de la cabeza, y un balance alto que multiplica la fuerza de cada golpe. Esa misma concentración de peso es la que reduce el punto dulce: los golpes descentrados se notan mucho más que en una pala de control, así que este tipo de pala exige una técnica ya consolidada para sacarle partido real. Si tu estilo de juego es agresivo y buscas rematar con contundencia desde el fondo de la pista, una diamante de balance alto es la opción lógica — pero si todavía estás definiendo tu técnica o notas molestias en el codo, probablemente rendirás mejor con una pala de control o al menos híbrida antes de dar el salto a la potencia pura. El peso también suele ser mayor en esta categoría (a menudo por encima de 360g), lo que añade fatiga durante el partido y penaliza algo la maniobrabilidad en la volea y la defensa. En este ranking ordenamos por valoración editorial las palas de potencia y agresivas de todo el catálogo, pensadas para jugadores de nivel avanzado o de competición que ya dominan el golpeo y priorizan la pegada por encima de la comodidad.",
+    metaDescription:
+      "Palas de potencia de pádel ordenadas por valoración editorial: forma diamante y balance alto para jugadores avanzados que priorizan la pegada.",
     filter: (p) => p.category === "palas" && (p.estiloJuego === "potencia" || p.estiloJuego === "agresivo"),
     sortBy: byEditorRating,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿Una pala de potencia es mala para el codo?",
+        answer:
+          "Puede serlo si ya tienes molestias: el balance alto y el núcleo más duro transmiten más vibración al brazo que una pala de control. Si notas epicondilitis o molestias en la muñeca, es mejor mirar palas de control o híbridas antes que una diamante pura.",
+      },
+      {
+        question: "¿Puedo pasar directamente de una pala de iniciación a una de potencia?",
+        answer:
+          "No es lo más recomendable. Lo habitual es pasar primero por una pala de control o híbrida de gama media antes de dar el salto a una de potencia pura, para no perder precisión de golpeo por el camino.",
+      },
+      {
+        question: "¿Cuánto debería pesar una pala de potencia?",
+        answer:
+          "Normalmente por encima de 360g, aunque el peso ideal depende también de tu físico y de cuánto entrenes: más peso da más pegada pero también más fatiga durante el partido.",
+      },
+      {
+        question: "¿Qué diferencia hay entre estilo \"potencia\" y \"agresivo\"?",
+        answer:
+          "Ambos priorizan la pegada por encima del control, pero el estilo agresivo suele llevar el balance y la dureza del núcleo todavía más al extremo, exigiendo aún más técnica y físico consolidados.",
+      },
+    ],
+    relatedSlugs: ["mejores-pelotas-competicion", "nox-at10-genius-vs-bullpadel-vertex-04", "pala-control-vs-potencia-cual-elegir"],
   },
   {
     type: "guide",
@@ -74,9 +105,29 @@ export const programmaticPages: ProgrammaticPage[] = [
     title: "Las mejores palas calidad-precio",
     h1: "Las mejores palas calidad-precio",
     category: "palas",
-    intro: "Ordenamos el catálogo por relación entre valoración editorial y precio para encontrar las palas que más rinden por cada euro.",
+    intro:
+      "No siempre la pala más cara es la que más te conviene. En este ranking no ordenamos por precio ni por valoración en solitario, sino por la relación entre ambas cosas: dividimos la valoración editorial de cada pala entre su precio, para encontrar los modelos que más rinden por cada euro invertido, sin importar si están en la gama de entrada o en la intermedia. Esto significa que vas a encontrar aquí tanto palas de menos de 100€ con una relación calidad-precio sobresaliente, como algún modelo de gama media que compensa un precio algo mayor con prestaciones que normalmente solo verías en la gama alta. Lo que no vas a encontrar en los primeros puestos son las palas más caras del catálogo: aunque puedan ser objetivamente mejores en rendimiento puro, su precio no compensa proporcionalmente frente a alternativas más asequibles con una valoración editorial similar. Es el ranking que recomendamos revisar si tu prioridad es gastar de forma inteligente antes que conseguir el máximo rendimiento posible sin mirar el precio — típicamente jugadores que empiezan o que juegan de forma recreativa, para quienes una pala de gama alta no se traduce necesariamente en mejor experiencia de juego.",
+    metaDescription:
+      "Las palas con mejor relación valoración-precio del catálogo, para encontrar las que más rinden por cada euro invertido.",
     sortBy: byValueForMoney,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿Una pala barata puede tener buena relación calidad-precio?",
+        answer:
+          "Sí — de hecho es habitual que palas de gama de entrada o media encabecen este ranking, porque su valoración editorial es alta en proporción a lo que cuestan, aunque no lleguen a las prestaciones absolutas de la gama alta.",
+      },
+      {
+        question: "¿Por qué las palas más caras del catálogo no encabezan este ranking?",
+        answer:
+          "Porque el precio no siempre escala en la misma proporción que las prestaciones: una pala puede ser objetivamente mejor y aun así tener peor relación calidad-precio que una alternativa más asequible con una valoración casi tan alta.",
+      },
+      {
+        question: "¿Debería preocuparme si mi pala favorita no aparece en los primeros puestos?",
+        answer:
+          "No necesariamente. Este ranking prioriza el rendimiento por cada euro invertido, no el rendimiento absoluto — una pala de gama alta puede tener otras ventajas (potencia máxima, materiales premium) que no se reflejan en esta métrica.",
+      },
+    ],
+    relatedSlugs: ["mejores-pelotas-calidad-precio", "mejores-palas-menos-de-100", "como-elegir-tu-primera-pala-de-padel"],
   },
   {
     type: "guide",
@@ -138,9 +189,29 @@ export const programmaticPages: ProgrammaticPage[] = [
     title: "Los mejores paleteros",
     h1: "Los mejores paleteros de pádel",
     category: "paleteros",
-    intro: "Paleteros para transportar tus palas, ropa y accesorios con comodidad, ordenados por valoración editorial.",
+    intro:
+      "Elegir un paletero no es solo cuestión de capacidad: el número de palas que sueles llevar, si entrenas a diario o juegas de forma ocasional, y si viajas en coche o caminando hasta la pista cambian bastante qué modelo tiene sentido para ti. Un paletero de 2 palas es suficiente si juegas con una pala habitual y quizá una de repuesto ocasional — cargar con más capacidad de la que necesitas solo añade peso vacío que notarás cada vez que lo lleves al hombro. A partir de 3-4 palas, el compartimento térmico empieza a ser una prestación real, no un lujo: protege el núcleo de la pala de los cambios bruscos de temperatura en el trayecto hasta la pista, algo que a la larga afecta más a las prestaciones de la pala que las propias horas de juego. Si entrenas con frecuencia o compites, también merece la pena fijarte en si el paletero tiene zapatillero independiente, para no mezclar el calzado —con restos de arena o polvo de pista— con el compartimento donde van las palas. En este ranking ordenamos el catálogo completo de paleteros por valoración editorial, cubriendo desde mochilas compactas de 2 palas hasta modelos de competición con capacidad para 4 y compartimento térmico incluido.",
+    metaDescription:
+      "Paleteros de pádel ordenados por valoración editorial: desde mochilas compactas de 2 palas hasta modelos de competición con compartimento térmico.",
     sortBy: byEditorRating,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿Necesito compartimento térmico si juego poco?",
+        answer:
+          "No es imprescindible: el térmico protege la pala de cambios bruscos de temperatura en trayectos largos o climas extremos, algo que importa más cuanto más a menudo juegas. Si vas de forma esporádica, un paletero sin térmico es suficiente.",
+      },
+      {
+        question: "¿Un paletero grande resta algo si solo llevo 2 palas?",
+        answer:
+          "Sobre todo peso extra y espacio desaprovechado. No hay problema funcional en usar un paletero grande medio vacío, pero si caminas mucho hasta la pista, uno ajustado a tu uso real pesa menos.",
+      },
+      {
+        question: "¿Qué diferencia hay entre una mochila y un paletero clásico?",
+        answer:
+          "Es sobre todo una cuestión de transporte: la mochila reparte el peso en ambos hombros y es más cómoda en trayectos largos a pie, mientras que el paletero clásico (bandolera) suele ser más rápido de coger y dejar en el coche.",
+      },
+    ],
+    relatedSlugs: ["mejores-paleteros-termicos", "nox-paletero-at10-vs-ml10-competition-xl-compact", "paletero-segun-numero-de-palas"],
   },
   {
     type: "guide",
@@ -202,7 +273,10 @@ export const programmaticPages: ProgrammaticPage[] = [
     title: "Las mejores zapatillas de pádel",
     h1: "Las mejores zapatillas de pádel",
     category: "zapatillas",
-    intro: "Zapatillas de pádel ordenadas por valoración editorial, con opciones para todos los tipos de pisada y niveles de juego.",
+    intro:
+      "La pisada influye más que la marca a la hora de elegir zapatillas de pádel, pero no es el único factor: la frecuencia con la que juegas, tu peso corporal y el tipo de pista (interior o exterior) también condicionan qué modelo te va a durar más y proteger mejor las articulaciones. El pádel exige frenadas y cambios de dirección mucho más bruscos que correr en línea recta, así que una zapatilla pensada específicamente para este deporte —con refuerzos laterales y una suela de agarre adecuada— marca una diferencia real frente a usar calzado genérico de otros deportes de raqueta. Si notas que tiendes a pronar (el pie gira hacia dentro al apoyar), prioriza modelos con refuerzo lateral y buena estabilidad en la suela; si tu pisada es neutra, tienes más margen para priorizar amortiguación y polivalencia sin preocuparte tanto por la estabilidad. En este ranking ordenamos por valoración editorial el catálogo completo de zapatillas de pádel, con opciones para todos los tipos de pisada, niveles de juego y presupuestos, desde modelos de entrada hasta la gama alta de marcas especializadas en el deporte.",
+    metaDescription:
+      "Zapatillas de pádel ordenadas por valoración editorial, con opciones para todo tipo de pisada, nivel de juego y presupuesto.",
     sortBy: byEditorRating,
     faqs: [
       {
@@ -210,6 +284,7 @@ export const programmaticPages: ProgrammaticPage[] = [
         answer: "Depende del uso, pero como referencia general, entre 6 y 12 meses jugando 2-3 veces por semana, cuando la suela empieza a perder agarre o la amortiguación se nota más plana.",
       },
     ],
+    relatedSlugs: ["mejores-zapatillas-pronador", "nox-at10-pro-padel-vs-nox-ml10-hexa", "zapatillas-padel-segun-tipo-pisada"],
   },
   {
     type: "guide",
@@ -258,9 +333,28 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Las mejores pelotas calidad-precio de pádel",
     category: "pelotas",
     intro:
-      "Ordenamos el catálogo de pelotas por relación entre valoración editorial y precio, para encontrar las que más rinden por cada euro.",
+      "Igual que con las palas, en este ranking no ordenamos las pelotas solo por valoración ni solo por precio, sino por la relación entre ambas cosas — dividimos la valoración editorial entre el precio para encontrar los botes que más rinden por cada euro. Las pelotas de pádel pierden presión con cada impacto de forma inevitable, así que la diferencia real entre una pelota barata y una cara está en cuánto tiempo tardan en notarse esa pérdida de bote, no en si rebota más o menos al abrir el bote. Para entrenar con frecuencia, una pelota de gama de entrenamiento con buena relación calidad-precio es perfectamente válida y mucho más económica que comprar pelotas de competición para cada sesión — reserva esas para los partidos que realmente lo justifiquen. En este ranking encontrarás tanto botes individuales como formatos de varias unidades, pensados para quien juega con regularidad y quiere optimizar el gasto en el consumible que más se repone de todo el equipo de pádel, sin sacrificar la calidad de bote durante un set completo.",
+    metaDescription:
+      "Pelotas de pádel con mejor relación valoración-precio del catálogo, para entrenar sin gastar de más en cada bote.",
     sortBy: byValueForMoney,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿Debo comprar pelotas de competición para entrenar?",
+        answer:
+          "No hace falta. Las pelotas de gama de entrenamiento con buena relación calidad-precio son perfectamente válidas para sesiones habituales — reserva las de competición para partidos donde de verdad se note la diferencia de bote.",
+      },
+      {
+        question: "¿Cuántos partidos aguanta un bote de gama calidad-precio?",
+        answer:
+          "Como referencia general, entre 1 y 2 partidos de intensidad media antes de notar pérdida de presión, algo menos que una pelota de competición pura, pero suficiente para entrenamientos y partidos recreativos.",
+      },
+      {
+        question: "¿Vale la pena comprar cajas grandes de varias unidades?",
+        answer:
+          "Sí, si juegas con cierta frecuencia: los formatos de varios botes suelen reducir el coste por unidad frente a comprar botes individuales cada vez.",
+      },
+    ],
+    relatedSlugs: ["mejores-pelotas-competicion", "dunlop-pro-padel-vs-dunlop-team-padel", "pelotas-padel-presion-duracion-cuando-cambiarlas"],
   },
   {
     type: "guide",
@@ -269,7 +363,9 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Los mejores overgrips de pádel",
     category: "overgrips",
     intro:
-      "El catálogo completo de overgrips ordenado por valoración editorial, con opciones para todo tipo de sudoración y preferencia de tacto.",
+      "El overgrip es, junto a las pelotas, el accesorio que más se repone en el pádel — y también el que más se descuida pese a costar solo unos euros. Un overgrip gastado o inadecuado para tu nivel de sudoración puede arruinar la sensación de agarre en pleno partido, por muy buena que sea la pala que lleves debajo, así que merece más atención de la que suele recibir. Si sudas mucho de manos, un overgrip de superficie perforada evacúa mejor la humedad y mantiene el agarre estable durante todo el partido, aunque el tacto sea algo más rugoso que uno liso; si no sudas en exceso, un overgrip liso te dará más sensibilidad y precisión en el golpeo. Como referencia, jugando 2-3 veces por semana, un overgrip suele aguantar entre 2 y 4 semanas antes de perder su capacidad de absorción — si notas que se desliza o ya no absorbe como al principio, es el momento de cambiarlo. En este ranking ordenamos por valoración editorial el catálogo completo de overgrips, con opciones tanto para manos sudorosas como para quien prioriza el tacto y la sensibilidad de golpeo por encima de la absorción.",
+    metaDescription:
+      "Overgrips de pádel ordenados por valoración editorial, con opciones para manos sudorosas y para quien prioriza el tacto.",
     sortBy: byEditorRating,
     faqs: [
       {
@@ -278,6 +374,7 @@ export const programmaticPages: ProgrammaticPage[] = [
           "Si juegas 2-3 veces por semana, entre 2 y 4 semanas antes de perder capacidad de absorción, aunque depende mucho de cuánto sudes de manos.",
       },
     ],
+    relatedSlugs: ["mejores-overgrips-sudoracion", "nerusgrip-pack-6-vs-siux-pro-perforated-x60", "overgrip-vs-grip-original-padel"],
   },
   {
     type: "guide",
@@ -298,9 +395,28 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Los mejores protectores de pala de pádel",
     category: "protectores",
     intro:
-      "El catálogo completo de protectores de marco ordenado por valoración editorial, para proteger tu pala de los golpes bajos sin penalizar el peso.",
+      "Un protector de marco cuesta apenas unos euros, pero evita que los golpes bajos —habituales en la volea baja y la salida de pared— desgasten directamente el marco de la pala, que es mucho más caro de reparar o sustituir. Es, junto al overgrip, el accesorio con mejor relación entre lo que cuesta y lo que protege: sin él, el roce constante contra el suelo o la pared va limando poco a poco el borde inferior del marco hasta dejarlo visiblemente desgastado o incluso agrietado en pocos meses de juego intenso. La mayoría de protectores del catálogo son transparentes, pensados para no alterar el diseño de la pala, aunque también existen acabados más llamativos (vinilo, dentado) que declaran mayor protección a cambio de ser más visibles — la diferencia real de protección entre unos y otros es menor de lo que el marketing sugiere. En cuanto notes que empieza a despegarse por una esquina, no esperes a que se caiga del todo: un protector parcialmente despegado deja precisamente la zona de más impacto sin cubrir. En este ranking ordenamos por valoración editorial el catálogo completo de protectores de pala.",
+    metaDescription:
+      "Protectores de pala de pádel ordenados por valoración editorial, para proteger el marco de los golpes bajos sin penalizar el peso.",
     sortBy: byEditorRating,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿El protector afecta al peso o al tacto de la pala?",
+        answer:
+          "El peso añadido es mínimo — la mayoría ronda los 10-15g, prácticamente imperceptible en el juego. No debería notarse ningún cambio relevante de tacto tras instalarlo.",
+      },
+      {
+        question: "¿Un protector transparente protege menos que uno de color o dentado?",
+        answer:
+          "La protección real entre acabados es más parecida de lo que sugiere el marketing. Los acabados llamativos (vinilo, dentado) apuestan más por la estética que por una diferencia sustancial de protección frente a los transparentes clásicos.",
+      },
+      {
+        question: "¿Cada cuánto hay que cambiar el protector?",
+        answer:
+          "En cuanto empiece a despegarse por una esquina, no esperes a que se caiga del todo — un protector parcialmente despegado deja precisamente la zona de más impacto sin cubrir.",
+      },
+    ],
+    relatedSlugs: ["mejores-overgrips", "black-crown-protector-adamantium-vs-nox-protector-de-pala", "protector-de-pala-merece-la-pena"],
   },
   {
     type: "guide",
@@ -309,10 +425,29 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Las mejores camisetas de pádel",
     category: "ropa",
     intro:
+      "La mayoría de camisetas técnicas de pádel usan poliéster o mezclas con elastano, pensadas para evacuar el sudor y secarse rápido durante el partido — la opción más lógica si juegas con intensidad, ya que el tejido técnico transporta la humedad hacia la superficie exterior en vez de retenerla pegada a la piel. Alguna opción del catálogo prioriza en cambio el algodón, con un tacto más agradable a costa de retener más la humedad durante el ejercicio intenso; tiene sentido para partidos recreativos de baja intensidad, pero no para entrenar a alta intensidad en verano, donde la camiseta se empapa y pesa notablemente más. También encontrarás en este ranking camisetas oficiales vinculadas a jugadores profesionales del circuito, que suelen costar más sin que eso implique necesariamente un tejido técnicamente superior — el extra de precio es sobre todo por la licencia de marca y el diseño asociado al jugador. En este ranking ordenamos por valoración editorial el catálogo completo de camisetas técnicas de pádel, desde opciones de gama de entrada hasta las prendas oficiales con más identidad de marca.",
+    metaDescription:
       "Camisetas técnicas de pádel ordenadas por valoración editorial, de gama de entrada a camisetas oficiales de jugadores profesionales.",
     filter: (p) => p.category === "ropa" && p.tipo === "camiseta",
     sortBy: byEditorRating,
-    faqs: [],
+    faqs: [
+      {
+        question: "¿Poliéster o algodón, cuál debería elegir?",
+        answer:
+          "Si juegas con intensidad, poliéster o mezclas con elastano: evacúan mejor el sudor y se secan más rápido. El algodón tiene un tacto más agradable pero retiene más la humedad, así que tiene más sentido para partidos recreativos de baja intensidad.",
+      },
+      {
+        question: "¿Las camisetas oficiales de jugador rinden mejor que el resto?",
+        answer:
+          "No necesariamente. El extra de precio suele ser por la licencia de marca y el diseño asociado al jugador, no por un tejido técnicamente superior al resto del catálogo de la misma gama.",
+      },
+      {
+        question: "¿Qué talla debería pedir?",
+        answer:
+          "La ropa técnica de pádel suele tallar más ajustada que una camiseta de algodón normal, así que si dudas entre dos tallas, conviene revisar la tabla de medidas específica del producto antes de guiarte solo por tu talla habitual.",
+      },
+    ],
+    relatedSlugs: ["regalos-para-jugadores-de-padel", "nox-camiseta-at10-tapia-vs-bullpadel-camiseta-edrar-triay", "camiseta-tecnica-padel-que-mirar"],
   },
   {
     type: "guide",
@@ -321,7 +456,9 @@ export const programmaticPages: ProgrammaticPage[] = [
     h1: "Ideas de regalo para jugadores de pádel",
     category: "accesorios",
     intro:
-      "Accesorios de pádel pensados como regalo: gorras, toallas, grips antivibración y otros complementos que cualquier jugador agradece, ordenados por valoración editorial.",
+      "Si no conoces bien el nivel o las preferencias de juego de la persona a la que quieres hacer un regalo, hay accesorios de pádel que son un acierto casi seguro y otros que conviene evitar salvo que te lo pidan expresamente. Una gorra, una toalla técnica o un spray de agarre son regalos que cualquier jugador puede usar independientemente de su nivel o de la pala con la que juegue — no dependen de preferencias técnicas específicas y son baratos si tienes dudas sobre cuánto gastar. Los overgrips y protectores son un acierto con más riesgo: son útiles, pero dependen del gusto de cada jugador (tacto liso o perforado, acabado transparente o más llamativo), así que solo son un buen regalo si sabes qué suele usar la persona habitualmente. Lo que es mejor evitar sin consultar antes es la pala: es la decisión más personal de todo el equipo, depende del nivel, el estilo de juego y hasta molestias físicas concretas, y regalar una pala sin preguntar es el error más habitual y caro dentro de este tipo de regalos. En este ranking ordenamos por valoración editorial los accesorios de pádel más habituales como regalo, del más seguro al que requiere conocer mejor a la persona.",
+    metaDescription:
+      "Ideas de regalo de pádel: gorras, toallas y grips antivibración ordenados por valoración editorial, para acertar sin conocer el nivel del jugador.",
     sortBy: byEditorRating,
     faqs: [
       {
@@ -330,6 +467,7 @@ export const programmaticPages: ProgrammaticPage[] = [
           "Los accesorios genéricos (gorra, toalla) son más seguros como regalo que los técnicos (grip antivibración, overgrips específicos), que dependen más de las preferencias de juego de cada persona.",
       },
     ],
+    relatedSlugs: ["mejores-camisetas-padel", "gladiator-padel-vs-spartan-padel-grip-antivibraciones", "ideas-regalo-jugadores-de-padel"],
   },
   {
     type: "selector-variant",
