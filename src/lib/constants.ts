@@ -11,6 +11,9 @@ export const GOOGLE_SITE_VERIFICATION = "lnxRgdxN0mpSclj0lEEl7-yis0QqoT-EfOIE1k5
 /** ID de la etiqueta de Google Ads (conversiones). Tampoco es un secreto: viaja en el HTML público. */
 export const GOOGLE_ADS_ID = "AW-17534487474";
 
+/** ID de publicador de Google AdSense. No es un secreto: viaja en el HTML público y en ads.txt. */
+export const ADSENSE_PUBLISHER_ID = "pub-8079901650961301";
+
 export const AFFILIATE_DISCLOSURE_TEXT =
   "Como asociados de Amazon, obtenemos ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no supone ningún coste adicional para ti y nos ayuda a mantener el contenido de la web.";
 

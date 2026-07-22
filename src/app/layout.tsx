@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema } from "@/lib/seo/schema";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { GOOGLE_ADS_ID, GOOGLE_SITE_VERIFICATION, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
+import { ADSENSE_PUBLISHER_ID, GOOGLE_ADS_ID, GOOGLE_SITE_VERIFICATION, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import { GA_ID } from "@/lib/analytics/ga";
 
 const geistSans = Geist({
@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
   },
+  other: {
+    "google-adsense-account": `ca-${ADSENSE_PUBLISHER_ID}`,
+  },
 };
 
 const GOOGLE_TAG_IDS = [GA_ID, GOOGLE_ADS_ID].filter(Boolean);
@@ -39,6 +42,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="es" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <JsonLd data={organizationSchema()} />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${ADSENSE_PUBLISHER_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {GOOGLE_TAG_IDS.length > 0 && (
           <>
             {/* Una sola etiqueta de Google (gtag.js): un config por cada producto (GA4, Google Ads...). */}
