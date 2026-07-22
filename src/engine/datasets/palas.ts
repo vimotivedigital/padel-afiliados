@@ -8,6 +8,11 @@ import type { Pala } from "../types";
  * Los datos técnicos (peso, dureza, potencia/control...) son aproximaciones
  * editoriales pensadas para alimentar el motor de recomendación, no fichas
  * técnicas oficiales del fabricante.
+ *
+ * Antes de añadir un producto nuevo: verifica el `categoryTree` real de
+ * Keepa/Amazon para el ASIN, no solo el nombre — varias marcas reutilizan
+ * el mismo nombre de línea entre palas y otras categorías (ver
+ * notas-sourcing-catalogo.md, caso real "StarVie Titania Pro").
  */
 export const palas: Pala[] = [
   {

@@ -1,5 +1,12 @@
 import type { Zapatilla } from "../types";
 
+/**
+ * Antes de añadir un producto nuevo aquí: verifica el `categoryTree` real de
+ * Keepa/Amazon para el ASIN, no solo el nombre. Varias marcas reutilizan el
+ * mismo nombre de línea entre palas y otras categorías (ver caso real
+ * "StarVie Titania Pro" en notas-sourcing-catalogo.md, era una pala con
+ * ASIN mal asignado aquí como zapatilla).
+ */
 export const zapatillas: Zapatilla[] = [
   {
     id: "zap-asics-gel-padel-pro",
