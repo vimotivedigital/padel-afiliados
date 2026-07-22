@@ -6,6 +6,7 @@ import { resolveRelatedLink } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ProductCard } from "@/components/product/ProductCard";
+import { GuideTopPick } from "@/components/product/GuideTopPick";
 import { Faq } from "@/components/product/Faq";
 import { TrustSection } from "@/components/home/TrustSection";
 
@@ -27,13 +28,18 @@ export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; p
 
       <div>
         <h1 className="text-3xl font-extrabold leading-tight">{guide.h1}</h1>
-        <p className="mt-3 max-w-3xl text-lg text-muted">{guide.intro}</p>
+        {guide.topPickCta && products.length > 0 && (
+          <div className="mt-4 max-w-3xl">
+            <GuideTopPick product={products[0]} livePrice={prices.get(products[0].asin)} />
+          </div>
+        )}
+        <p className="mt-4 max-w-3xl text-lg text-muted">{guide.intro}</p>
       </div>
 
       {products.length === 0 ? (
         <p className="text-muted">Todavía no tenemos suficientes productos publicados para esta guía.</p>
       ) : (
-        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ol id="ranking" className="grid scroll-mt-6 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, index) => (
             <li key={product.id} className="relative">
               <span className="absolute -left-2 -top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-white">

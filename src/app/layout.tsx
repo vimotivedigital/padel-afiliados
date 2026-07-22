@@ -36,7 +36,7 @@ const GOOGLE_TAG_IDS = [GA_ID, GOOGLE_ADS_ID].filter(Boolean);
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="es" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <JsonLd data={organizationSchema()} />
         {GOOGLE_TAG_IDS.length > 0 && (

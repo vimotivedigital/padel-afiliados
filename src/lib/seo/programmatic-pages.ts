@@ -22,6 +22,13 @@ export interface GuidePage {
   sortBy?: (a: Product, b: Product) => number;
   faqs: Faq[];
   relatedSlugs?: string[];
+  /**
+   * Muestra un "top pick" (producto nº1 + CTA + ancla al ranking) antes de
+   * la intro larga, para acortar la distancia al CTA en páginas de tráfico
+   * de pago con intro extensa. Cambio dirigido, no activo por defecto —
+   * solo mejores-palas-calidad-precio y mejores-zapatillas lo tienen hoy.
+   */
+  topPickCta?: boolean;
 }
 
 export interface SelectorVariantPage {
@@ -109,6 +116,7 @@ export const programmaticPages: ProgrammaticPage[] = [
       "No siempre la pala más cara es la que más te conviene. En este ranking no ordenamos por precio ni por valoración en solitario, sino por la relación entre ambas cosas: dividimos la valoración editorial de cada pala entre su precio, para encontrar los modelos que más rinden por cada euro invertido, sin importar si están en la gama de entrada o en la intermedia. Esto significa que vas a encontrar aquí tanto palas de menos de 100€ con una relación calidad-precio sobresaliente, como algún modelo de gama media que compensa un precio algo mayor con prestaciones que normalmente solo verías en la gama alta. Lo que no vas a encontrar en los primeros puestos son las palas más caras del catálogo: aunque puedan ser objetivamente mejores en rendimiento puro, su precio no compensa proporcionalmente frente a alternativas más asequibles con una valoración editorial similar. Es el ranking que recomendamos revisar si tu prioridad es gastar de forma inteligente antes que conseguir el máximo rendimiento posible sin mirar el precio — típicamente jugadores que empiezan o que juegan de forma recreativa, para quienes una pala de gama alta no se traduce necesariamente en mejor experiencia de juego.",
     metaDescription:
       "Las palas con mejor relación valoración-precio del catálogo, para encontrar las que más rinden por cada euro invertido.",
+    topPickCta: true,
     sortBy: byValueForMoney,
     faqs: [
       {
@@ -277,6 +285,7 @@ export const programmaticPages: ProgrammaticPage[] = [
       "La pisada influye más que la marca a la hora de elegir zapatillas de pádel, pero no es el único factor: la frecuencia con la que juegas, tu peso corporal y el tipo de pista (interior o exterior) también condicionan qué modelo te va a durar más y proteger mejor las articulaciones. El pádel exige frenadas y cambios de dirección mucho más bruscos que correr en línea recta, así que una zapatilla pensada específicamente para este deporte —con refuerzos laterales y una suela de agarre adecuada— marca una diferencia real frente a usar calzado genérico de otros deportes de raqueta. Si notas que tiendes a pronar (el pie gira hacia dentro al apoyar), prioriza modelos con refuerzo lateral y buena estabilidad en la suela; si tu pisada es neutra, tienes más margen para priorizar amortiguación y polivalencia sin preocuparte tanto por la estabilidad. En este ranking ordenamos por valoración editorial el catálogo completo de zapatillas de pádel, con opciones para todos los tipos de pisada, niveles de juego y presupuestos, desde modelos de entrada hasta la gama alta de marcas especializadas en el deporte.",
     metaDescription:
       "Zapatillas de pádel ordenadas por valoración editorial, con opciones para todo tipo de pisada, nivel de juego y presupuesto.",
+    topPickCta: true,
     sortBy: byEditorRating,
     faqs: [
       {
