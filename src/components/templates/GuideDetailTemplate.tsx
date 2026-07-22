@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { GuidePage } from "@/lib/seo/programmatic-pages";
-import { getGuideProducts } from "@/lib/seo/programmatic-pages";
+import { getGuideProducts, getGuideTopPick } from "@/lib/seo/programmatic-pages";
 import { getProductPrices } from "@/lib/pricing/getProductPrices";
 import { resolveRelatedLink } from "@/lib/content";
 import { CATEGORY_LABELS } from "@/lib/constants";
@@ -14,6 +14,7 @@ export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; p
   const products = getGuideProducts(guide);
   const prices = await getProductPrices(products.map((p) => p.asin));
   const categoryLabel = CATEGORY_LABELS[guide.category];
+  const topPick = guide.topPickCta ? getGuideTopPick(guide, products) : undefined;
 
   return (
     <div className="space-y-8">
@@ -28,9 +29,9 @@ export async function GuideDetailTemplate({ guide, path }: { guide: GuidePage; p
 
       <div>
         <h1 className="text-3xl font-extrabold leading-tight">{guide.h1}</h1>
-        {guide.topPickCta && products.length > 0 && (
+        {topPick && (
           <div className="mt-4 max-w-3xl">
-            <GuideTopPick product={products[0]} livePrice={prices.get(products[0].asin)} />
+            <GuideTopPick product={topPick} livePrice={prices.get(topPick.asin)} />
           </div>
         )}
         <p className="mt-4 max-w-3xl text-lg text-muted">{guide.intro}</p>

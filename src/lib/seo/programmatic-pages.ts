@@ -29,6 +29,17 @@ export interface GuidePage {
    * solo mejores-palas-calidad-precio y mejores-zapatillas lo tienen hoy.
    */
   topPickCta?: boolean;
+  /**
+   * Umbral mínimo de `reviewCount` para poder ser elegido como top pick
+   * (independiente del orden del ranking completo, que no se toca). Existe
+   * porque `byValueForMoney` (editorRating/precio) puede llevar a productos
+   * baratos con 0 reseñas reales al primer puesto — válidos para el ranking,
+   * pero poco convincentes como "Nuestra recomendación nº1" destacada. Si se
+   * define, `getGuideTopPick` filtra por este mínimo antes de aplicar
+   * `sortBy` como desempate; si ningún producto lo alcanza, cae al nº1 del
+   * ranking normal.
+   */
+  topPickMinReviews?: number;
 }
 
 export interface SelectorVariantPage {
@@ -117,6 +128,7 @@ export const programmaticPages: ProgrammaticPage[] = [
     metaDescription:
       "Las palas con mejor relación valoración-precio del catálogo, para encontrar las que más rinden por cada euro invertido.",
     topPickCta: true,
+    topPickMinReviews: 20,
     sortBy: byValueForMoney,
     faqs: [
       {
@@ -608,4 +620,18 @@ export function getGuideProducts(guide: GuidePage): Product[] {
   const all = getProductsByCategory(guide.category);
   const filtered = guide.filter ? all.filter(guide.filter) : all;
   return [...filtered].sort(guide.sortBy ?? byEditorRating);
+}
+
+/**
+ * Producto a mostrar en el `GuideTopPick`. Por defecto es `products[0]` (el
+ * nº1 del ranking), pero si la guía define `topPickMinReviews`, se restringe
+ * primero a los productos con esa cantidad mínima de reseñas reales y solo
+ * entre esos se aplica el `sortBy` de la guía como desempate — el ranking
+ * completo (`products`) no se ve afectado.
+ */
+export function getGuideTopPick(guide: GuidePage, products: Product[]): Product | undefined {
+  if (guide.topPickMinReviews === undefined) return products[0];
+  const eligible = products.filter((p) => p.reviewCount >= guide.topPickMinReviews!);
+  if (eligible.length === 0) return products[0];
+  return [...eligible].sort(guide.sortBy ?? byEditorRating)[0];
 }
