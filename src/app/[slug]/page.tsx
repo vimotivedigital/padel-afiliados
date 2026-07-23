@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CATEGORY_LABELS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { programmaticPages, getProgrammaticPage } from "@/lib/seo/programmatic-pages";
+import { categoryContent } from "@/lib/seo/category-content";
 import { CategoryListingTemplate } from "@/components/templates/CategoryListingTemplate";
 import { GuideDetailTemplate } from "@/components/templates/GuideDetailTemplate";
 import { SelectorVariantTemplate } from "@/components/templates/SelectorVariantTemplate";
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const label = CATEGORY_LABELS[slug];
     return buildMetadata({
       title: label,
-      description: `Descubre nuestra selección de ${label.toLowerCase()}: reviews, comparativas y las mejores ofertas.`,
+      description: categoryContent[slug as Category].metaDescription,
       path: `/${slug}`,
     });
   }
