@@ -88,6 +88,12 @@ export async function ComparisonDetailTemplate({ comparison, path }: { compariso
         <AmazonCTA asin={winner.asin} productName={winner.name} size="lg" className="mt-4" />
       </section>
 
+      <p className="text-sm text-muted">
+        <Link href="/sobre-nosotros" className="font-semibold text-brand-primary hover:underline">
+          Conoce nuestra metodología completa →
+        </Link>
+      </p>
+
       <Faq faqs={comparison.faqs} />
 
       {comparison.relatedSlugs && comparison.relatedSlugs.length > 0 && (

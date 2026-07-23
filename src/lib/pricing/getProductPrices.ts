@@ -42,3 +42,21 @@ export const getProductPrices = cache(async (asins: string[]): Promise<Map<strin
 
   return map;
 });
+
+/**
+ * Fecha del producto sincronizado MÁS RECIENTEMENTE de un conjunto (una
+ * guía mezcla productos con su propio `last_updated` individual, no hay un
+ * timestamp único de página real). Devuelve `null` si ningún producto tiene
+ * precio en vivo (Supabase no configurado, o ninguna fila sincronizada
+ * todavía) — en ese caso el llamante no debe mostrar ninguna fecha, nunca
+ * inventar una.
+ */
+export function getMostRecentSync(prices: Map<string, import("./getProductPrice").LivePrice>): string | null {
+  let latest: string | null = null;
+  for (const price of prices.values()) {
+    if (!latest || new Date(price.lastUpdated) > new Date(latest)) {
+      latest = price.lastUpdated;
+    }
+  }
+  return latest;
+}
