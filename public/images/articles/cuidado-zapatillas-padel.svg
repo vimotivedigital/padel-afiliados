@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cuidados básicos de las zapatillas de pádel">
+  <rect width="1200" height="630" fill="#0E7C86"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <path d="M420 380 Q420 300 520 290 L680 260 Q760 250 780 320 L780 400 Q780 430 750 430 L450 430 Q420 430 420 400 Z" fill="#12664F" stroke="#0B1120" stroke-width="6"/>
+  <path d="M450 380 L740 380" stroke="#C6F135" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="880" cy="240" r="10" fill="#F7F8F5"/>
+  <circle cx="910" cy="290" r="7" fill="#F7F8F5"/>
+  <circle cx="860" cy="300" r="6" fill="#F7F8F5"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">CUIDADO DE ZAPATILLAS</text>
+</svg>

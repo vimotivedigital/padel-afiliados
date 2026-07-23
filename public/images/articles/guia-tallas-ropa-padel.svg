@@ -1,0 +1,6 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Guía de tallas de ropa técnica de pádel">
+  <rect width="1200" height="630" fill="#12664F"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <path d="M520 220 L470 260 L500 300 L520 285 L520 420 L680 420 L680 285 L700 300 L730 260 L680 220 Q600 250 520 220 Z" fill="none" stroke="#C6F135" stroke-width="10"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">TALLAS DE ROPA TÉCNICA</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Protector de pala: merece la pena">
+  <rect width="1200" height="630" fill="#0E7C86"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <path d="M600 200 L700 240 L700 340 Q700 420 600 460 Q500 420 500 340 L500 240 Z" fill="none" stroke="#C6F135" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M565 330 L590 355 L640 300" fill="none" stroke="#F7F8F5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">PROTECTOR DE PALA</text>
+</svg>

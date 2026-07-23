@@ -1,0 +1,10 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ideas de regalo para jugadores de pádel">
+  <rect width="1200" height="630" fill="#12664F"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <rect x="480" y="290" width="240" height="160" rx="12" fill="none" stroke="#F7F8F5" stroke-width="10"/>
+  <rect x="460" y="250" width="280" height="50" rx="10" fill="none" stroke="#C6F135" stroke-width="10"/>
+  <path d="M600 250 L600 450" stroke="#C6F135" stroke-width="8"/>
+  <path d="M560 250 Q520 190 580 190 Q600 190 600 250 Z" fill="none" stroke="#C6F135" stroke-width="8"/>
+  <path d="M640 250 Q680 190 620 190 Q600 190 600 250 Z" fill="none" stroke="#C6F135" stroke-width="8"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">IDEAS DE REGALO</text>
+</svg>

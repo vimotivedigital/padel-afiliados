@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Overgrip frente a grip original en pádel">
+  <rect width="1200" height="630" fill="#12664F"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <rect x="440" y="220" width="90" height="220" rx="18" fill="none" stroke="#F7F8F5" stroke-width="8"/>
+  <path d="M440 260 L530 260 M440 300 L530 300 M440 340 L530 340 M440 380 L530 380" stroke="#F7F8F5" stroke-width="6"/>
+  <rect x="660" y="220" width="90" height="220" rx="18" fill="none" stroke="#C6F135" stroke-width="8"/>
+  <path d="M660 250 Q705 270 750 250 M660 300 Q705 320 750 300 M660 350 Q705 370 750 350 M660 400 Q705 420 750 400" stroke="#C6F135" stroke-width="6" fill="none"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">OVERGRIP VS GRIP ORIGINAL</text>
+</svg>

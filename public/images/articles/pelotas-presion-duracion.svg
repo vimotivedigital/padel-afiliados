@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Presión y duración de las pelotas de pádel">
+  <rect width="1200" height="630" fill="#0E7C86"/>
+  <rect width="1200" height="630" fill="#0B1120" opacity="0.35"/>
+  <circle cx="520" cy="315" r="95" fill="#C6F135" opacity="0.9"/>
+  <path d="M450 280 Q520 320 450 360" fill="none" stroke="#0B1120" stroke-width="8"/>
+  <path d="M590 280 Q520 320 590 360" fill="none" stroke="#0B1120" stroke-width="8"/>
+  <circle cx="720" cy="315" r="70" fill="none" stroke="#F7F8F5" stroke-width="8" opacity="0.6"/>
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#F7F8F5">PRESIÓN DE LAS PELOTAS</text>
+</svg>

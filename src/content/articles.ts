@@ -314,7 +314,7 @@ export const articles: Article[] = [
     excerpt:
       "La forma es, junto al balance, lo que más condiciona el carácter de una pala. Explicamos qué aporta cada forma y cuál encaja mejor con cada estilo de juego.",
     category: "Guías",
-    coverImage: "/images/articles/forma-pala-padel.jpg",
+    coverImage: "/images/articles/forma-pala-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-01",
     updatedAt: "2026-07-01",
@@ -364,7 +364,7 @@ export const articles: Article[] = [
     excerpt:
       "Una pala no dura para siempre, aunque no se rompa. Repasamos las señales que indican que tu pala ha perdido prestaciones y es momento de renovarla.",
     category: "Guías",
-    coverImage: "/images/articles/cuando-cambiar-pala-padel.jpg",
+    coverImage: "/images/articles/cuando-cambiar-pala-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-02",
     updatedAt: "2026-07-02",
@@ -412,7 +412,7 @@ export const articles: Article[] = [
     excerpt:
       "Una zapatilla de pádel es una inversión que se puede alargar bastante con unos cuidados básicos. Repasamos los errores más comunes y cómo evitarlos.",
     category: "Guías",
-    coverImage: "/images/articles/cuidado-zapatillas-padel.jpg",
+    coverImage: "/images/articles/cuidado-zapatillas-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-04",
     updatedAt: "2026-07-04",
@@ -455,7 +455,7 @@ export const articles: Article[] = [
     excerpt:
       "Comprar ropa técnica de pádel por internet genera dudas de talla frecuentes. Te damos algunas claves para acertar a la primera.",
     category: "Guías",
-    coverImage: "/images/articles/guia-tallas-ropa-padel.jpg",
+    coverImage: "/images/articles/guia-tallas-ropa-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-05",
     updatedAt: "2026-07-05",
@@ -494,7 +494,7 @@ export const articles: Article[] = [
     excerpt:
       "No todos los paleteros están pensados para lo mismo: si juegas solo, en pareja habitual o entrenas con más gente, la capacidad que necesitas cambia. Te ayudamos a elegir según tu caso.",
     category: "Guías",
-    coverImage: "/images/articles/paletero-numero-palas.jpg",
+    coverImage: "/images/articles/paletero-numero-palas.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -535,7 +535,7 @@ export const articles: Article[] = [
     excerpt:
       "El grip original que trae la pala de fábrica no está pensado para durar toda la vida útil de la pala. Explicamos la diferencia con el overgrip y cuándo merece la pena tocar cada uno.",
     category: "Guías",
-    coverImage: "/images/articles/overgrip-vs-grip-original.jpg",
+    coverImage: "/images/articles/overgrip-vs-grip-original.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -574,7 +574,7 @@ export const articles: Article[] = [
     excerpt:
       "Pala, zapatillas, protector y overgrip no se cuidan igual. Repasamos lo básico para que tu equipo dure más sin gastar en mantenimiento innecesario.",
     category: "Guías",
-    coverImage: "/images/articles/mantenimiento-material-padel.jpg",
+    coverImage: "/images/articles/mantenimiento-material-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -615,7 +615,7 @@ export const articles: Article[] = [
     excerpt:
       "Si no conoces bien el nivel o las preferencias de juego de la persona, hay regalos de pádel que son un acierto casi seguro y otros que es mejor evitar. Te lo explicamos.",
     category: "Guías",
-    coverImage: "/images/articles/ideas-regalo-padel.jpg",
+    coverImage: "/images/articles/ideas-regalo-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -655,7 +655,7 @@ export const articles: Article[] = [
     excerpt:
       "Una pelota de pádel no dura para siempre, y notarlo a mitad de partido no es agradable. Explicamos qué influye en su duración y cuándo merece la pena abrir un bote nuevo.",
     category: "Guías",
-    coverImage: "/images/articles/pelotas-presion-duracion.jpg",
+    coverImage: "/images/articles/pelotas-presion-duracion.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -695,7 +695,7 @@ export const articles: Article[] = [
     excerpt:
       "No todas las camisetas de pádel están pensadas para lo mismo: hay diferencias reales entre una técnica de tejido sintético y una de algodón, más allá del precio o la marca.",
     category: "Guías",
-    coverImage: "/images/articles/camiseta-tecnica-padel.jpg",
+    coverImage: "/images/articles/camiseta-tecnica-padel.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
@@ -730,7 +730,7 @@ export const articles: Article[] = [
     excerpt:
       "Es de los accesorios más baratos de todo el equipo, pero también de los que más se pasan por alto. Explicamos por qué merece la pena y qué diferencia a unos protectores de otros.",
     category: "Guías",
-    coverImage: "/images/articles/protector-pala-merece-la-pena.jpg",
+    coverImage: "/images/articles/protector-pala-merece-la-pena.svg",
     author: "Redacción Voleador",
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
