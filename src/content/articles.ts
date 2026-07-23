@@ -34,6 +34,11 @@ export const articles: Article[] = [
         content:
           "Hay palas de iniciación muy competentes por debajo de 100€. Nuestra recomendación es empezar con una pala de este rango y, pasados unos meses, dar el salto a una pala de gama media cuando ya tengas claro tu estilo de juego.",
       },
+      {
+        heading: "No descuides el resto del equipo básico",
+        content:
+          "Una pala nueva no soluciona un overgrip gastado ni un protector mal colocado: son accesorios baratos que influyen directamente en el agarre y en la protección del marco desde el primer día. Empezar con una pala razonable pero un equipo completo suele dar mejor resultado que gastar todo el presupuesto en la pala y descuidar el resto.",
+      },
     ],
     faqs: [
       {
@@ -43,6 +48,11 @@ export const articles: Article[] = [
       {
         question: "¿Necesito una pala distinta si soy mujer?",
         answer: "No es imprescindible, pero muchas jugadoras prefieren palas más ligeras; puedes filtrar por ese criterio en nuestro selector de pala.",
+      },
+      {
+        question: "¿Debería comprar la pala del jugador profesional que más me gusta?",
+        answer:
+          "No es el criterio más razonable para empezar: las palas de jugadores profesionales suelen ser de gama de potencia muy exigente técnicamente, pensadas para un nivel muy distinto al de quien empieza.",
       },
     ],
     relatedSlugs: [
@@ -142,12 +152,22 @@ export const articles: Article[] = [
         content:
           "Un truco casero: moja la planta del pie y pisa sobre una superficie que deje marca (cartón, folio). Si la huella se ve casi completa y ancha, tiendes a la pronación; si se ve una franja fina en el centro, es más probable que tengas pisada neutra o incluso supinadora. No sustituye a un estudio de la pisada real, pero da una primera pista.",
       },
+      {
+        heading: "Pisada supinadora: la menos habitual pero también relevante",
+        content:
+          "Con pisada supinadora, el pie apoya más por el borde exterior, lo contrario de la pronación. Es menos frecuente que las otras dos, pero también se beneficia de una zapatilla con buena amortiguación lateral que compense esa tendencia, ya que el peso se reparte de forma menos uniforme durante los cambios de dirección propios del pádel.",
+      },
     ],
     faqs: [
       {
         question: "¿Puedo jugar al pádel con zapatillas de running?",
         answer:
           "No es lo recomendable: las zapatillas de running están pensadas para desplazamiento lineal, no para los frenazos y cambios de dirección del pádel, y su suela no ofrece el agarre necesario en pista.",
+      },
+      {
+        question: "¿Puedo tener una pisada distinta en cada pie?",
+        answer:
+          "Sí, es más habitual de lo que parece. En ese caso, prioriza el criterio del pie con la pisada más marcada a la hora de elegir zapatilla, ya que suele ser el que más sufre en los cambios de dirección.",
       },
     ],
     relatedSlugs: ["selector-zapatillas-pronador", "selector-zapatillas-amortiguacion"],
@@ -297,12 +317,22 @@ export const articles: Article[] = [
         content:
           "Como referencia, si juegas 2-3 veces por semana, un overgrip suele aguantar entre 2 y 4 semanas antes de perder su capacidad de absorción. Si notas que se desliza o que ya no absorbe como al principio, es el momento de cambiarlo.",
       },
+      {
+        heading: "Otros trucos si el overgrip no es suficiente",
+        content:
+          "Si ya usas un overgrip perforado y sigues notando que la pala se escapa en los momentos de más tensión del partido, revisa también tus propias manos: secarlas con una toalla entre puntos, o usar un poco de resina o polvo antideslizante específico para raqueta, puede ser el complemento que faltaba cuando el overgrip por sí solo no llega a compensar una sudoración muy alta.",
+      },
     ],
     faqs: [
       {
         question: "¿Puedo poner un overgrip encima de otro?",
         answer:
           "Sí, es habitual poner un overgrip nuevo sobre uno antiguo para ganar grosor, aunque si el de debajo ya está muy degradado es mejor quitarlo antes para no perder sensibilidad.",
+      },
+      {
+        question: "¿El polvo o la resina antideslizante sustituyen a un buen overgrip?",
+        answer:
+          "No, son un complemento puntual, no un sustituto: el overgrip sigue siendo la base del agarre día a día. La resina ayuda en momentos concretos de sudoración muy alta, pero no soluciona un overgrip ya degradado.",
       },
     ],
     relatedSlugs: ["selector-overgrip-sudor", "mejores-overgrips-sudoracion"],
@@ -438,12 +468,22 @@ export const articles: Article[] = [
         content:
           "El patrón de desgaste te dice mucho: si se desgasta más por el borde interior, es señal de pisada pronadora, información útil para elegir tu siguiente par.",
       },
+      {
+        heading: "Cuánto duran realmente antes de perder prestaciones",
+        content:
+          "Aunque no se vean rotas por fuera, la amortiguación de la mediasuela se va endureciendo con el uso, incluso con buenos cuidados. Como referencia, jugando 2-3 veces por semana con las rotaciones y el secado adecuados, una zapatilla de pádel suele mantener sus prestaciones entre 6 y 12 meses antes de que la amortiguación se note claramente más plana, momento en el que merece la pena renovarlas aunque la suela todavía tenga buen aspecto.",
+      },
     ],
     faqs: [
       {
         question: "¿Se pueden lavar en lavadora?",
         answer:
           "No se recomienda: el tambor y el centrifugado pueden dañar la estructura y los adhesivos de la zapatilla. Lo mejor es limpiarlas a mano con un cepillo suave y agua tibia.",
+      },
+      {
+        question: "¿Cómo sé si ya toca cambiar de zapatillas y no solo limpiarlas?",
+        answer:
+          "Si notas que la amortiguación se siente más plana que al principio, o que la suela ha perdido agarre pese a estar limpia, son señales de que el problema ya no es de mantenimiento sino de desgaste real del material.",
       },
     ],
     relatedSlugs: ["zapatillas-padel-segun-tipo-pisada", "mejores-zapatillas", "mejores-zapatillas-pronador", "mantenimiento-material-padel"],
@@ -557,12 +597,22 @@ export const articles: Article[] = [
         content:
           "Si el overgrip se ha quedado liso, pegajoso de forma desagradable o se despega en los bordes, toca cambiarlo — es normal y frecuente. Si notas el mango original duro, agrietado o con zonas hundidas por el uso, ahí sí hay que ir al grip base, algo mucho menos habitual.",
       },
+      {
+        heading: "Cómo instalar un overgrip nuevo sin que quede aire ni arrugas",
+        content:
+          "La clave está en tensar ligeramente la cinta mientras enrollas, solapando cada vuelta sobre la mitad de la anterior, de abajo hacia arriba del mango. Si queda una burbuja de aire o una arruga, es mejor deshacer esa vuelta y repetirla que dejarla así: con el tiempo esa zona se despega antes y pierde agarre justo donde más se necesita, en el punto donde la mano aprieta con más fuerza durante el golpeo.",
+      },
     ],
     faqs: [
       {
         question: "¿Puedo poner overgrip directamente sin haber cambiado nunca el grip original?",
         answer:
           "Sí, de hecho es lo más habitual: la mayoría de jugadores nunca llegan a cambiar el grip original porque el overgrip absorbe casi todo el desgaste diario antes de que el de fábrica se resienta.",
+      },
+      {
+        question: "¿Necesito alguna herramienta especial para cambiar el overgrip?",
+        answer:
+          "No, solo tijeras para cortar el sobrante al final. Es una de las tareas de mantenimiento más sencillas de todo el equipo de pádel, y se puede hacer en cualquier sitio en pocos minutos.",
       },
     ],
     relatedSlugs: ["mejores-overgrips", "mejores-overgrips-sudoracion", "nerusgrip-pack-6-vs-siux-pro-perforated-x60"],
