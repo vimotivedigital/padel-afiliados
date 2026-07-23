@@ -43,7 +43,7 @@ export const categoryContent: Record<Category, CategoryContent> = {
       {
         question: "¿Qué diferencia hay entre este listado y la guía de mejores zapatillas?",
         answer:
-          "Este listado muestra todo el catálogo para que compares por tu cuenta. La guía de mejores zapatillas es una selección curada y ordenada por valoración editorial, con un top pick destacado para quien prefiere una recomendación directa.",
+          "Este listado muestra todo el catálogo para que compares por tu cuenta. La guía de mejores zapatillas ordena por valoración editorial con un top pick destacado, y si ya sabes que tienes pisada pronadora, tenemos además una guía específica para ese perfil con zapatillas de refuerzo lateral.",
       },
       {
         question: "¿Cómo sé qué tipo de pisada tengo antes de elegir?",
@@ -61,7 +61,7 @@ export const categoryContent: Record<Category, CategoryContent> = {
       {
         question: "¿Qué diferencia hay entre este listado y la guía de mejores paleteros?",
         answer:
-          "Este listado muestra todo el catálogo para que compares capacidad, compartimentos y precio por tu cuenta. La guía de mejores paleteros es una selección curada y ordenada por valoración editorial.",
+          "Este listado muestra todo el catálogo para que compares capacidad, compartimentos y precio por tu cuenta. La guía de mejores paleteros ordena por valoración editorial todo el catálogo, y si buscas específicamente compartimento térmico para proteger la pala del calor o el frío, tenemos una guía centrada solo en esos modelos.",
       },
       {
         question: "¿Necesito compartimento térmico si juego poco?",
@@ -79,7 +79,7 @@ export const categoryContent: Record<Category, CategoryContent> = {
       {
         question: "¿Qué diferencia hay entre este listado y las guías de pelotas?",
         answer:
-          "Este listado muestra todo el catálogo para que compares formatos y precios por tu cuenta. Nuestras guías de mejores pelotas de competición y calidad-precio son una selección curada y ordenada por valoración editorial para cada uso concreto.",
+          "Este listado muestra todo el catálogo para que compares formatos y precios por tu cuenta. Nuestras guías de mejores pelotas de competición y calidad-precio no ordenan igual: la primera prioriza valoración editorial pura, la segunda la relación entre valoración y precio.",
       },
       {
         question: "¿Debo comprar pelotas de competición para entrenar?",
@@ -115,7 +115,7 @@ export const categoryContent: Record<Category, CategoryContent> = {
       {
         question: "¿Qué diferencia hay entre este listado y la guía de mejores protectores?",
         answer:
-          "Este listado muestra todo el catálogo para que compares acabados y pesos por tu cuenta. La guía de mejores protectores es una selección curada y ordenada por valoración editorial.",
+          "Este listado muestra todo el catálogo para que compares acabados y pesos por tu cuenta. A diferencia de otras categorías, aquí no tenemos guías separadas por perfil: la diferencia real entre acabados (transparente, dentado, vinilo) es menor de lo que sugiere el diseño, así que una sola guía de mejores protectores cubre bien todo el catálogo.",
       },
       {
         question: "¿El protector afecta al peso o al tacto de la pala?",
@@ -133,7 +133,7 @@ export const categoryContent: Record<Category, CategoryContent> = {
       {
         question: "¿Qué diferencia hay entre este listado y la guía de mejores camisetas?",
         answer:
-          "Este listado muestra todo el catálogo de ropa (camisetas, faldas y más) para que compares por tu cuenta. La guía de mejores camisetas de pádel es una selección curada y ordenada por valoración editorial centrada en esa prenda.",
+          "Este listado incluye todas las prendas del catálogo —camisetas, faldas y el resto—, mientras que la guía de mejores camisetas de pádel se centra solo en esa prenda concreta, ordenada por valoración editorial.",
       },
       {
         question: "¿Qué talla debería pedir?",
