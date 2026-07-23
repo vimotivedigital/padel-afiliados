@@ -317,6 +317,7 @@ export const programmaticPages: ProgrammaticPage[] = [
     filter: (p) => p.category === "zapatillas" && p.tipoPisada === "pronador",
     sortBy: byEditorRating,
     faqs: [],
+    relatedSlugs: ["zapatillas-padel-segun-tipo-pisada", "selector-zapatillas-pronador"],
   },
   {
     type: "guide",

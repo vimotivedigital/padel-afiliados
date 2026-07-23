@@ -494,7 +494,7 @@ export const comparisons: Comparison[] = [
     faqs: [],
     publishedAt: "2026-07-17",
     updatedAt: "2026-07-17",
-    relatedSlugs: ["epicondilitis-codo-de-tenista-en-padel-como-evitarlo", "ideas-regalo-jugadores-de-padel", "mejores-palas-epicondilitis"],
+    relatedSlugs: ["epicondilitis-padel-como-elegir-material", "ideas-regalo-jugadores-de-padel", "mejores-palas-epicondilitis"],
     metaDescription:
       "Gladiator Padel vs Spartan Padel: comparamos los dos grips antivibración del catálogo.",
   },

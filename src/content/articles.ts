@@ -185,7 +185,7 @@ export const articles: Article[] = [
       {
         heading: "Otros hábitos que ayudan a proteger el codo",
         content:
-          "Además del material, ayuda calentar bien el antebrazo antes de jugar, evitar golpear con el brazo completamente estirado y no forzar partidos si ya notas molestias. Si el dolor persiste más de un par de semanas, lo razonable es consultar con un fisioterapeuta antes de que se cronifique.",
+          "Además del material, ayuda calentar bien el antebrazo antes de jugar, evitar golpear con el brazo completamente estirado y no forzar partidos si ya notas molestias. Ningún cambio de material sustituye tampoco una técnica correcta ni el descanso necesario tras sobrecargar la zona: si el dolor persiste más de un par de semanas, lo razonable es consultar con un fisioterapeuta antes de que se cronifique.",
       },
     ],
     faqs: [
@@ -198,6 +198,11 @@ export const articles: Article[] = [
         question: "¿Cambiar de pala cura la epicondilitis?",
         answer:
           "No: una pala más blanda puede ayudar a no agravar las molestias y a jugar más cómodo, pero ante una lesión activa lo recomendable es acudir a un fisioterapeuta o médico deportivo.",
+      },
+      {
+        question: "¿Una muñequera ayuda a prevenir la epicondilitis?",
+        answer:
+          "Una muñequera no actúa sobre el codo directamente, pero una codera o banda de compresión específica sí puede aliviar la tensión del tendón durante el juego, siempre como complemento y no como solución única.",
       },
     ],
     relatedSlugs: [
@@ -300,7 +305,7 @@ export const articles: Article[] = [
           "Sí, es habitual poner un overgrip nuevo sobre uno antiguo para ganar grosor, aunque si el de debajo ya está muy degradado es mejor quitarlo antes para no perder sensibilidad.",
       },
     ],
-    relatedSlugs: ["selector-overgrip-sudor"],
+    relatedSlugs: ["selector-overgrip-sudor", "mejores-overgrips-sudoracion"],
   },
   {
     slug: "forma-diamante-vs-lagrima-vs-redonda-padel",
@@ -399,55 +404,6 @@ export const articles: Article[] = [
       },
     ],
     relatedSlugs: ["como-elegir-tu-primera-pala-de-padel", "mejores-palas-avanzadas"],
-  },
-  {
-    slug: "epicondilitis-codo-de-tenista-en-padel-como-evitarlo",
-    title: "Cómo evitar el codo de tenista (epicondilitis) jugando al pádel",
-    h1: "Cómo evitar el codo de tenista en pádel",
-    excerpt:
-      "La epicondilitis es una de las lesiones más frecuentes entre jugadores amateur de pádel. Explicamos qué la provoca y cómo el material puede ayudar a prevenirla.",
-    category: "Guías",
-    coverImage: "/images/articles/epicondilitis-padel.jpg",
-    author: "Redacción Voleador",
-    publishedAt: "2026-07-03",
-    updatedAt: "2026-07-03",
-    readingMinutes: 6,
-    sections: [
-      {
-        heading: "Qué es la epicondilitis y por qué es tan común en pádel",
-        content:
-          "La epicondilitis, conocida como codo de tenista, es una inflamación de los tendones del antebrazo que se insertan en el codo, provocada por la repetición de impactos y microvibraciones. En pádel es especialmente frecuente por la superficie rígida de la pala, muy distinta a una raqueta encordada que amortigua parte del impacto.",
-      },
-      {
-        heading: "El material influye, y mucho",
-        content:
-          "Una pala dura, pesada y con balance alto transmite más vibración al brazo en cada golpeo. Cambiar a una pala más ligera, de núcleo blando y balance bajo o medio puede reducir notablemente esa transmisión, aunque no sustituye una buena técnica.",
-        productSlugs: ["babolat-technical-veron"],
-      },
-      {
-        heading: "El overgrip y el encordado también cuentan",
-        content:
-          "Un overgrip en mal estado obliga a apretar más fuerte el mango para no perder agarre, lo que aumenta la tensión en el antebrazo. Mantenerlo en buen estado es una medida sencilla y barata de prevención.",
-      },
-      {
-        heading: "Más allá del material: técnica y descanso",
-        content:
-          "Ningún cambio de material sustituye una técnica correcta ni el descanso necesario tras sobrecargar la zona. Si ya tienes molestias persistentes, lo recomendable es consultar con un fisioterapeuta antes de que la inflamación vaya a más.",
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Qué tipo de pala se recomienda si ya tengo epicondilitis?",
-        answer:
-          "Palas ligeras (340-360g), de forma redonda, balance bajo y núcleo de goma blanda. Puedes filtrar directamente por esta lesión en nuestro selector de pala.",
-      },
-      {
-        question: "¿Una muñequera ayuda a prevenir la epicondilitis?",
-        answer:
-          "Una muñequera no actúa sobre el codo directamente, pero una coderas o bandas de compresión específicas sí pueden aliviar la tensión del tendón durante el juego, siempre como complemento y no como solución única.",
-      },
-    ],
-    relatedSlugs: ["epicondilitis-padel-como-elegir-material", "mejores-palas-epicondilitis", "selector-pala-epicondilitis"],
   },
   {
     slug: "cuidados-basicos-zapatillas-padel",

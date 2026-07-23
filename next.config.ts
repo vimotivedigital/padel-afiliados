@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/blog/epicondilitis-codo-de-tenista-en-padel-como-evitarlo",
+        destination: "/blog/epicondilitis-padel-como-elegir-material",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     // Los placeholders de ejemplo son SVG locales; se mantiene mientras
     // convivan con las fotos reales servidas directamente desde Amazon
